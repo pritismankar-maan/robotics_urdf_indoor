@@ -17,10 +17,13 @@ Visualization Manager:
       Alpha: 0.5
       Color: 255; 0; 0  # Red points
       Size (m): 0.01
-    - Class: rviz_default_plugins/Imu
+    - Class: rviz_imu_plugin/Imu
       Topic: /imu/data
       Value: true
       Queue Size: 10
+      Show Orientation: true
+      Show Axes: true
+      Scale: 0.5
     - Class: rviz_default_plugins/TF
       Frame Timeout: 1
       Marker Scale: 1
