@@ -1,0 +1,12 @@
+package.xml
+setup.cfg
+setup.py
+my_slam/__init__.py
+my_slam.egg-info/PKG-INFO
+my_slam.egg-info/SOURCES.txt
+my_slam.egg-info/dependency_links.txt
+my_slam.egg-info/entry_points.txt
+my_slam.egg-info/requires.txt
+my_slam.egg-info/top_level.txt
+my_slam.egg-info/zip-safe
+resource/my_slam

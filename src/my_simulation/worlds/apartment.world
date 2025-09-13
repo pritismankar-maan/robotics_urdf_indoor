@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="apartment">
+    <include><uri>model://sun</uri></include>
+    <include><uri>model://ground_plane</uri></include>
+    <!-- Outer Walls -->
+    <model name="wall_north"><pose>0 2.5 0.5 0 0 0</pose><link name="link"><collision><geometry><box size="5 0.1 1"/></geometry></collision><visual><geometry><box size="5 0.1 1"/></geometry><material><ambient>0.8 0.8 0.8 1</ambient></material></visual></link></model>
+    <model name="wall_south"><pose>0 -2.5 0.5 0 0 0</pose><link name="link"><collision><geometry><box size="5 0.1 1"/></geometry></collision><visual><geometry><box size="5 0.1 1"/></geometry><material><ambient>0.8 0.8 0.8 1</ambient></material></visual></link></model>
+    <model name="wall_east"><pose>2.5 0 0.5 0 0 1.5708</pose><link name="link"><collision><geometry><box size="5 0.1 1"/></geometry></collision><visual><geometry><box size="5 0.1 1"/></geometry><material><ambient>0.8 0.8 0.8 1</ambient></material></visual></link></model>
+    <model name="wall_west"><pose>-2.5 0 0.5 0 0 1.5708</pose><link name="link"><collision><geometry><box size="5 0.1 1"/></geometry></collision><visual><geometry><box size="5 0.1 1"/></geometry><material><ambient>0.8 0.8 0.8 1</ambient></material></visual></link></model>
+    <!-- Furniture -->
+    <model name="sofa"><pose>1 1 0.3 0 0 0</pose><link name="link"><collision><geometry><box size="1 2 0.6"/></geometry></collision><visual><geometry><box size="1 2 0.6"/></geometry><material><ambient>0.7 0.3 0.3 1</ambient></material></visual></link></model>
+    <model name="table"><pose>-1 0 0.4 0 0 0</pose><link name="link"><collision><geometry><box size="0.8 0.8 0.8"/></geometry></collision><visual><geometry><box size="0.8 0.8 0.8"/></geometry><material><ambient>0.3 0.7 0.3 1</ambient></material></visual></link></model>
+    <model name="box"><pose>0 -1.5 0.25 0 0 0</pose><link name="link"><collision><geometry><box size="0.5 0.5 0.5"/></geometry></collision><visual><geometry><box size="0.5 0.5 0.5"/></geometry><material><ambient>0.3 0.3 0.7 1</ambient></material></visual></link></model>
+  </world>
+</sdf>

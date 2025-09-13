@@ -1,0 +1,57 @@
+Panels:
+  - Class: rviz/DefaultPanelDockWidget
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.7
+      Class: rviz_default_plugins/RobotModel
+      Description: ""
+      Enabled: true
+      Robot Description: robot_description
+      TF: /tf
+      Value: true
+      Visual Enabled: true
+    - Class: rviz_default_plugins/LaserScan
+      Topic: /scan
+      Value: true
+      Alpha: 0.5
+      Color: 255; 0; 0  # Red points
+      Size (m): 0.01
+    - Class: rviz_default_plugins/Imu
+      Topic: /imu/data
+      Value: true
+      Queue Size: 10
+    - Class: rviz_default_plugins/TF
+      Frame Timeout: 1
+      Marker Scale: 1
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree Size: 1
+      Update Interval: 0
+      Value: true
+  Enabled: true
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 5
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.06
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Name: Current View
+      Near Clip Distance: 0.01
+      Pitch: 0.5
+      Target Frame: base_link
+      Value: Orbit (rviz)
+      Yaw: 0.7854

@@ -1,0 +1,32 @@
+[1.588s] Invoking command in '/home/pritismankar/ros2_ws/build/my_odometry': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_odometry/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_odometry/build --no-deps symlink_data
+[1.887s] running develop
+[2.104s] running egg_info
+[2.107s] creating my_odometry.egg-info
+[2.108s] writing my_odometry.egg-info/PKG-INFO
+[2.109s] writing dependency_links to my_odometry.egg-info/dependency_links.txt
+[2.109s] writing entry points to my_odometry.egg-info/entry_points.txt
+[2.110s] writing top-level names to my_odometry.egg-info/top_level.txt
+[2.113s] writing manifest file 'my_odometry.egg-info/SOURCES.txt'
+[2.181s] reading manifest file 'my_odometry.egg-info/SOURCES.txt'
+[2.182s] writing manifest file 'my_odometry.egg-info/SOURCES.txt'
+[2.247s] running build_ext
+[2.249s] Creating /home/pritismankar/ros2_ws/install/my_odometry/lib/python3.8/site-packages/site.py
+[2.250s] Creating /home/pritismankar/ros2_ws/install/my_odometry/lib/python3.8/site-packages/my-odometry.egg-link (link to .)
+[2.254s] Installing encoder_odom script to /home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry
+[2.254s] Installing imu_odom script to /home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry
+[2.254s] Installing move_robot script to /home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry
+[2.254s] 
+[2.254s] Installed /home/pritismankar/ros2_ws/build/my_odometry
+[2.254s] running symlink_data
+[2.254s] creating /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index
+[2.254s] creating /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index
+[2.254s] creating /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/packages
+[2.254s] symbolically linking /home/pritismankar/ros2_ws/build/my_odometry/resource/my_odometry -> /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/packages
+[2.254s] symbolically linking /home/pritismankar/ros2_ws/build/my_odometry/package.xml -> /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry
+[2.254s] creating /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/launch
+[2.254s] symbolically linking /home/pritismankar/ros2_ws/build/my_odometry/launch/odom.launch.py -> /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/launch
+[2.254s] creating /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/scripts
+[2.254s] symbolically linking /home/pritismankar/ros2_ws/build/my_odometry/scripts/encoder_odom.py -> /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/scripts
+[2.255s] symbolically linking /home/pritismankar/ros2_ws/build/my_odometry/scripts/imu_odom.py -> /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/scripts
+[2.255s] symbolically linking /home/pritismankar/ros2_ws/build/my_odometry/scripts/move_robot.py -> /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/scripts
+[2.386s] Invoked command in '/home/pritismankar/ros2_ws/build/my_odometry' returned '0': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_odometry/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_odometry/build --no-deps symlink_data

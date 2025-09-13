@@ -1,0 +1,4 @@
+[console_scripts]
+map_builder = my_slam.scripts.map_builder:main
+scan_matcher = my_slam.scripts.scan_matcher:main
+
