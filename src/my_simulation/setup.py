@@ -16,6 +16,8 @@ setup(
         (os.path.join('share', package_name, 'worlds'), glob('worlds/*.world')),
         # Install launch files
         (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
+    	 # Install config files (controllers YAML)
+        (os.path.join('share', package_name, 'config'), glob('config/*.yaml')),
     ],
     zip_safe=True,
     maintainer='pritismankar',

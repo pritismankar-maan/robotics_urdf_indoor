@@ -1,6 +1,7 @@
 package.xml
 setup.cfg
 setup.py
+config/diffbot_controllers.yaml
 launch/sim.launch.py
 my_simulation/__init__.py
 my_simulation.egg-info/PKG-INFO
