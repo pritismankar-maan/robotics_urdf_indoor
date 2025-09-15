@@ -1,0 +1,18 @@
+[1.843s] Invoking command in '/home/pritismankar/ros2_ws/build/my_odometry': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_odometry/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_odometry/build --no-deps symlink_data
+[2.182s] running develop
+[2.356s] running egg_info
+[2.357s] writing my_odometry.egg-info/PKG-INFO
+[2.358s] writing dependency_links to my_odometry.egg-info/dependency_links.txt
+[2.360s] writing entry points to my_odometry.egg-info/entry_points.txt
+[2.362s] writing top-level names to my_odometry.egg-info/top_level.txt
+[2.429s] reading manifest file 'my_odometry.egg-info/SOURCES.txt'
+[2.431s] writing manifest file 'my_odometry.egg-info/SOURCES.txt'
+[2.514s] running build_ext
+[2.515s] Creating /home/pritismankar/ros2_ws/install/my_odometry/lib/python3.8/site-packages/my-odometry.egg-link (link to .)
+[2.515s] Installing encoder_odom script to /home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry
+[2.515s] Installing imu_odom script to /home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry
+[2.516s] Installing move_robot script to /home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry
+[2.516s] 
+[2.528s] Installed /home/pritismankar/ros2_ws/build/my_odometry
+[2.528s] running symlink_data
+[2.873s] Invoked command in '/home/pritismankar/ros2_ws/build/my_odometry' returned '0': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_odometry/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_odometry/build --no-deps symlink_data

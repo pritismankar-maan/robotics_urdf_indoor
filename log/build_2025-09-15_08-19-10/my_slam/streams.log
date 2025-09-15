@@ -1,0 +1,22 @@
+[1.012s] Invoking command in '/home/pritismankar/ros2_ws/src/my_slam': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_slam build --build-base /home/pritismankar/ros2_ws/build/my_slam/build install --record /home/pritismankar/ros2_ws/build/my_slam/install.log --install-scripts $base/lib/my_slam --single-version-externally-managed install_data
+[1.216s] running egg_info
+[1.217s] writing ../../build/my_slam/my_slam.egg-info/PKG-INFO
+[1.217s] writing dependency_links to ../../build/my_slam/my_slam.egg-info/dependency_links.txt
+[1.218s] writing entry points to ../../build/my_slam/my_slam.egg-info/entry_points.txt
+[1.218s] writing requirements to ../../build/my_slam/my_slam.egg-info/requires.txt
+[1.218s] writing top-level names to ../../build/my_slam/my_slam.egg-info/top_level.txt
+[1.254s] reading manifest file '../../build/my_slam/my_slam.egg-info/SOURCES.txt'
+[1.255s] writing manifest file '../../build/my_slam/my_slam.egg-info/SOURCES.txt'
+[1.256s] running build
+[1.257s] running build_py
+[1.257s] running install
+[1.259s] running install_lib
+[1.261s] running install_data
+[1.262s] running install_egg_info
+[1.265s] removing '/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages/my_slam-0.0.0-py3.8.egg-info' (and everything under it)
+[1.265s] Copying ../../build/my_slam/my_slam.egg-info to /home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages/my_slam-0.0.0-py3.8.egg-info
+[1.267s] running install_scripts
+[1.283s] Installing map_builder script to /home/pritismankar/ros2_ws/install/my_slam/lib/my_slam
+[1.283s] Installing scan_matcher script to /home/pritismankar/ros2_ws/install/my_slam/lib/my_slam
+[1.284s] writing list of installed files to '/home/pritismankar/ros2_ws/build/my_slam/install.log'
+[1.309s] Invoked command in '/home/pritismankar/ros2_ws/src/my_slam' returned '0': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_slam build --build-base /home/pritismankar/ros2_ws/build/my_slam/build install --record /home/pritismankar/ros2_ws/build/my_slam/install.log --install-scripts $base/lib/my_slam --single-version-externally-managed install_data

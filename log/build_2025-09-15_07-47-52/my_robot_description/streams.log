@@ -1,0 +1,34 @@
+[2.065s] Invoking command in '/home/pritismankar/ros2_ws/build/my_robot_description': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_robot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/pritismankar/ros2_ws/build/my_robot_description/build
+[2.429s] running develop
+[2.626s] Removing /home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages/my-robot-description.egg-link (link to .)
+[2.699s] Invoked command in '/home/pritismankar/ros2_ws/build/my_robot_description' returned '0': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_robot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/pritismankar/ros2_ws/build/my_robot_description/build
+[2.707s] Invoking command in '/home/pritismankar/ros2_ws/src/my_robot_description': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_robot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_description build --build-base /home/pritismankar/ros2_ws/build/my_robot_description/build install --record /home/pritismankar/ros2_ws/build/my_robot_description/install.log --install-scripts $base/lib/my_robot_description --single-version-externally-managed install_data --force
+[3.424s] running egg_info
+[3.428s] writing ../../build/my_robot_description/my_robot_description.egg-info/PKG-INFO
+[3.430s] writing dependency_links to ../../build/my_robot_description/my_robot_description.egg-info/dependency_links.txt
+[3.432s] writing top-level names to ../../build/my_robot_description/my_robot_description.egg-info/top_level.txt
+[3.494s] reading manifest file '../../build/my_robot_description/my_robot_description.egg-info/SOURCES.txt'
+[3.495s] writing manifest file '../../build/my_robot_description/my_robot_description.egg-info/SOURCES.txt'
+[3.495s] running build
+[3.496s] running build_py
+[3.496s] creating /home/pritismankar/ros2_ws/build/my_robot_description/build
+[3.496s] creating /home/pritismankar/ros2_ws/build/my_robot_description/build/lib
+[3.496s] creating /home/pritismankar/ros2_ws/build/my_robot_description/build/lib/my_robot_description
+[3.497s] copying my_robot_description/__init__.py -> /home/pritismankar/ros2_ws/build/my_robot_description/build/lib/my_robot_description
+[3.497s] running install
+[3.500s] running install_lib
+[3.504s] creating /home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages/my_robot_description
+[3.504s] copying /home/pritismankar/ros2_ws/build/my_robot_description/build/lib/my_robot_description/__init__.py -> /home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages/my_robot_description
+[3.505s] byte-compiling /home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages/my_robot_description/__init__.py to __init__.cpython-38.pyc
+[3.506s] running install_data
+[3.507s] copying resource/my_robot_description -> /home/pritismankar/ros2_ws/install/my_robot_description/share/ament_index/resource_index/packages
+[3.508s] copying package.xml -> /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description
+[3.508s] copying urdf/robot.urdf.xacro -> /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/urdf
+[3.509s] copying urdf/materials.xacro -> /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/urdf
+[3.509s] copying launch/display.launch.py -> /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/launch
+[3.512s] copying rviz/config.rviz -> /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/rviz
+[3.512s] running install_egg_info
+[3.515s] Copying ../../build/my_robot_description/my_robot_description.egg-info to /home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages/my_robot_description-0.0.0-py3.8.egg-info
+[3.519s] running install_scripts
+[3.547s] writing list of installed files to '/home/pritismankar/ros2_ws/build/my_robot_description/install.log'
+[3.684s] Invoked command in '/home/pritismankar/ros2_ws/src/my_robot_description' returned '0': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_robot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_description build --build-base /home/pritismankar/ros2_ws/build/my_robot_description/build install --record /home/pritismankar/ros2_ws/build/my_robot_description/install.log --install-scripts $base/lib/my_robot_description --single-version-externally-managed install_data --force

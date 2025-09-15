@@ -73,9 +73,21 @@ def generate_launch_description():
                 Node(
                     package='controller_manager',
                     executable='spawner.py',
-                    arguments=['diff_drive_controller', '--controller-manager', '/my_diffbot/controller_manager'],
+                    arguments=["diff_cont"],
                     output='screen',
-                    parameters=[controller_yaml]
+                )
+            ]
+        ),
+        
+        # Delay spawner to ensure ros2_control_node is fully up
+        TimerAction(
+            period=8.0,  # Foxy is slow to initialize
+            actions=[
+                Node(
+                    package='controller_manager',
+                    executable='spawner.py',
+                    arguments=["joint_broad"],
+                    output='screen',
                 )
             ]
         ),
