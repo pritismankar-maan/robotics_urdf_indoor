@@ -1,0 +1,19 @@
+running develop
+running egg_info
+writing my_simulation.egg-info/PKG-INFO
+writing dependency_links to my_simulation.egg-info/dependency_links.txt
+writing entry points to my_simulation.egg-info/entry_points.txt
+writing top-level names to my_simulation.egg-info/top_level.txt
+reading manifest file 'my_simulation.egg-info/SOURCES.txt'
+writing manifest file 'my_simulation.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages/my-simulation.egg-link (link to .)
+
+Installed /home/pritismankar/ros2_ws/build/my_simulation
+running symlink_data
+creating /home/pritismankar/ros2_ws/install/my_simulation/src
+creating /home/pritismankar/ros2_ws/install/my_simulation/src/my_simulation
+creating /home/pritismankar/ros2_ws/install/my_simulation/src/my_simulation/worlds
+symbolically linking /home/pritismankar/ros2_ws/build/my_simulation/worlds/apartment.world -> /home/pritismankar/ros2_ws/install/my_simulation/src/my_simulation/worlds
+creating /home/pritismankar/ros2_ws/install/my_simulation/src/my_simulation/launch
+symbolically linking /home/pritismankar/ros2_ws/build/my_simulation/launch/sim.launch.py -> /home/pritismankar/ros2_ws/install/my_simulation/src/my_simulation/launch

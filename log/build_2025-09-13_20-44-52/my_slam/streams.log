@@ -1,0 +1,18 @@
+[0.567s] Invoking command in '/home/pritismankar/ros2_ws/build/my_slam': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_slam/build --no-deps symlink_data
+[0.722s] running develop
+[0.801s] running egg_info
+[0.801s] writing my_slam.egg-info/PKG-INFO
+[0.801s] writing dependency_links to my_slam.egg-info/dependency_links.txt
+[0.801s] writing entry points to my_slam.egg-info/entry_points.txt
+[0.801s] writing requirements to my_slam.egg-info/requires.txt
+[0.801s] writing top-level names to my_slam.egg-info/top_level.txt
+[0.820s] reading manifest file 'my_slam.egg-info/SOURCES.txt'
+[0.820s] writing manifest file 'my_slam.egg-info/SOURCES.txt'
+[0.841s] running build_ext
+[0.841s] Creating /home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages/my-slam.egg-link (link to .)
+[0.842s] Installing map_builder script to /home/pritismankar/ros2_ws/install/my_slam/lib/my_slam
+[0.842s] Installing scan_matcher script to /home/pritismankar/ros2_ws/install/my_slam/lib/my_slam
+[0.842s] 
+[0.842s] Installed /home/pritismankar/ros2_ws/build/my_slam
+[0.842s] running symlink_data
+[0.867s] Invoked command in '/home/pritismankar/ros2_ws/build/my_slam' returned '0': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_slam/build --no-deps symlink_data

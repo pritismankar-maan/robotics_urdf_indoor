@@ -11,6 +11,14 @@
   <material name="black"><color rgba="0 0 0 1"/></material>
   <material name="gray"><color rgba="0.5 0.5 0.5 1"/></material>
 
+  <!-- Dummy World Link to Suppress KDL Warning -->
+  <link name="world"/>
+  <joint name="world_to_base" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
   <!-- Base Link -->
   <link name="base_link">
     <visual>
@@ -26,7 +34,6 @@
         <box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
       </geometry>
     </collision>
-    <!-- Inertia calculated as I_xx = m/12 * (width^2 + height^2), etc. for realistic physics -->
     <inertial>
       <mass value="5.0"/>
       <inertia ixx="0.038" ixy="0" ixz="0" iyy="0.083" iyz="0" izz="0.094"/>
@@ -48,7 +55,6 @@
         <cylinder radius="${wheel_radius}" length="0.05"/>
       </geometry>
     </collision>
-    <!-- Simple inertia for wheel -->
     <inertial>
       <mass value="0.5"/>
       <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.0005"/>
@@ -61,7 +67,7 @@
     <axis xyz="0 1 0"/>
   </joint>
 
-  <!-- Right Wheel (symmetric) -->
+  <!-- Right Wheel -->
   <link name="right_wheel_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -76,7 +82,6 @@
         <cylinder radius="${wheel_radius}" length="0.05"/>
       </geometry>
     </collision>
-    <!-- Simple inertia for wheel -->
     <inertial>
       <mass value="0.5"/>
       <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.004" iyz="0" izz="0.0005"/>
@@ -104,16 +109,16 @@
         <sphere radius="0.025"/>
       </geometry>
     </collision>
-    <!-- Simple inertia for caster -->
     <inertial>
-      <mass value="0.2"/>
+      <mass value="0.5"/>
       <inertia ixx="0.0005" ixy="0" ixz="0" iyy="0.0005" iyz="0" izz="0.0005"/>
     </inertial>
   </link>
-  <joint name="caster_joint" type="fixed">
+  <joint name="caster_joint" type="continuous">
     <parent link="base_link"/>
     <child link="caster_wheel_link"/>
-    <origin xyz="${-chassis_length/2} 0 -${chassis_height/2}" rpy="0 0 0"/>
+    <origin xyz="${-chassis_length/2} 0 -${chassis_height}" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
   </joint>
 
   <!-- IMU Link -->
@@ -131,7 +136,6 @@
         <box size="0.05 0.05 0.05"/>
       </geometry>
     </collision>
-    <!-- Negligible inertia for IMU -->
     <inertial>
       <mass value="0.01"/>
       <inertia ixx="8.33e-6" ixy="0" ixz="0" iyy="8.33e-6" iyz="0" izz="8.33e-6"/>
@@ -140,7 +144,7 @@
   <joint name="imu_joint" type="fixed">
     <parent link="base_link"/>
     <child link="imu_link"/>
-    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    <origin xyz="0 0 ${chassis_height + 0.05}" rpy="0 0 0"/>
   </joint>
 
   <!-- LiDAR Link -->
@@ -158,7 +162,6 @@
         <cylinder radius="0.02" length="0.05"/>
       </geometry>
     </collision>
-    <!-- Simple inertia for LiDAR -->
     <inertial>
       <mass value="0.1"/>
       <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.00005"/>
@@ -167,7 +170,7 @@
   <joint name="lidar_joint" type="fixed">
     <parent link="base_link"/>
     <child link="lidar_link"/>
-    <origin xyz="0 0 0.2" rpy="0 0 0"/>
+    <origin xyz="0 0 ${chassis_height + 0.2}" rpy="0 0 0"/>
   </joint>
 
   <!-- Gazebo Plugins -->
@@ -177,16 +180,50 @@
     </plugin>
   </gazebo>
 
+  <!--
   <gazebo reference="base_link">
     <plugin filename="libgazebo_ros_diff_drive.so" name="diff_drive">
       <ros><namespace>/</namespace></ros>
-      <left_joint>left_wheel_joint</left_joint><right_joint>right_wheel_joint</right_joint>
-      <wheel_separation>${wheel_separation}</wheel_separation><wheel_diameter>${2 * wheel_radius}</wheel_diameter>
-      <max_wheel_torque>20</max_wheel_torque><max_wheel_acceleration>10</max_wheel_acceleration>
-      <publish_odom>true</publish_odom><odometry_topic>/gazebo_odom</odometry_topic>
-      <publish_wheel_tf>true</publish_wheel_tf><publish_wheel_joint_state>true</publish_wheel_joint_state>
+      <left_joint>left_wheel_joint</left_joint>
+      <right_joint>right_wheel_joint</right_joint>
+      <wheel_separation>${wheel_separation}</wheel_separation>
+      <wheel_diameter>${2 * wheel_radius}</wheel_diameter>
+      <max_wheel_torque>20</max_wheel_torque>
+      <max_wheel_acceleration>10</max_wheel_acceleration>
+      <publish_odom>true</publish_odom>
+      <odometry_topic>/gazebo_odom</odometry_topic>
+      <command_topic>/cmd_vel</command_topic>
+      <publish_wheel_tf>true</publish_wheel_tf>
+      <publish_wheel_joint_state>true</publish_wheel_joint_state>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_link</robot_base_frame>
     </plugin>
   </gazebo>
+  -->
+  <gazebo>
+  <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+    <ros>
+      <namespace>/</namespace>
+    </ros>
+
+    <left_joint>left_wheel_joint</left_joint>
+    <right_joint>right_wheel_joint</right_joint>
+    <wheel_separation>${wheel_separation}</wheel_separation>
+    <wheel_diameter>${2 * wheel_radius}</wheel_diameter>
+
+    <max_wheel_torque>20</max_wheel_torque>
+    <max_wheel_acceleration>10</max_wheel_acceleration>
+
+    <publish_odom>true</publish_odom>
+    <publish_odom_tf>true</publish_odom_tf>
+    <odometry_topic>gazebo_odom</odometry_topic>
+    <command_topic>cmd_vel</command_topic>
+    <publish_wheel_tf>true</publish_wheel_tf>
+    <publish_wheel_joint_state>true</publish_wheel_joint_state>
+    <odometry_frame>odom</odometry_frame>
+    <robot_base_frame>base_link</robot_base_frame>
+  </plugin>
+</gazebo>
 
   <gazebo reference="imu_link">
     <sensor name="imu_sensor" type="imu">
@@ -195,14 +232,11 @@
       <visualize>true</visualize>
       <topic>/imu/data</topic>
       <plugin filename="libgazebo_ros_imu.so" name="imu_plugin">
-        <ros>
-          <namespace>/</namespace>
-          <remapping>~/out:=imu/data</remapping>
-        </ros>
+        <ros><namespace>/</namespace><remapping>~/out:=imu/data</remapping></ros>
         <gaussianNoise>0.0002</gaussianNoise>
         <orientation_covariance>0.0001 0 0 0 0.0001 0 0 0 0.0001</orientation_covariance>
-        <angular_velocity_covariance>0.0001 0 0 0 0.0001 0 0 0 0.0001</angular_velocity_covariance>
-        <linear_acceleration_covariance>0.0001 0 0 0 0.0001 0 0 0 0.0001</linear_acceleration_covariance>
+        <angular_velocity_covariance>0.0001 0 0 0 0 0.0001 0 0 0 0.0001</angular_velocity_covariance>
+        <linear_acceleration_covariance>0.0001 0 0 0 0 0.0001 0 0 0 0.0001</linear_acceleration_covariance>
       </plugin>
     </sensor>
   </gazebo>
@@ -229,10 +263,8 @@
         </range>
       </ray>
       <plugin filename="libgazebo_ros_ray_sensor.so" name="lidar_plugin">
-        <ros>
-          <namespace>/</namespace>
-          <remapping>~/out:=scan</remapping>
-        </ros>
+        <ros><namespace>/</namespace><remapping>~/out:=scan</remapping></ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
         <gaussianNoise>0.0001</gaussianNoise>
         <update_rate>10</update_rate>
       </plugin>

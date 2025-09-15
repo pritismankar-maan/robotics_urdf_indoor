@@ -1,0 +1,15 @@
+[1.645s] Invoking command in '/home/pritismankar/ros2_ws/build/my_simulation': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_simulation/build --no-deps symlink_data
+[1.819s] running develop
+[1.920s] running egg_info
+[1.922s] writing my_simulation.egg-info/PKG-INFO
+[1.923s] writing dependency_links to my_simulation.egg-info/dependency_links.txt
+[1.924s] writing entry points to my_simulation.egg-info/entry_points.txt
+[1.925s] writing top-level names to my_simulation.egg-info/top_level.txt
+[1.961s] reading manifest file 'my_simulation.egg-info/SOURCES.txt'
+[1.965s] writing manifest file 'my_simulation.egg-info/SOURCES.txt'
+[2.005s] running build_ext
+[2.008s] Creating /home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages/my-simulation.egg-link (link to .)
+[2.010s] 
+[2.010s] Installed /home/pritismankar/ros2_ws/build/my_simulation
+[2.010s] running symlink_data
+[2.052s] Invoked command in '/home/pritismankar/ros2_ws/build/my_simulation' returned '0': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_simulation/build --no-deps symlink_data

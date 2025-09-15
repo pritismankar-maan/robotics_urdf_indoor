@@ -22,8 +22,8 @@ def generate_launch_description():
         Node(package='gazebo_ros', executable='spawn_entity.py', arguments=['-entity', 'my_diffbot', '-topic', 'robot_description'],
              output='screen', parameters=[robot_description]),
         # Pub TF/State
-        Node(package='robot_state_publisher', executable='robot_state_publisher', output='screen', parameters=[robot_description]),
-        Node(package='joint_state_publisher', executable='joint_state_publisher', output='screen'),
+        Node(package='robot_state_publisher', executable='robot_state_publisher', output='screen', parameters=[robot_description, {'use_sim_time': True}]),
+        Node(package='joint_state_publisher', executable='joint_state_publisher', output='screen', parameters=[{'use_sim_time': True}]),
         # RViz
         Node(package='rviz2', executable='rviz2', output='screen', arguments=['-d', os.path.join(pkg_urdf, 'rviz', 'config.rviz')]),
     ])

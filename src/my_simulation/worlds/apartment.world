@@ -1,16 +1,327 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
   <world name="apartment">
-    <include><uri>model://sun</uri></include>
-    <include><uri>model://ground_plane</uri></include>
-    <!-- Outer Walls -->
-    <model name="wall_north"><pose>0 2.5 0.5 0 0 0</pose><link name="link"><collision><geometry><box size="5 0.1 1"/></geometry></collision><visual><geometry><box size="5 0.1 1"/></geometry><material><ambient>0.8 0.8 0.8 1</ambient></material></visual></link></model>
-    <model name="wall_south"><pose>0 -2.5 0.5 0 0 0</pose><link name="link"><collision><geometry><box size="5 0.1 1"/></geometry></collision><visual><geometry><box size="5 0.1 1"/></geometry><material><ambient>0.8 0.8 0.8 1</ambient></material></visual></link></model>
-    <model name="wall_east"><pose>2.5 0 0.5 0 0 1.5708</pose><link name="link"><collision><geometry><box size="5 0.1 1"/></geometry></collision><visual><geometry><box size="5 0.1 1"/></geometry><material><ambient>0.8 0.8 0.8 1</ambient></material></visual></link></model>
-    <model name="wall_west"><pose>-2.5 0 0.5 0 0 1.5708</pose><link name="link"><collision><geometry><box size="5 0.1 1"/></geometry></collision><visual><geometry><box size="5 0.1 1"/></geometry><material><ambient>0.8 0.8 0.8 1</ambient></material></visual></link></model>
-    <!-- Furniture -->
-    <model name="sofa"><pose>1 1 0.3 0 0 0</pose><link name="link"><collision><geometry><box size="1 2 0.6"/></geometry></collision><visual><geometry><box size="1 2 0.6"/></geometry><material><ambient>0.7 0.3 0.3 1</ambient></material></visual></link></model>
-    <model name="table"><pose>-1 0 0.4 0 0 0</pose><link name="link"><collision><geometry><box size="0.8 0.8 0.8"/></geometry></collision><visual><geometry><box size="0.8 0.8 0.8"/></geometry><material><ambient>0.3 0.7 0.3 1</ambient></material></visual></link></model>
-    <model name="box"><pose>0 -1.5 0.25 0 0 0</pose><link name="link"><collision><geometry><box size="0.5 0.5 0.5"/></geometry></collision><visual><geometry><box size="0.5 0.5 0.5"/></geometry><material><ambient>0.3 0.3 0.7 1</ambient></material></visual></link></model>
+    <!-- Physics Engine -->
+    <physics name="default_physics" default="true" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <!-- Scene and Lighting -->
+    <scene>
+      <ambient>0.4 0.4 0.4 1.0</ambient>
+      <background>0.7 0.7 0.7 1.0</background>
+      <shadows>true</shadows>
+      <grid>true</grid>
+      <origin_visual>true</origin_visual>
+    </scene>
+
+    <!-- Light Source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Ground Plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+    <!-- North Wall (horizontal, full 7m, 0.2m thick) -->
+    <model name="wall_north">
+      <static>true</static>
+      <pose>0 3.5 0.5 0 0 0</pose>
+      <link name="link">
+        <inertial>
+          <mass>14.0</mass>
+          <inertia>
+            <ixx>1.4</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>1.4</iyy>
+            <iyz>0.0</iyz>
+            <izz>1.4</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>7 0.2 1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>7 0.2 1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- South Wall (horizontal, 6m with 1m door gap on left) -->
+    <model name="wall_south">
+      <static>true</static>
+      <pose>-0.5 -3.5 0.5 0 0 0</pose>
+      <link name="link">
+        <inertial>
+          <mass>16.8</mass>
+          <inertia>
+            <ixx>1.68</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>1.68</iyy>
+            <iyz>0.0</iyz>
+            <izz>1.68</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>6 0.2 1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>6 0.2 1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- East Wall (horizontal, 0.2m thick, 7m long) -->
+    <model name="wall_east">
+      <static>true</static>
+      <pose>3.5 0 0.5 0 0 0</pose>
+      <link name="link">
+        <inertial>
+          <mass>14.0</mass>
+          <inertia>
+            <ixx>1.4</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>1.4</iyy>
+            <iyz>0.0</iyz>
+            <izz>1.4</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 7 1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 7 1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- West Wall (horizontal, 0.2m thick, 7m long) -->
+    <model name="wall_west">
+      <static>true</static>
+      <pose>-3.5 0 0.5 0 0 0</pose>
+      <link name="link">
+        <inertial>
+          <mass>14.0</mass>
+          <inertia>
+            <ixx>1.4</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>1.4</iyy>
+            <iyz>0.0</iyz>
+            <izz>1.4</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 7 1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 7 1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Sofa (Red, reduced size) -->
+    <model name="sofa">
+      <static>true</static>
+      <pose>2 3 0.3 0 0 0</pose>
+      <link name="link">
+        <inertial>
+          <mass>16.0</mass>
+          <inertia>
+            <ixx>1.6</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>1.6</iyy>
+            <iyz>0.0</iyz>
+            <izz>1.6</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.8 1.5 0.6</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.8 1.5 0.6</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.7 0.3 0.3 1</ambient>
+            <diffuse>0.7 0.3 0.3 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Table (Green, reduced size) -->
+    <model name="table">
+      <static>true</static>
+      <pose>-2 0 0.4 0 0 0</pose>
+      <link name="link">
+        <inertial>
+          <mass>12.0</mass>
+          <inertia>
+            <ixx>1.2</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>1.2</iyy>
+            <iyz>0.0</iyz>
+            <izz>1.2</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.6 0.6 0.6</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.6 0.6 0.6</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.3 0.7 0.3 1</ambient>
+            <diffuse>0.3 0.7 0.3 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Chair (Yellow) -->
+    <model name="chair">
+      <static>true</static>
+      <pose>0.5 1 0.4 0 0 0</pose>
+      <link name="link">
+        <inertial>
+          <mass>5.0</mass>
+          <inertia>
+            <ixx>0.5</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.5</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.5</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.8</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.7 0.7 0.0 1</ambient>
+            <diffuse>0.7 0.7 0.0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Box (Blue) -->
+    <model name="box">
+      <static>true</static>
+      <pose>1.5 -1.5 0.25 0 0 0</pose>
+      <link name="link">
+        <inertial>
+          <mass>5.0</mass>
+          <inertia>
+            <ixx>0.5</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.5</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.5</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.3 0.3 0.7 1</ambient>
+            <diffuse>0.3 0.3 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
   </world>
 </sdf>

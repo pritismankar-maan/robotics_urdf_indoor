@@ -1,0 +1,16 @@
+[1.433s] Invoking command in '/home/pritismankar/ros2_ws/build/my_fusion': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_fusion/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_fusion/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_fusion/build --no-deps symlink_data
+[1.670s] running develop
+[1.757s] running egg_info
+[1.758s] writing my_fusion.egg-info/PKG-INFO
+[1.758s] writing dependency_links to my_fusion.egg-info/dependency_links.txt
+[1.758s] writing entry points to my_fusion.egg-info/entry_points.txt
+[1.758s] writing top-level names to my_fusion.egg-info/top_level.txt
+[1.795s] reading manifest file 'my_fusion.egg-info/SOURCES.txt'
+[1.796s] writing manifest file 'my_fusion.egg-info/SOURCES.txt'
+[1.821s] running build_ext
+[1.821s] Creating /home/pritismankar/ros2_ws/install/my_fusion/lib/python3.8/site-packages/my-fusion.egg-link (link to .)
+[1.822s] Installing ekf_fusion script to /home/pritismankar/ros2_ws/install/my_fusion/lib/my_fusion
+[1.822s] 
+[1.822s] Installed /home/pritismankar/ros2_ws/build/my_fusion
+[1.822s] running symlink_data
+[1.849s] Invoked command in '/home/pritismankar/ros2_ws/build/my_fusion' returned '0': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_fusion/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_fusion/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_fusion/build --no-deps symlink_data
