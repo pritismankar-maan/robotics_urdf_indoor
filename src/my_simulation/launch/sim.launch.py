@@ -57,14 +57,6 @@ def generate_launch_description():
             parameters=[{'use_sim_time': True}]
         ),
 
-        # Ros2 Control Node
-        Node(
-            package="controller_manager",
-            executable="ros2_control_node",
-            namespace='my_diffbot',
-            parameters=[robot_description],
-            output="screen"
-        ),
 
         # Delay spawner to ensure ros2_control_node is fully up
         TimerAction(

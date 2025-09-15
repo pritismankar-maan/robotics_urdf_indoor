@@ -1,0 +1,17 @@
+[1.668s] Invoking command in '/home/pritismankar/ros2_ws/build/my_simulation': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_simulation/build --no-deps symlink_data
+[1.934s] running develop
+[1.987s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:368: UserWarning: Unbuilt egg for my-odometry [unknown version] (/home/pritismankar/ros2_ws/build/my_odometry)
+[1.987s]   self.local_index = Environment(self.shadow_path + sys.path)
+[2.077s] running egg_info
+[2.079s] writing my_simulation.egg-info/PKG-INFO
+[2.079s] writing dependency_links to my_simulation.egg-info/dependency_links.txt
+[2.081s] writing entry points to my_simulation.egg-info/entry_points.txt
+[2.081s] writing top-level names to my_simulation.egg-info/top_level.txt
+[2.153s] reading manifest file 'my_simulation.egg-info/SOURCES.txt'
+[2.153s] writing manifest file 'my_simulation.egg-info/SOURCES.txt'
+[2.158s] running build_ext
+[2.158s] Creating /home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages/my-simulation.egg-link (link to .)
+[2.158s] 
+[2.158s] Installed /home/pritismankar/ros2_ws/build/my_simulation
+[2.158s] running symlink_data
+[2.513s] Invoked command in '/home/pritismankar/ros2_ws/build/my_simulation' returned '0': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_simulation/build --no-deps symlink_data

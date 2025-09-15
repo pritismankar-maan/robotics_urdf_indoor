@@ -11,14 +11,6 @@
   <material name="black"><color rgba="0 0 0 1"/></material>
   <material name="gray"><color rgba="0.5 0.5 0.5 1"/></material>
 
-  <!-- Dummy World Link to Suppress KDL Warning -->
-  <link name="world"/>
-  <joint name="world_to_base" type="fixed">
-    <parent link="world"/>
-    <child link="base_link"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-  </joint>
-
   <!-- Base Link -->
   <link name="base_link">
     <visual>
