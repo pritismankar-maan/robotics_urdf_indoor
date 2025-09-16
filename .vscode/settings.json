@@ -1,0 +1,29 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/pritismankar/ros2_ws/build/my_slam",
+        "/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages",
+        "/home/pritismankar/ros2_ws/build/my_simulation",
+        "/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages",
+        "/home/pritismankar/ros2_ws/build/my_robot_description",
+        "/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages",
+        "/home/pritismankar/ros2_ws/install/my_odometry/lib/python3.8/site-packages",
+        "/home/pritismankar/ros2_ws/build/my_fusion",
+        "/home/pritismankar/ros2_ws/install/my_fusion/lib/python3.8/site-packages",
+        "/opt/ros/foxy/lib/python3.8/site-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/pritismankar/ros2_ws/build/my_slam",
+        "/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages",
+        "/home/pritismankar/ros2_ws/build/my_simulation",
+        "/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages",
+        "/home/pritismankar/ros2_ws/build/my_robot_description",
+        "/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages",
+        "/home/pritismankar/ros2_ws/install/my_odometry/lib/python3.8/site-packages",
+        "/home/pritismankar/ros2_ws/build/my_fusion",
+        "/home/pritismankar/ros2_ws/install/my_fusion/lib/python3.8/site-packages",
+        "/opt/ros/foxy/lib/python3.8/site-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "cmake.sourceDirectory": "/home/pritismankar/ros2_ws/src/my_odometry"
+}
