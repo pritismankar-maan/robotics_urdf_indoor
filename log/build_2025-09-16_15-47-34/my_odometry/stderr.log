@@ -1,0 +1,17 @@
+[01m[K/home/pritismankar/ros2_ws/src/my_odometry/scripts/odom_node.cpp:[m[K In member function ‘[01m[Kvoid OdomNode::jointCallback(sensor_msgs::msg::JointState_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/pritismankar/ros2_ws/src/my_odometry/scripts/odom_node.cpp:79:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kyaw_[m[K’ was not declared in this scope
+   79 |     [01;31m[Kyaw_[m[K += d_theta;
+      |     [01;31m[K^~~~[m[K
+[01m[K/home/pritismankar/ros2_ws/src/my_odometry/scripts/odom_node.cpp:80:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_[m[K’ was not declared in this scope
+   80 |     [01;31m[Kx_[m[K += d_center * std::cos(yaw_);
+      |     [01;31m[K^~[m[K
+[01m[K/home/pritismankar/ros2_ws/src/my_odometry/scripts/odom_node.cpp:81:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ky_[m[K’ was not declared in this scope; did you mean ‘[01m[Kyn[m[K’?
+   81 |     [01;31m[Ky_[m[K += d_center * std::sin(yaw_);
+      |     [01;31m[K^~[m[K
+      |     [32m[Kyn[m[K
+[01m[K/home/pritismankar/ros2_ws/src/my_odometry/scripts/odom_node.cpp:84:5:[m[K [01;31m[Kerror: [m[K‘[01m[KpublishTrajectory[m[K’ was not declared in this scope
+   84 |     [01;31m[KpublishTrajectory[m[K(now);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/odom_node.dir/build.make:63: CMakeFiles/odom_node.dir/scripts/odom_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/odom_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

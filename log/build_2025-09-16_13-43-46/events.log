@@ -1,0 +1,218 @@
+[0.000000] (-) TimerEvent: {}
+[0.005621] (-) JobUnselected: {'identifier': 'my_fusion'}
+[0.005758] (-) JobUnselected: {'identifier': 'my_robot_description'}
+[0.005779] (-) JobUnselected: {'identifier': 'my_simulation'}
+[0.005792] (-) JobUnselected: {'identifier': 'my_slam'}
+[0.005809] (my_odometry) JobQueued: {'identifier': 'my_odometry', 'dependencies': OrderedDict()}
+[0.005827] (my_odometry) JobStarted: {'identifier': 'my_odometry'}
+[0.030619] (my_odometry) JobProgress: {'identifier': 'my_odometry', 'progress': 'cmake'}
+[0.043637] (my_odometry) JobProgress: {'identifier': 'my_odometry', 'progress': 'build'}
+[0.044262] (my_odometry) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pritismankar/ros2_ws/build/my_odometry', '--', '-j4', '-l4'], 'cwd': '/home/pritismankar/ros2_ws/build/my_odometry', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pritismankar'), ('SSH_AGENT_PID', '1424'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/pritismankar/catkin_ws/devel/lib:/opt/ros/noetic/lib'), ('HOME', '/home/pritismankar'), ('OLDPWD', '/home/pritismankar'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1175'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/pritismankar/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'pritismankar'), ('JOURNAL_STREAM', '8:31659'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/pritismankar/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'pritismankar'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/opt/ros/noetic/bin:/home/pritismankar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu-ros:@/tmp/.ICE-unix/1681,unix/ubuntu-ros:/tmp/.ICE-unix/1681'), ('INVOCATION_ID', 'fdfce832ea684e0f909920d8d7e97642'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e721e0b7_f1c4_4200_a33e_1d19cb4631c2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.71'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/pritismankar/ros2_ws/build/my_odometry'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/foxy/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pritismankar/ros2_ws/build/my_slam:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_simulation:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_robot_description:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/install/my_odometry/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_fusion:/home/pritismankar/ros2_ws/install/my_fusion/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/home/pritismankar/ros2_ws/install/my_fusion:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic')]), 'shell': False}
+[0.100140] (-) TimerEvent: {}
+[0.193125] (my_odometry) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target odom_node\x1b[0m\n'}
+[0.201281] (-) TimerEvent: {}
+[0.273388] (my_odometry) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/odom_node.dir/scripts/odom_node.cpp.o\x1b[0m\n'}
+[0.302170] (-) TimerEvent: {}
+[0.455030] (-) TimerEvent: {}
+[0.556190] (-) TimerEvent: {}
+[0.659614] (-) TimerEvent: {}
+[0.762367] (-) TimerEvent: {}
+[0.866015] (-) TimerEvent: {}
+[0.969061] (-) TimerEvent: {}
+[1.076593] (-) TimerEvent: {}
+[1.199420] (-) TimerEvent: {}
+[1.302664] (-) TimerEvent: {}
+[1.404248] (-) TimerEvent: {}
+[1.521049] (-) TimerEvent: {}
+[1.650834] (-) TimerEvent: {}
+[1.752317] (-) TimerEvent: {}
+[1.857095] (-) TimerEvent: {}
+[1.959012] (-) TimerEvent: {}
+[2.060697] (-) TimerEvent: {}
+[2.162890] (-) TimerEvent: {}
+[2.267688] (-) TimerEvent: {}
+[2.368982] (-) TimerEvent: {}
+[2.474809] (-) TimerEvent: {}
+[2.577823] (-) TimerEvent: {}
+[2.681116] (-) TimerEvent: {}
+[2.786666] (-) TimerEvent: {}
+[2.891996] (-) TimerEvent: {}
+[2.996370] (-) TimerEvent: {}
+[3.101486] (-) TimerEvent: {}
+[3.202823] (-) TimerEvent: {}
+[3.304768] (-) TimerEvent: {}
+[3.406783] (-) TimerEvent: {}
+[3.511804] (-) TimerEvent: {}
+[3.616501] (-) TimerEvent: {}
+[3.725158] (-) TimerEvent: {}
+[3.828125] (-) TimerEvent: {}
+[3.931790] (-) TimerEvent: {}
+[4.071503] (-) TimerEvent: {}
+[4.175041] (-) TimerEvent: {}
+[4.285001] (-) TimerEvent: {}
+[4.388722] (-) TimerEvent: {}
+[4.491016] (-) TimerEvent: {}
+[4.592797] (-) TimerEvent: {}
+[4.694791] (-) TimerEvent: {}
+[4.796616] (-) TimerEvent: {}
+[4.901817] (-) TimerEvent: {}
+[5.004577] (-) TimerEvent: {}
+[5.110058] (-) TimerEvent: {}
+[5.214007] (-) TimerEvent: {}
+[5.331111] (-) TimerEvent: {}
+[5.441189] (-) TimerEvent: {}
+[5.544267] (-) TimerEvent: {}
+[5.648961] (-) TimerEvent: {}
+[5.752633] (-) TimerEvent: {}
+[5.855116] (-) TimerEvent: {}
+[5.958280] (-) TimerEvent: {}
+[6.064411] (-) TimerEvent: {}
+[6.171743] (-) TimerEvent: {}
+[6.274975] (-) TimerEvent: {}
+[6.380548] (-) TimerEvent: {}
+[6.485713] (-) TimerEvent: {}
+[6.587609] (-) TimerEvent: {}
+[6.688931] (-) TimerEvent: {}
+[6.793140] (-) TimerEvent: {}
+[6.901779] (-) TimerEvent: {}
+[7.005283] (-) TimerEvent: {}
+[7.108776] (-) TimerEvent: {}
+[7.216449] (-) TimerEvent: {}
+[7.325972] (-) TimerEvent: {}
+[7.431447] (-) TimerEvent: {}
+[7.534220] (-) TimerEvent: {}
+[7.636387] (-) TimerEvent: {}
+[7.740100] (-) TimerEvent: {}
+[7.843542] (-) TimerEvent: {}
+[7.948110] (-) TimerEvent: {}
+[8.054063] (-) TimerEvent: {}
+[8.157651] (-) TimerEvent: {}
+[8.259230] (-) TimerEvent: {}
+[8.362275] (-) TimerEvent: {}
+[8.470445] (-) TimerEvent: {}
+[8.575688] (-) TimerEvent: {}
+[8.687753] (-) TimerEvent: {}
+[8.801735] (-) TimerEvent: {}
+[8.905910] (-) TimerEvent: {}
+[9.048752] (-) TimerEvent: {}
+[9.166275] (-) TimerEvent: {}
+[9.281473] (-) TimerEvent: {}
+[9.395141] (-) TimerEvent: {}
+[9.498542] (-) TimerEvent: {}
+[9.602088] (-) TimerEvent: {}
+[9.732932] (-) TimerEvent: {}
+[9.839692] (-) TimerEvent: {}
+[9.943335] (-) TimerEvent: {}
+[10.047265] (-) TimerEvent: {}
+[10.152140] (-) TimerEvent: {}
+[10.255324] (-) TimerEvent: {}
+[10.358767] (-) TimerEvent: {}
+[10.465673] (-) TimerEvent: {}
+[10.567338] (-) TimerEvent: {}
+[10.675594] (-) TimerEvent: {}
+[10.778838] (-) TimerEvent: {}
+[10.881834] (-) TimerEvent: {}
+[10.985382] (-) TimerEvent: {}
+[11.125851] (-) TimerEvent: {}
+[11.230903] (-) TimerEvent: {}
+[11.333763] (-) TimerEvent: {}
+[11.441062] (-) TimerEvent: {}
+[11.543152] (-) TimerEvent: {}
+[11.647802] (-) TimerEvent: {}
+[11.749822] (-) TimerEvent: {}
+[11.865613] (-) TimerEvent: {}
+[11.967588] (-) TimerEvent: {}
+[12.077910] (-) TimerEvent: {}
+[12.181675] (-) TimerEvent: {}
+[12.283093] (-) TimerEvent: {}
+[12.386262] (-) TimerEvent: {}
+[12.488326] (-) TimerEvent: {}
+[12.590622] (-) TimerEvent: {}
+[12.692302] (-) TimerEvent: {}
+[12.794752] (-) TimerEvent: {}
+[12.903185] (-) TimerEvent: {}
+[13.012407] (-) TimerEvent: {}
+[13.115138] (-) TimerEvent: {}
+[13.216549] (-) TimerEvent: {}
+[13.320772] (-) TimerEvent: {}
+[13.422913] (-) TimerEvent: {}
+[13.525110] (-) TimerEvent: {}
+[13.632641] (-) TimerEvent: {}
+[13.748923] (-) TimerEvent: {}
+[13.853864] (-) TimerEvent: {}
+[13.962060] (-) TimerEvent: {}
+[14.096772] (-) TimerEvent: {}
+[14.199475] (-) TimerEvent: {}
+[14.303015] (-) TimerEvent: {}
+[14.405781] (-) TimerEvent: {}
+[14.510818] (-) TimerEvent: {}
+[14.613945] (-) TimerEvent: {}
+[14.716152] (-) TimerEvent: {}
+[14.818000] (-) TimerEvent: {}
+[14.955704] (-) TimerEvent: {}
+[15.062452] (-) TimerEvent: {}
+[15.179573] (-) TimerEvent: {}
+[15.283596] (-) TimerEvent: {}
+[15.387174] (-) TimerEvent: {}
+[15.490145] (-) TimerEvent: {}
+[15.594503] (-) TimerEvent: {}
+[15.701939] (-) TimerEvent: {}
+[15.804218] (-) TimerEvent: {}
+[15.906516] (-) TimerEvent: {}
+[16.008979] (-) TimerEvent: {}
+[16.115815] (-) TimerEvent: {}
+[16.222966] (-) TimerEvent: {}
+[16.326641] (-) TimerEvent: {}
+[16.429923] (-) TimerEvent: {}
+[16.536909] (-) TimerEvent: {}
+[16.639822] (-) TimerEvent: {}
+[16.741770] (-) TimerEvent: {}
+[16.844149] (-) TimerEvent: {}
+[16.947956] (-) TimerEvent: {}
+[17.050995] (-) TimerEvent: {}
+[17.152905] (-) TimerEvent: {}
+[18.413152] (-) TimerEvent: {}
+[18.528716] (-) TimerEvent: {}
+[18.659126] (-) TimerEvent: {}
+[18.760512] (-) TimerEvent: {}
+[18.787254] (my_odometry) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable odom_node\x1b[0m\n'}
+[18.861161] (-) TimerEvent: {}
+[18.962788] (-) TimerEvent: {}
+[19.068715] (-) TimerEvent: {}
+[19.170843] (-) TimerEvent: {}
+[19.272470] (-) TimerEvent: {}
+[19.375932] (-) TimerEvent: {}
+[19.480243] (-) TimerEvent: {}
+[19.582363] (-) TimerEvent: {}
+[19.685640] (-) TimerEvent: {}
+[19.787790] (-) TimerEvent: {}
+[19.888819] (-) TimerEvent: {}
+[19.999241] (-) TimerEvent: {}
+[20.078681] (my_odometry) StdoutLine: {'line': b'[100%] Built target odom_node\n'}
+[20.099823] (-) TimerEvent: {}
+[20.115769] (my_odometry) CommandEnded: {'returncode': 0}
+[20.118443] (my_odometry) JobProgress: {'identifier': 'my_odometry', 'progress': 'install'}
+[20.155168] (my_odometry) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/pritismankar/ros2_ws/build/my_odometry'], 'cwd': '/home/pritismankar/ros2_ws/build/my_odometry', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pritismankar'), ('SSH_AGENT_PID', '1424'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/pritismankar/catkin_ws/devel/lib:/opt/ros/noetic/lib'), ('HOME', '/home/pritismankar'), ('OLDPWD', '/home/pritismankar'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1175'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/pritismankar/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'pritismankar'), ('JOURNAL_STREAM', '8:31659'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/pritismankar/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'pritismankar'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/opt/ros/noetic/bin:/home/pritismankar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu-ros:@/tmp/.ICE-unix/1681,unix/ubuntu-ros:/tmp/.ICE-unix/1681'), ('INVOCATION_ID', 'fdfce832ea684e0f909920d8d7e97642'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e721e0b7_f1c4_4200_a33e_1d19cb4631c2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.71'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/pritismankar/ros2_ws/build/my_odometry'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/foxy/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pritismankar/ros2_ws/build/my_slam:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_simulation:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_robot_description:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/install/my_odometry/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_fusion:/home/pritismankar/ros2_ws/install/my_fusion/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/home/pritismankar/ros2_ws/install/my_fusion:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic')]), 'shell': False}
+[20.170575] (my_odometry) StdoutLine: {'line': b'-- Install configuration: "Debug"\n'}
+[20.172483] (my_odometry) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[20.173828] (my_odometry) StdoutLine: {'line': b'-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry/odom_node\n'}
+[20.175187] (my_odometry) StdoutLine: {'line': b'-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/package_run_dependencies/my_odometry\n'}
+[20.176787] (my_odometry) StdoutLine: {'line': b'-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/parent_prefix_path/my_odometry\n'}
+[20.179292] (my_odometry) StdoutLine: {'line': b'-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/ament_prefix_path.sh\n'}
+[20.181445] (my_odometry) StdoutLine: {'line': b'-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/ament_prefix_path.dsv\n'}
+[20.182310] (my_odometry) StdoutLine: {'line': b'-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/path.sh\n'}
+[20.183938] (my_odometry) StdoutLine: {'line': b'-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/path.dsv\n'}
+[20.184369] (my_odometry) StdoutLine: {'line': b'-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.bash\n'}
+[20.184790] (my_odometry) StdoutLine: {'line': b'-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.sh\n'}
+[20.185542] (my_odometry) StdoutLine: {'line': b'-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.zsh\n'}
+[20.186059] (my_odometry) StdoutLine: {'line': b'-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.dsv\n'}
+[20.186731] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/package.dsv\n'}
+[20.200539] (-) TimerEvent: {}
+[20.207803] (my_odometry) StdoutLine: {'line': b'-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/packages/my_odometry\n'}
+[20.208417] (my_odometry) StdoutLine: {'line': b'-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/cmake/my_odometryConfig.cmake\n'}
+[20.208642] (my_odometry) StdoutLine: {'line': b'-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/cmake/my_odometryConfig-version.cmake\n'}
+[20.208787] (my_odometry) StdoutLine: {'line': b'-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/package.xml\n'}
+[20.221084] (my_odometry) CommandEnded: {'returncode': 0}
+[20.303161] (-) TimerEvent: {}
+[20.307996] (my_odometry) JobEnded: {'identifier': 'my_odometry', 'rc': 0}
+[20.309260] (-) EventReactorShutdown: {}
