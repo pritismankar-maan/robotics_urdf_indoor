@@ -1,0 +1,567 @@
+[0.000000] (-) TimerEvent: {}
+[0.002608] (matplotlib_cpp) JobQueued: {'identifier': 'matplotlib_cpp', 'dependencies': OrderedDict()}
+[0.004034] (my_fusion) JobQueued: {'identifier': 'my_fusion', 'dependencies': OrderedDict()}
+[0.004222] (my_odometry) JobQueued: {'identifier': 'my_odometry', 'dependencies': OrderedDict()}
+[0.004324] (my_robot_description) JobQueued: {'identifier': 'my_robot_description', 'dependencies': OrderedDict()}
+[0.004419] (my_simulation) JobQueued: {'identifier': 'my_simulation', 'dependencies': OrderedDict()}
+[0.004513] (my_slam) JobQueued: {'identifier': 'my_slam', 'dependencies': OrderedDict()}
+[0.004607] (matplotlib_cpp) JobStarted: {'identifier': 'matplotlib_cpp'}
+[0.038854] (my_fusion) JobStarted: {'identifier': 'my_fusion'}
+[0.059474] (my_odometry) JobStarted: {'identifier': 'my_odometry'}
+[0.088661] (my_robot_description) JobStarted: {'identifier': 'my_robot_description'}
+[0.099367] (-) TimerEvent: {}
+[0.125596] (matplotlib_cpp) JobProgress: {'identifier': 'matplotlib_cpp', 'progress': 'cmake'}
+[0.128110] (matplotlib_cpp) Command: {'cmd': ['/usr/bin/cmake', '/home/pritismankar/ros2_ws/src/matplotlib-cpp', '-DCMAKE_INSTALL_PREFIX=/home/pritismankar/ros2_ws/install/matplotlib_cpp'], 'cwd': '/home/pritismankar/ros2_ws/build/matplotlib_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pritismankar'), ('SSH_AGENT_PID', '1614'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/pritismankar/catkin_ws/devel/lib:/opt/ros/noetic/lib'), ('HOME', '/home/pritismankar'), ('OLDPWD', '/home/pritismankar'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1186'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/pritismankar/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'pritismankar'), ('JOURNAL_STREAM', '8:32426'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/pritismankar/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'pritismankar'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/opt/ros/noetic/bin:/home/pritismankar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu-ros:@/tmp/.ICE-unix/1740,unix/ubuntu-ros:/tmp/.ICE-unix/1740'), ('INVOCATION_ID', '290a8c4ed1bd4a4a9fdde5b20973d42a'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9c278e65_4e49_4055_b68b_6e4042799706'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.86'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/pritismankar/ros2_ws/build/matplotlib_cpp'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/foxy/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pritismankar/ros2_ws/build/my_slam:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_simulation:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_robot_description:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic')]), 'shell': False}
+[0.177095] (my_fusion) JobProgress: {'identifier': 'my_fusion', 'progress': 'cmake'}
+[0.178517] (my_fusion) Command: {'cmd': ['/usr/bin/cmake', '/home/pritismankar/ros2_ws/src/my_fusion', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/pritismankar/ros2_ws/install/my_fusion'], 'cwd': '/home/pritismankar/ros2_ws/build/my_fusion', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pritismankar'), ('SSH_AGENT_PID', '1614'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/pritismankar/catkin_ws/devel/lib:/opt/ros/noetic/lib'), ('HOME', '/home/pritismankar'), ('OLDPWD', '/home/pritismankar'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1186'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/pritismankar/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'pritismankar'), ('JOURNAL_STREAM', '8:32426'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/pritismankar/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'pritismankar'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/opt/ros/noetic/bin:/home/pritismankar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu-ros:@/tmp/.ICE-unix/1740,unix/ubuntu-ros:/tmp/.ICE-unix/1740'), ('INVOCATION_ID', '290a8c4ed1bd4a4a9fdde5b20973d42a'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9c278e65_4e49_4055_b68b_6e4042799706'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.86'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/pritismankar/ros2_ws/build/my_fusion'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/foxy/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pritismankar/ros2_ws/build/my_slam:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_simulation:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_robot_description:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic')]), 'shell': False}
+[0.199687] (my_odometry) JobProgress: {'identifier': 'my_odometry', 'progress': 'cmake'}
+[0.200029] (-) TimerEvent: {}
+[0.200511] (my_odometry) Command: {'cmd': ['/usr/bin/cmake', '/home/pritismankar/ros2_ws/src/my_odometry', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/pritismankar/ros2_ws/install/my_odometry'], 'cwd': '/home/pritismankar/ros2_ws/build/my_odometry', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pritismankar'), ('SSH_AGENT_PID', '1614'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/pritismankar/catkin_ws/devel/lib:/opt/ros/noetic/lib'), ('HOME', '/home/pritismankar'), ('OLDPWD', '/home/pritismankar'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1186'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/pritismankar/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'pritismankar'), ('JOURNAL_STREAM', '8:32426'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/pritismankar/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'pritismankar'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/opt/ros/noetic/bin:/home/pritismankar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu-ros:@/tmp/.ICE-unix/1740,unix/ubuntu-ros:/tmp/.ICE-unix/1740'), ('INVOCATION_ID', '290a8c4ed1bd4a4a9fdde5b20973d42a'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9c278e65_4e49_4055_b68b_6e4042799706'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.86'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/pritismankar/ros2_ws/build/my_odometry'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/foxy/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pritismankar/ros2_ws/build/my_slam:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_simulation:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_robot_description:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic')]), 'shell': False}
+[0.300447] (-) TimerEvent: {}
+[0.410235] (-) TimerEvent: {}
+[0.533725] (-) TimerEvent: {}
+[0.677339] (-) TimerEvent: {}
+[0.691108] (my_fusion) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.695824] (matplotlib_cpp) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.712796] (my_odometry) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.716526] (matplotlib_cpp) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.783404] (-) TimerEvent: {}
+[0.797803] (my_fusion) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.807348] (my_fusion) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.882695] (my_odometry) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.900799] (my_odometry) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.901579] (-) TimerEvent: {}
+[1.004644] (-) TimerEvent: {}
+[1.071413] (matplotlib_cpp) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[1.072633] (my_fusion) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[1.073441] (matplotlib_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.074149] (my_fusion) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.106035] (-) TimerEvent: {}
+[1.194389] (my_odometry) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[1.200072] (my_odometry) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.206336] (-) TimerEvent: {}
+[1.307194] (-) TimerEvent: {}
+[1.375681] (my_fusion) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.404280] (matplotlib_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.411075] (-) TimerEvent: {}
+[1.417817] (my_fusion) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.418600] (my_fusion) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.420221] (matplotlib_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.420352] (matplotlib_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.421953] (my_fusion) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[1.473270] (my_odometry) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.485675] (my_odometry) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.487307] (my_odometry) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.489967] (my_odometry) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[1.511215] (-) TimerEvent: {}
+[1.592086] (my_fusion) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[1.594568] (my_fusion) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.611534] (-) TimerEvent: {}
+[1.715235] (-) TimerEvent: {}
+[1.778500] (my_odometry) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[1.781458] (my_odometry) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.816911] (-) TimerEvent: {}
+[1.870413] (my_fusion) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.887663] (my_fusion) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.889151] (my_fusion) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.912887] (my_fusion) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[1.939577] (-) TimerEvent: {}
+[1.950817] (my_robot_description) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/pritismankar/ros2_ws/build/my_robot_description/build', '--no-deps', 'symlink_data'], 'cwd': '/home/pritismankar/ros2_ws/build/my_robot_description', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pritismankar', 'SSH_AGENT_PID': '1614', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/pritismankar/catkin_ws/devel/lib:/opt/ros/noetic/lib', 'HOME': '/home/pritismankar', 'OLDPWD': '/home/pritismankar', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1186', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/pritismankar/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'pritismankar', 'JOURNAL_STREAM': '8:32426', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/pritismankar/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pritismankar', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/opt/ros/noetic/bin:/home/pritismankar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu-ros:@/tmp/.ICE-unix/1740,unix/ubuntu-ros:/tmp/.ICE-unix/1740', 'INVOCATION_ID': '290a8c4ed1bd4a4a9fdde5b20973d42a', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/9c278e65_4e49_4055_b68b_6e4042799706', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.86', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/opt/ros/foxy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/pritismankar/ros2_ws/build/my_robot_description', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'GAZEBO_PLUGIN_PATH': ':/opt/ros/foxy/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pritismankar/ros2_ws/build/my_robot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_slam:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_simulation:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_robot_description:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic'}, 'shell': False}
+[1.987243] (my_fusion) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[1.987503] (my_fusion) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.059041] (-) TimerEvent: {}
+[2.092753] (matplotlib_cpp) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.8 (found version "3.8.10") found components: Interpreter Development \n'}
+[2.128281] (my_odometry) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.137864] (my_odometry) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.139012] (my_odometry) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.142512] (my_odometry) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[2.168685] (my_odometry) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[2.168905] (-) TimerEvent: {}
+[2.169096] (my_odometry) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.273491] (-) TimerEvent: {}
+[2.281707] (my_fusion) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[2.364478] (my_robot_description) StdoutLine: {'line': b'running develop\n'}
+[2.372271] (my_fusion) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[2.375901] (-) TimerEvent: {}
+[2.482121] (my_odometry) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[2.482377] (-) TimerEvent: {}
+[2.491598] (my_odometry) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[2.502487] (my_fusion) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.525426] (my_fusion) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[2.570221] (my_odometry) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.582668] (-) TimerEvent: {}
+[2.612681] (my_odometry) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[2.672233] (my_robot_description) StdoutLine: {'line': b'running egg_info\n'}
+[2.673748] (my_robot_description) StdoutLine: {'line': b'creating my_robot_description.egg-info\n'}
+[2.707623] (my_robot_description) StdoutLine: {'line': b'writing my_robot_description.egg-info/PKG-INFO\n'}
+[2.708085] (-) TimerEvent: {}
+[2.708414] (my_robot_description) StdoutLine: {'line': b'writing dependency_links to my_robot_description.egg-info/dependency_links.txt\n'}
+[2.709360] (my_robot_description) StdoutLine: {'line': b'writing top-level names to my_robot_description.egg-info/top_level.txt\n'}
+[2.714196] (my_robot_description) StdoutLine: {'line': b"writing manifest file 'my_robot_description.egg-info/SOURCES.txt'\n"}
+[2.753377] (my_robot_description) StdoutLine: {'line': b"reading manifest file 'my_robot_description.egg-info/SOURCES.txt'\n"}
+[2.754558] (my_robot_description) StdoutLine: {'line': b"writing manifest file 'my_robot_description.egg-info/SOURCES.txt'\n"}
+[2.801407] (my_fusion) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[2.807968] (my_odometry) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[2.809065] (-) TimerEvent: {}
+[2.820526] (my_robot_description) StdoutLine: {'line': b'running build_ext\n'}
+[2.822351] (my_robot_description) StdoutLine: {'line': b'Creating /home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages/site.py\n'}
+[2.825880] (my_robot_description) StdoutLine: {'line': b'Creating /home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages/my-robot-description.egg-link (link to .)\n'}
+[2.826946] (my_robot_description) StdoutLine: {'line': b'\n'}
+[2.827057] (my_robot_description) StdoutLine: {'line': b'Installed /home/pritismankar/ros2_ws/build/my_robot_description\n'}
+[2.827109] (my_robot_description) StdoutLine: {'line': b'running symlink_data\n'}
+[2.828339] (my_robot_description) StdoutLine: {'line': b'creating /home/pritismankar/ros2_ws/install/my_robot_description/share/ament_index\n'}
+[2.828474] (my_robot_description) StdoutLine: {'line': b'creating /home/pritismankar/ros2_ws/install/my_robot_description/share/ament_index/resource_index\n'}
+[2.828529] (my_robot_description) StdoutLine: {'line': b'creating /home/pritismankar/ros2_ws/install/my_robot_description/share/ament_index/resource_index/packages\n'}
+[2.828574] (my_robot_description) StdoutLine: {'line': b'symbolically linking /home/pritismankar/ros2_ws/build/my_robot_description/resource/my_robot_description -> /home/pritismankar/ros2_ws/install/my_robot_description/share/ament_index/resource_index/packages\n'}
+[2.828625] (my_robot_description) StdoutLine: {'line': b'symbolically linking /home/pritismankar/ros2_ws/build/my_robot_description/package.xml -> /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description\n'}
+[2.828670] (my_robot_description) StdoutLine: {'line': b'creating /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/urdf\n'}
+[2.828713] (my_robot_description) StdoutLine: {'line': b'symbolically linking /home/pritismankar/ros2_ws/build/my_robot_description/urdf/robot.urdf.xacro -> /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/urdf\n'}
+[2.828765] (my_robot_description) StdoutLine: {'line': b'symbolically linking /home/pritismankar/ros2_ws/build/my_robot_description/urdf/materials.xacro -> /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/urdf\n'}
+[2.828806] (my_robot_description) StdoutLine: {'line': b'creating /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/launch\n'}
+[2.828847] (my_robot_description) StdoutLine: {'line': b'symbolically linking /home/pritismankar/ros2_ws/build/my_robot_description/launch/display.launch.py -> /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/launch\n'}
+[2.828887] (my_robot_description) StdoutLine: {'line': b'creating /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/rviz\n'}
+[2.831521] (my_robot_description) StdoutLine: {'line': b'symbolically linking /home/pritismankar/ros2_ws/build/my_robot_description/rviz/config.rviz -> /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/rviz\n'}
+[2.858559] (my_odometry) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[2.874844] (my_robot_description) CommandEnded: {'returncode': 0}
+[2.892768] (my_fusion) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[2.911471] (-) TimerEvent: {}
+[2.930095] (my_robot_description) JobEnded: {'identifier': 'my_robot_description', 'rc': 0}
+[2.930841] (my_simulation) JobStarted: {'identifier': 'my_simulation'}
+[3.029566] (my_fusion) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.031518] (-) TimerEvent: {}
+[3.053127] (my_odometry) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.133868] (-) TimerEvent: {}
+[3.183466] (matplotlib_cpp) StdoutLine: {'line': b'-- Found Python3: /home/pritismankar/.local/lib/python3.8/site-packages/numpy/core/include (found version "3.8.10") found components: NumPy Interpreter Development \n'}
+[3.189081] (my_odometry) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[3.191096] (matplotlib_cpp) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.195713] (my_odometry) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.199434] (my_fusion) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[3.203231] (my_odometry) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[3.205637] (my_fusion) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.210593] (my_fusion) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[3.280895] (matplotlib_cpp) StdoutLine: {'line': b'-- Generating done\n'}
+[3.281467] (-) TimerEvent: {}
+[3.294489] (matplotlib_cpp) StdoutLine: {'line': b'-- Build files have been written to: /home/pritismankar/ros2_ws/build/matplotlib_cpp\n'}
+[3.466341] (-) TimerEvent: {}
+[3.490154] (my_fusion) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[3.492816] (my_fusion) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[3.508121] (my_odometry) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[3.510760] (my_odometry) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[3.516511] (matplotlib_cpp) CommandEnded: {'returncode': 0}
+[3.519810] (matplotlib_cpp) JobProgress: {'identifier': 'matplotlib_cpp', 'progress': 'build'}
+[3.547322] (matplotlib_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pritismankar/ros2_ws/build/matplotlib_cpp', '--', '-j4', '-l4'], 'cwd': '/home/pritismankar/ros2_ws/build/matplotlib_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pritismankar'), ('SSH_AGENT_PID', '1614'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/pritismankar/catkin_ws/devel/lib:/opt/ros/noetic/lib'), ('HOME', '/home/pritismankar'), ('OLDPWD', '/home/pritismankar'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1186'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/pritismankar/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'pritismankar'), ('JOURNAL_STREAM', '8:32426'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/pritismankar/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'pritismankar'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/opt/ros/noetic/bin:/home/pritismankar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu-ros:@/tmp/.ICE-unix/1740,unix/ubuntu-ros:/tmp/.ICE-unix/1740'), ('INVOCATION_ID', '290a8c4ed1bd4a4a9fdde5b20973d42a'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9c278e65_4e49_4055_b68b_6e4042799706'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.86'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/pritismankar/ros2_ws/build/matplotlib_cpp'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/foxy/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pritismankar/ros2_ws/build/my_slam:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_simulation:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_robot_description:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic')]), 'shell': False}
+[3.588536] (-) TimerEvent: {}
+[3.693352] (-) TimerEvent: {}
+[3.743934] (matplotlib_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target colorbar\x1b[0m\n'}
+[3.762383] (matplotlib_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target spy\x1b[0m\n'}
+[3.762708] (my_fusion) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[3.764831] (my_fusion) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[3.787900] (matplotlib_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target surface\x1b[0m\n'}
+[3.799103] (-) TimerEvent: {}
+[3.815465] (matplotlib_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target xkcd\x1b[0m\n'}
+[3.817301] (my_odometry) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[3.817880] (my_odometry) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[3.900715] (-) TimerEvent: {}
+[3.908768] (matplotlib_cpp) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding CXX object CMakeFiles/spy.dir/examples/spy.cpp.o\x1b[0m\n'}
+[3.938013] (matplotlib_cpp) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object CMakeFiles/surface.dir/examples/surface.cpp.o\x1b[0m\n'}
+[3.942201] (matplotlib_cpp) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CXX object CMakeFiles/xkcd.dir/examples/xkcd.cpp.o\x1b[0m\n'}
+[4.000021] (matplotlib_cpp) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/colorbar.dir/examples/colorbar.cpp.o\x1b[0m\n'}
+[4.002289] (-) TimerEvent: {}
+[4.115683] (-) TimerEvent: {}
+[4.216595] (-) TimerEvent: {}
+[4.230219] (my_odometry) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[4.230921] (my_odometry) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[4.318472] (-) TimerEvent: {}
+[4.478533] (-) TimerEvent: {}
+[5.577260] (-) TimerEvent: {}
+[5.678147] (-) TimerEvent: {}
+[5.679980] (my_fusion) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[5.683135] (my_fusion) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[5.730998] (matplotlib_cpp) StdoutLine: {'line': b'[ 15%] \x1b[32m\x1b[1mLinking CXX executable bin/xkcd\x1b[0m\n'}
+[5.788004] (-) TimerEvent: {}
+[5.814202] (matplotlib_cpp) StdoutLine: {'line': b'[ 18%] \x1b[32m\x1b[1mLinking CXX executable bin/colorbar\x1b[0m\n'}
+[5.889607] (-) TimerEvent: {}
+[5.953528] (my_odometry) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[5.953901] (my_odometry) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[5.991877] (-) TimerEvent: {}
+[6.091085] (my_simulation) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/pritismankar/ros2_ws/build/my_simulation/build', '--no-deps', 'symlink_data'], 'cwd': '/home/pritismankar/ros2_ws/build/my_simulation', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pritismankar', 'SSH_AGENT_PID': '1614', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/pritismankar/catkin_ws/devel/lib:/opt/ros/noetic/lib', 'HOME': '/home/pritismankar', 'OLDPWD': '/home/pritismankar', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1186', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/pritismankar/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'pritismankar', 'JOURNAL_STREAM': '8:32426', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/pritismankar/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pritismankar', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/opt/ros/noetic/bin:/home/pritismankar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu-ros:@/tmp/.ICE-unix/1740,unix/ubuntu-ros:/tmp/.ICE-unix/1740', 'INVOCATION_ID': '290a8c4ed1bd4a4a9fdde5b20973d42a', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/9c278e65_4e49_4055_b68b_6e4042799706', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.86', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/opt/ros/foxy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/pritismankar/ros2_ws/build/my_simulation', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'GAZEBO_PLUGIN_PATH': ':/opt/ros/foxy/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pritismankar/ros2_ws/build/my_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_slam:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_simulation:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_robot_description:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic'}, 'shell': False}
+[6.099167] (-) TimerEvent: {}
+[6.181285] (my_fusion) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[6.189254] (my_fusion) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[6.198164] (matplotlib_cpp) StdoutLine: {'line': b'[ 18%] Built target xkcd\n'}
+[6.199262] (-) TimerEvent: {}
+[6.243055] (matplotlib_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target basic\x1b[0m\n'}
+[6.299963] (matplotlib_cpp) StdoutLine: {'line': b'[ 18%] Built target colorbar\n'}
+[6.300454] (-) TimerEvent: {}
+[6.317916] (matplotlib_cpp) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/basic.dir/examples/basic.cpp.o\x1b[0m\n'}
+[6.540791] (matplotlib_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target animation\x1b[0m\n'}
+[6.545294] (-) TimerEvent: {}
+[6.545465] (my_simulation) StdoutLine: {'line': b'running develop\n'}
+[6.587275] (matplotlib_cpp) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking CXX executable bin/surface\x1b[0m\n'}
+[6.646771] (-) TimerEvent: {}
+[6.738845] (my_odometry) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[6.747509] (my_fusion) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[6.749430] (-) TimerEvent: {}
+[6.770385] (matplotlib_cpp) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/animation.dir/examples/animation.cpp.o\x1b[0m\n'}
+[6.877903] (-) TimerEvent: {}
+[6.921039] (my_simulation) StdoutLine: {'line': b'running egg_info\n'}
+[6.923352] (my_simulation) StdoutLine: {'line': b'creating my_simulation.egg-info\n'}
+[6.925789] (my_simulation) StdoutLine: {'line': b'writing my_simulation.egg-info/PKG-INFO\n'}
+[6.926665] (my_simulation) StdoutLine: {'line': b'writing dependency_links to my_simulation.egg-info/dependency_links.txt\n'}
+[6.927215] (my_simulation) StdoutLine: {'line': b'writing entry points to my_simulation.egg-info/entry_points.txt\n'}
+[6.927309] (my_simulation) StdoutLine: {'line': b'writing top-level names to my_simulation.egg-info/top_level.txt\n'}
+[6.929647] (my_simulation) StdoutLine: {'line': b"writing manifest file 'my_simulation.egg-info/SOURCES.txt'\n"}
+[6.979804] (-) TimerEvent: {}
+[7.020862] (my_simulation) StdoutLine: {'line': b"reading manifest file 'my_simulation.egg-info/SOURCES.txt'\n"}
+[7.021577] (my_simulation) StdoutLine: {'line': b"writing manifest file 'my_simulation.egg-info/SOURCES.txt'\n"}
+[7.073211] (my_simulation) StdoutLine: {'line': b'running build_ext\n'}
+[7.074414] (my_simulation) StdoutLine: {'line': b'Creating /home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages/site.py\n'}
+[7.079658] (my_simulation) StdoutLine: {'line': b'Creating /home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages/my-simulation.egg-link (link to .)\n'}
+[7.080194] (-) TimerEvent: {}
+[7.083044] (my_simulation) StdoutLine: {'line': b'\n'}
+[7.083380] (my_simulation) StdoutLine: {'line': b'Installed /home/pritismankar/ros2_ws/build/my_simulation\n'}
+[7.083476] (my_simulation) StdoutLine: {'line': b'running symlink_data\n'}
+[7.084600] (my_simulation) StdoutLine: {'line': b'creating /home/pritismankar/ros2_ws/install/my_simulation/share/ament_index\n'}
+[7.084929] (my_simulation) StdoutLine: {'line': b'creating /home/pritismankar/ros2_ws/install/my_simulation/share/ament_index/resource_index\n'}
+[7.086066] (my_simulation) StdoutLine: {'line': b'creating /home/pritismankar/ros2_ws/install/my_simulation/share/ament_index/resource_index/packages\n'}
+[7.087614] (my_simulation) StdoutLine: {'line': b'symbolically linking /home/pritismankar/ros2_ws/build/my_simulation/resource/my_simulation -> /home/pritismankar/ros2_ws/install/my_simulation/share/ament_index/resource_index/packages\n'}
+[7.088997] (my_simulation) StdoutLine: {'line': b'symbolically linking /home/pritismankar/ros2_ws/build/my_simulation/package.xml -> /home/pritismankar/ros2_ws/install/my_simulation/share/my_simulation\n'}
+[7.090627] (my_simulation) StdoutLine: {'line': b'creating /home/pritismankar/ros2_ws/install/my_simulation/share/my_simulation/worlds\n'}
+[7.090889] (my_simulation) StdoutLine: {'line': b'symbolically linking /home/pritismankar/ros2_ws/build/my_simulation/worlds/apartment.world -> /home/pritismankar/ros2_ws/install/my_simulation/share/my_simulation/worlds\n'}
+[7.094122] (my_simulation) StdoutLine: {'line': b'creating /home/pritismankar/ros2_ws/install/my_simulation/share/my_simulation/launch\n'}
+[7.094448] (my_simulation) StdoutLine: {'line': b'symbolically linking /home/pritismankar/ros2_ws/build/my_simulation/launch/sim.launch.py -> /home/pritismankar/ros2_ws/install/my_simulation/share/my_simulation/launch\n'}
+[7.094585] (my_simulation) StdoutLine: {'line': b'creating /home/pritismankar/ros2_ws/install/my_simulation/share/my_simulation/config\n'}
+[7.094675] (my_simulation) StdoutLine: {'line': b'symbolically linking /home/pritismankar/ros2_ws/build/my_simulation/config/diffbot_controllers.yaml -> /home/pritismankar/ros2_ws/install/my_simulation/share/my_simulation/config\n'}
+[7.106182] (my_fusion) StdoutLine: {'line': b'-- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)\n'}
+[7.154451] (my_simulation) CommandEnded: {'returncode': 0}
+[7.176596] (my_simulation) JobEnded: {'identifier': 'my_simulation', 'rc': 0}
+[7.177417] (my_slam) JobStarted: {'identifier': 'my_slam'}
+[7.187751] (-) TimerEvent: {}
+[7.253778] (my_odometry) StdoutLine: {'line': b'-- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)\n'}
+[7.254093] (my_fusion) StdoutLine: {'line': b'-- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)\n'}
+[7.255893] (matplotlib_cpp) StdoutLine: {'line': b'[ 28%] Built target surface\n'}
+[7.268108] (my_odometry) StdoutLine: {'line': b'-- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)\n'}
+[7.350663] (my_fusion) StdoutLine: {'line': b'-- Found tf2: 0.13.14 (/opt/ros/foxy/share/tf2/cmake)\n'}
+[7.351155] (-) TimerEvent: {}
+[7.351781] (my_odometry) StdoutLine: {'line': b'-- Found tf2: 0.13.14 (/opt/ros/foxy/share/tf2/cmake)\n'}
+[7.373777] (matplotlib_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target minimal\x1b[0m\n'}
+[7.383799] (my_fusion) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)\n'}
+[7.397054] (my_fusion) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)\n'}
+[7.405887] (my_fusion) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.3.7") \n'}
+[7.475264] (-) TimerEvent: {}
+[7.480500] (my_odometry) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)\n'}
+[7.530843] (matplotlib_cpp) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/minimal.dir/examples/minimal.cpp.o\x1b[0m\n'}
+[7.531679] (my_odometry) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)\n'}
+[7.566706] (my_odometry) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.3.7") \n'}
+[7.575466] (-) TimerEvent: {}
+[8.171396] (matplotlib_cpp) StdoutLine: {'line': b'[ 34%] \x1b[32m\x1b[1mLinking CXX executable bin/animation\x1b[0m\n'}
+[8.171794] (-) TimerEvent: {}
+[8.240085] (matplotlib_cpp) StdoutLine: {'line': b'[ 37%] \x1b[32m\x1b[1mLinking CXX executable bin/basic\x1b[0m\n'}
+[8.250407] (matplotlib_cpp) StdoutLine: {'line': b'[ 40%] \x1b[32m\x1b[1mLinking CXX executable bin/minimal\x1b[0m\n'}
+[8.287701] (matplotlib_cpp) StdoutLine: {'line': b'[ 43%] \x1b[32m\x1b[1mLinking CXX executable bin/spy\x1b[0m\n'}
+[8.288638] (-) TimerEvent: {}
+[8.390774] (-) TimerEvent: {}
+[8.491591] (matplotlib_cpp) StdoutLine: {'line': b'[ 43%] Built target animation\n'}
+[8.492064] (-) TimerEvent: {}
+[8.541999] (matplotlib_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target nonblock\x1b[0m\n'}
+[8.589921] (matplotlib_cpp) StdoutLine: {'line': b'[ 43%] Built target minimal\n'}
+[8.593534] (-) TimerEvent: {}
+[8.683788] (matplotlib_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target fill\x1b[0m\n'}
+[8.694268] (-) TimerEvent: {}
+[8.761694] (matplotlib_cpp) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/nonblock.dir/examples/nonblock.cpp.o\x1b[0m\n'}
+[8.798529] (-) TimerEvent: {}
+[8.823031] (matplotlib_cpp) StdoutLine: {'line': b'[ 50%] Built target spy\n'}
+[8.823325] (matplotlib_cpp) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/fill.dir/examples/fill.cpp.o\x1b[0m\n'}
+[8.900106] (-) TimerEvent: {}
+[9.068951] (-) TimerEvent: {}
+[9.070058] (matplotlib_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target contour\x1b[0m\n'}
+[9.181988] (-) TimerEvent: {}
+[9.224378] (matplotlib_cpp) StdoutLine: {'line': b'[ 50%] Built target basic\n'}
+[9.255462] (my_fusion) StdoutLine: {'line': b'-- Configuring done\n'}
+[9.282673] (-) TimerEvent: {}
+[9.306632] (matplotlib_cpp) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/contour.dir/examples/contour.cpp.o\x1b[0m\n'}
+[9.324773] (matplotlib_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target bar\x1b[0m\n'}
+[9.338873] (my_fusion) StdoutLine: {'line': b'-- Generating done\n'}
+[9.385190] (-) TimerEvent: {}
+[9.385724] (my_fusion) StdoutLine: {'line': b'-- Build files have been written to: /home/pritismankar/ros2_ws/build/my_fusion\n'}
+[9.405088] (my_fusion) CommandEnded: {'returncode': 0}
+[9.411648] (my_fusion) JobProgress: {'identifier': 'my_fusion', 'progress': 'build'}
+[9.411890] (my_fusion) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pritismankar/ros2_ws/build/my_fusion', '--', '-j4', '-l4'], 'cwd': '/home/pritismankar/ros2_ws/build/my_fusion', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pritismankar'), ('SSH_AGENT_PID', '1614'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/pritismankar/catkin_ws/devel/lib:/opt/ros/noetic/lib'), ('HOME', '/home/pritismankar'), ('OLDPWD', '/home/pritismankar'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1186'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/pritismankar/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'pritismankar'), ('JOURNAL_STREAM', '8:32426'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/pritismankar/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'pritismankar'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/opt/ros/noetic/bin:/home/pritismankar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu-ros:@/tmp/.ICE-unix/1740,unix/ubuntu-ros:/tmp/.ICE-unix/1740'), ('INVOCATION_ID', '290a8c4ed1bd4a4a9fdde5b20973d42a'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9c278e65_4e49_4055_b68b_6e4042799706'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.86'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/pritismankar/ros2_ws/build/my_fusion'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/foxy/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pritismankar/ros2_ws/build/my_slam:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_simulation:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_robot_description:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic')]), 'shell': False}
+[9.636250] (-) TimerEvent: {}
+[9.647065] (matplotlib_cpp) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/bar.dir/examples/bar.cpp.o\x1b[0m\n'}
+[9.737913] (-) TimerEvent: {}
+[9.839660] (-) TimerEvent: {}
+[9.933832] (my_fusion) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target ekf_fusion_node\x1b[0m\n'}
+[9.977220] (-) TimerEvent: {}
+[10.035508] (my_slam) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/pritismankar/ros2_ws/build/my_slam/build', '--no-deps', 'symlink_data'], 'cwd': '/home/pritismankar/ros2_ws/build/my_slam', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pritismankar', 'SSH_AGENT_PID': '1614', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/pritismankar/catkin_ws/devel/lib:/opt/ros/noetic/lib', 'HOME': '/home/pritismankar', 'OLDPWD': '/home/pritismankar', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1186', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/pritismankar/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'pritismankar', 'JOURNAL_STREAM': '8:32426', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/pritismankar/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pritismankar', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/opt/ros/noetic/bin:/home/pritismankar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu-ros:@/tmp/.ICE-unix/1740,unix/ubuntu-ros:/tmp/.ICE-unix/1740', 'INVOCATION_ID': '290a8c4ed1bd4a4a9fdde5b20973d42a', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/9c278e65_4e49_4055_b68b_6e4042799706', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.86', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/opt/ros/foxy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/pritismankar/ros2_ws/build/my_slam', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'GAZEBO_PLUGIN_PATH': ':/opt/ros/foxy/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pritismankar/ros2_ws/build/my_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_slam:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_simulation:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_robot_description:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic'}, 'shell': False}
+[10.077324] (-) TimerEvent: {}
+[10.201542] (-) TimerEvent: {}
+[10.303411] (-) TimerEvent: {}
+[10.449382] (-) TimerEvent: {}
+[10.562864] (-) TimerEvent: {}
+[10.678170] (-) TimerEvent: {}
+[10.769525] (my_fusion) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/ekf_fusion_node.dir/scripts/ekf_fusion_node.cpp.o\x1b[0m\n'}
+[10.795491] (matplotlib_cpp) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking CXX executable bin/fill\x1b[0m\n'}
+[10.796270] (-) TimerEvent: {}
+[10.817387] (matplotlib_cpp) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking CXX executable bin/nonblock\x1b[0m\n'}
+[10.896738] (-) TimerEvent: {}
+[10.963802] (my_slam) StdoutLine: {'line': b'running develop\n'}
+[10.997026] (-) TimerEvent: {}
+[11.098396] (-) TimerEvent: {}
+[11.123445] (matplotlib_cpp) StdoutLine: {'line': b'[ 62%] Built target fill\n'}
+[11.148966] (matplotlib_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target fill_inbetween\x1b[0m\n'}
+[11.202234] (-) TimerEvent: {}
+[11.231983] (matplotlib_cpp) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/fill_inbetween.dir/examples/fill_inbetween.cpp.o\x1b[0m\n'}
+[11.281634] (matplotlib_cpp) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX executable bin/bar\x1b[0m\n'}
+[11.317660] (-) TimerEvent: {}
+[11.338259] (matplotlib_cpp) StdoutLine: {'line': b'[ 68%] Built target nonblock\n'}
+[11.371049] (my_slam) StdoutLine: {'line': b'running egg_info\n'}
+[11.371534] (my_slam) StdoutLine: {'line': b'creating my_slam.egg-info\n'}
+[11.372323] (my_slam) StdoutLine: {'line': b'writing my_slam.egg-info/PKG-INFO\n'}
+[11.398248] (my_slam) StdoutLine: {'line': b'writing dependency_links to my_slam.egg-info/dependency_links.txt\n'}
+[11.399663] (my_slam) StdoutLine: {'line': b'writing entry points to my_slam.egg-info/entry_points.txt\n'}
+[11.400985] (my_slam) StdoutLine: {'line': b'writing requirements to my_slam.egg-info/requires.txt\n'}
+[11.401170] (my_slam) StdoutLine: {'line': b'writing top-level names to my_slam.egg-info/top_level.txt\n'}
+[11.403840] (my_slam) StdoutLine: {'line': b"writing manifest file 'my_slam.egg-info/SOURCES.txt'\n"}
+[11.418459] (-) TimerEvent: {}
+[11.421079] (matplotlib_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target update\x1b[0m\n'}
+[11.428202] (my_odometry) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.8 (found version "3.8.10") found components: Interpreter Development NumPy \n'}
+[11.557749] (-) TimerEvent: {}
+[11.577567] (my_slam) StdoutLine: {'line': b"reading manifest file 'my_slam.egg-info/SOURCES.txt'\n"}
+[11.581805] (my_slam) StdoutLine: {'line': b"writing manifest file 'my_slam.egg-info/SOURCES.txt'\n"}
+[11.621863] (matplotlib_cpp) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/update.dir/examples/update.cpp.o\x1b[0m\n'}
+[11.658211] (-) TimerEvent: {}
+[11.665839] (my_slam) StdoutLine: {'line': b'running build_ext\n'}
+[11.666531] (my_slam) StdoutLine: {'line': b'Creating /home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages/site.py\n'}
+[11.667248] (matplotlib_cpp) StdoutLine: {'line': b'[ 71%] Built target bar\n'}
+[11.771070] (matplotlib_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target lines3d\x1b[0m\n'}
+[11.771682] (-) TimerEvent: {}
+[11.777883] (my_slam) StdoutLine: {'line': b'Creating /home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages/my-slam.egg-link (link to .)\n'}
+[11.778231] (my_slam) StdoutLine: {'line': b'Installing map_builder script to /home/pritismankar/ros2_ws/install/my_slam/lib/my_slam\n'}
+[11.792293] (my_slam) StdoutLine: {'line': b'Installing scan_matcher script to /home/pritismankar/ros2_ws/install/my_slam/lib/my_slam\n'}
+[11.792825] (my_slam) StdoutLine: {'line': b'\n'}
+[11.792911] (my_slam) StdoutLine: {'line': b'Installed /home/pritismankar/ros2_ws/build/my_slam\n'}
+[11.792965] (my_slam) StdoutLine: {'line': b'running symlink_data\n'}
+[11.794075] (my_slam) StdoutLine: {'line': b'creating /home/pritismankar/ros2_ws/install/my_slam/share/ament_index\n'}
+[11.794200] (my_slam) StdoutLine: {'line': b'creating /home/pritismankar/ros2_ws/install/my_slam/share/ament_index/resource_index\n'}
+[11.794253] (my_slam) StdoutLine: {'line': b'creating /home/pritismankar/ros2_ws/install/my_slam/share/ament_index/resource_index/packages\n'}
+[11.794772] (my_slam) StdoutLine: {'line': b'symbolically linking /home/pritismankar/ros2_ws/build/my_slam/resource/my_slam -> /home/pritismankar/ros2_ws/install/my_slam/share/ament_index/resource_index/packages\n'}
+[11.795831] (my_slam) StdoutLine: {'line': b'symbolically linking /home/pritismankar/ros2_ws/build/my_slam/package.xml -> /home/pritismankar/ros2_ws/install/my_slam/share/my_slam\n'}
+[11.877023] (-) TimerEvent: {}
+[11.878110] (my_odometry) StdoutLine: {'line': b'-- Configuring done\n'}
+[11.879358] (matplotlib_cpp) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/lines3d.dir/examples/lines3d.cpp.o\x1b[0m\n'}
+[11.918465] (matplotlib_cpp) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX executable bin/contour\x1b[0m\n'}
+[11.961472] (my_slam) CommandEnded: {'returncode': 0}
+[11.983161] (-) TimerEvent: {}
+[11.997771] (my_slam) JobEnded: {'identifier': 'my_slam', 'rc': 0}
+[12.007768] (my_odometry) StdoutLine: {'line': b'-- Generating done\n'}
+[12.045542] (my_odometry) StdoutLine: {'line': b'-- Build files have been written to: /home/pritismankar/ros2_ws/build/my_odometry\n'}
+[12.074474] (my_odometry) CommandEnded: {'returncode': 0}
+[12.076882] (my_odometry) JobProgress: {'identifier': 'my_odometry', 'progress': 'build'}
+[12.076958] (my_odometry) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pritismankar/ros2_ws/build/my_odometry', '--', '-j4', '-l4'], 'cwd': '/home/pritismankar/ros2_ws/build/my_odometry', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pritismankar'), ('SSH_AGENT_PID', '1614'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/pritismankar/catkin_ws/devel/lib:/opt/ros/noetic/lib'), ('HOME', '/home/pritismankar'), ('OLDPWD', '/home/pritismankar'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1186'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/pritismankar/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'pritismankar'), ('JOURNAL_STREAM', '8:32426'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/pritismankar/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'pritismankar'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/opt/ros/noetic/bin:/home/pritismankar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu-ros:@/tmp/.ICE-unix/1740,unix/ubuntu-ros:/tmp/.ICE-unix/1740'), ('INVOCATION_ID', '290a8c4ed1bd4a4a9fdde5b20973d42a'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9c278e65_4e49_4055_b68b_6e4042799706'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.86'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/pritismankar/ros2_ws/build/my_odometry'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/foxy/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pritismankar/ros2_ws/build/my_slam:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_simulation:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_robot_description:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic')]), 'shell': False}
+[12.083561] (-) TimerEvent: {}
+[12.218562] (-) TimerEvent: {}
+[12.321494] (-) TimerEvent: {}
+[12.531014] (-) TimerEvent: {}
+[12.607175] (my_odometry) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target odom_node\x1b[0m\n'}
+[12.634786] (-) TimerEvent: {}
+[12.651412] (my_odometry) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target live_plot\x1b[0m\n'}
+[12.677094] (matplotlib_cpp) StdoutLine: {'line': b'[ 78%] Built target contour\n'}
+[12.757860] (matplotlib_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target modern\x1b[0m\n'}
+[12.759538] (-) TimerEvent: {}
+[12.824018] (matplotlib_cpp) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX executable bin/fill_inbetween\x1b[0m\n'}
+[12.856339] (my_odometry) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/odom_node.dir/scripts/odom_node.cpp.o\x1b[0m\n'}
+[12.867152] (matplotlib_cpp) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding CXX object CMakeFiles/modern.dir/examples/modern.cpp.o\x1b[0m\n'}
+[12.867622] (-) TimerEvent: {}
+[12.975978] (-) TimerEvent: {}
+[13.009729] (my_odometry) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/live_plot.dir/scripts/live_plot.cpp.o\x1b[0m\n'}
+[13.443728] (-) TimerEvent: {}
+[13.501970] (matplotlib_cpp) StdoutLine: {'line': b'[ 84%] Built target fill_inbetween\n'}
+[13.545231] (matplotlib_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target subplot2grid\x1b[0m\n'}
+[13.545589] (-) TimerEvent: {}
+[13.572804] (matplotlib_cpp) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking CXX executable bin/lines3d\x1b[0m\n'}
+[13.707889] (-) TimerEvent: {}
+[13.777174] (matplotlib_cpp) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding CXX object CMakeFiles/subplot2grid.dir/examples/subplot2grid.cpp.o\x1b[0m\n'}
+[15.649738] (-) TimerEvent: {}
+[15.750378] (-) TimerEvent: {}
+[15.767372] (matplotlib_cpp) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking CXX executable bin/update\x1b[0m\n'}
+[15.787430] (matplotlib_cpp) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking CXX executable bin/modern\x1b[0m\n'}
+[15.869819] (-) TimerEvent: {}
+[15.953334] (matplotlib_cpp) StdoutLine: {'line': b'[100%] Built target modern\n'}
+[15.954568] (matplotlib_cpp) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable bin/subplot2grid\x1b[0m\n'}
+[16.016786] (-) TimerEvent: {}
+[16.089513] (matplotlib_cpp) StdoutLine: {'line': b'[100%] Built target subplot2grid\n'}
+[16.111052] (matplotlib_cpp) StdoutLine: {'line': b'[100%] Built target lines3d\n'}
+[16.117093] (-) TimerEvent: {}
+[16.227791] (matplotlib_cpp) StdoutLine: {'line': b'[100%] Built target update\n'}
+[16.228826] (-) TimerEvent: {}
+[16.331473] (-) TimerEvent: {}
+[16.384442] (matplotlib_cpp) CommandEnded: {'returncode': 0}
+[16.386205] (matplotlib_cpp) JobProgress: {'identifier': 'matplotlib_cpp', 'progress': 'install'}
+[16.414833] (matplotlib_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/pritismankar/ros2_ws/build/matplotlib_cpp'], 'cwd': '/home/pritismankar/ros2_ws/build/matplotlib_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pritismankar'), ('SSH_AGENT_PID', '1614'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/pritismankar/catkin_ws/devel/lib:/opt/ros/noetic/lib'), ('HOME', '/home/pritismankar'), ('OLDPWD', '/home/pritismankar'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1186'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/pritismankar/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'pritismankar'), ('JOURNAL_STREAM', '8:32426'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/pritismankar/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'pritismankar'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/opt/ros/noetic/bin:/home/pritismankar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu-ros:@/tmp/.ICE-unix/1740,unix/ubuntu-ros:/tmp/.ICE-unix/1740'), ('INVOCATION_ID', '290a8c4ed1bd4a4a9fdde5b20973d42a'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9c278e65_4e49_4055_b68b_6e4042799706'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.86'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/pritismankar/ros2_ws/build/matplotlib_cpp'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/foxy/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pritismankar/ros2_ws/build/my_slam:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_simulation:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_robot_description:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic')]), 'shell': False}
+[16.434724] (-) TimerEvent: {}
+[16.435765] (matplotlib_cpp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[16.436412] (matplotlib_cpp) StdoutLine: {'line': b'-- Installing: /home/pritismankar/ros2_ws/install/matplotlib_cpp/include/matplotlibcpp.h\n'}
+[16.437343] (matplotlib_cpp) StdoutLine: {'line': b'-- Installing: /home/pritismankar/ros2_ws/install/matplotlib_cpp/lib/matplotlib_cpp/cmake/matplotlib_cppTargets.cmake\n'}
+[16.437701] (matplotlib_cpp) StdoutLine: {'line': b'-- Installing: /home/pritismankar/ros2_ws/install/matplotlib_cpp/lib/matplotlib_cpp/cmake/matplotlib_cppConfig.cmake\n'}
+[16.441492] (matplotlib_cpp) CommandEnded: {'returncode': 0}
+[16.455717] (matplotlib_cpp) JobEnded: {'identifier': 'matplotlib_cpp', 'rc': 0}
+[16.721996] (-) TimerEvent: {}
+[16.834264] (-) TimerEvent: {}
+[16.937699] (-) TimerEvent: {}
+[17.467482] (-) TimerEvent: {}
+[17.601555] (-) TimerEvent: {}
+[17.917763] (-) TimerEvent: {}
+[18.029880] (-) TimerEvent: {}
+[18.150579] (-) TimerEvent: {}
+[18.267269] (-) TimerEvent: {}
+[18.458599] (-) TimerEvent: {}
+[18.565114] (-) TimerEvent: {}
+[18.690169] (-) TimerEvent: {}
+[18.826126] (-) TimerEvent: {}
+[19.084755] (-) TimerEvent: {}
+[19.293820] (-) TimerEvent: {}
+[19.649575] (-) TimerEvent: {}
+[19.751884] (-) TimerEvent: {}
+[20.132009] (-) TimerEvent: {}
+[20.456860] (-) TimerEvent: {}
+[20.565409] (-) TimerEvent: {}
+[20.666296] (-) TimerEvent: {}
+[20.773495] (-) TimerEvent: {}
+[20.896633] (-) TimerEvent: {}
+[21.092502] (-) TimerEvent: {}
+[21.601369] (-) TimerEvent: {}
+[22.806647] (-) TimerEvent: {}
+[22.986108] (-) TimerEvent: {}
+[23.627903] (-) TimerEvent: {}
+[23.747216] (-) TimerEvent: {}
+[23.848593] (-) TimerEvent: {}
+[23.952545] (-) TimerEvent: {}
+[24.062643] (-) TimerEvent: {}
+[24.169993] (-) TimerEvent: {}
+[24.577295] (-) TimerEvent: {}
+[24.733919] (-) TimerEvent: {}
+[26.480093] (-) TimerEvent: {}
+[26.584554] (-) TimerEvent: {}
+[26.686076] (-) TimerEvent: {}
+[26.789427] (-) TimerEvent: {}
+[26.899833] (-) TimerEvent: {}
+[27.025858] (-) TimerEvent: {}
+[27.130540] (-) TimerEvent: {}
+[27.236981] (-) TimerEvent: {}
+[27.345814] (-) TimerEvent: {}
+[27.456330] (-) TimerEvent: {}
+[27.558670] (-) TimerEvent: {}
+[27.660990] (-) TimerEvent: {}
+[27.764472] (-) TimerEvent: {}
+[27.867266] (-) TimerEvent: {}
+[27.978922] (-) TimerEvent: {}
+[28.175496] (-) TimerEvent: {}
+[28.277573] (-) TimerEvent: {}
+[28.380030] (-) TimerEvent: {}
+[28.481642] (-) TimerEvent: {}
+[28.599118] (-) TimerEvent: {}
+[28.702842] (-) TimerEvent: {}
+[28.805974] (-) TimerEvent: {}
+[28.906950] (-) TimerEvent: {}
+[29.007764] (-) TimerEvent: {}
+[29.108504] (-) TimerEvent: {}
+[29.212149] (-) TimerEvent: {}
+[29.315864] (-) TimerEvent: {}
+[29.423573] (-) TimerEvent: {}
+[29.476903] (my_odometry) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable live_plot\x1b[0m\n'}
+[29.525947] (-) TimerEvent: {}
+[29.637769] (-) TimerEvent: {}
+[29.738832] (-) TimerEvent: {}
+[30.031229] (-) TimerEvent: {}
+[30.095624] (my_odometry) StdoutLine: {'line': b'[ 75%] Built target live_plot\n'}
+[30.131567] (-) TimerEvent: {}
+[30.233315] (-) TimerEvent: {}
+[30.336950] (-) TimerEvent: {}
+[30.481436] (-) TimerEvent: {}
+[30.582881] (-) TimerEvent: {}
+[30.683796] (-) TimerEvent: {}
+[30.845266] (-) TimerEvent: {}
+[30.957753] (-) TimerEvent: {}
+[31.077175] (-) TimerEvent: {}
+[31.178129] (-) TimerEvent: {}
+[31.279466] (-) TimerEvent: {}
+[31.381057] (-) TimerEvent: {}
+[31.482116] (-) TimerEvent: {}
+[31.582891] (-) TimerEvent: {}
+[31.684829] (-) TimerEvent: {}
+[31.785417] (-) TimerEvent: {}
+[31.886067] (-) TimerEvent: {}
+[31.986846] (-) TimerEvent: {}
+[32.500982] (-) TimerEvent: {}
+[32.605959] (-) TimerEvent: {}
+[32.650036] (my_fusion) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable ekf_fusion_node\x1b[0m\n'}
+[32.728472] (-) TimerEvent: {}
+[32.831117] (-) TimerEvent: {}
+[33.065136] (-) TimerEvent: {}
+[33.167046] (-) TimerEvent: {}
+[33.269250] (-) TimerEvent: {}
+[33.312420] (my_fusion) StdoutLine: {'line': b'[100%] Built target ekf_fusion_node\n'}
+[33.338285] (my_odometry) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable odom_node\x1b[0m\n'}
+[33.347585] (my_fusion) CommandEnded: {'returncode': 0}
+[33.351183] (my_fusion) JobProgress: {'identifier': 'my_fusion', 'progress': 'install'}
+[33.351359] (my_fusion) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/pritismankar/ros2_ws/build/my_fusion'], 'cwd': '/home/pritismankar/ros2_ws/build/my_fusion', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pritismankar'), ('SSH_AGENT_PID', '1614'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/pritismankar/catkin_ws/devel/lib:/opt/ros/noetic/lib'), ('HOME', '/home/pritismankar'), ('OLDPWD', '/home/pritismankar'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1186'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/pritismankar/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'pritismankar'), ('JOURNAL_STREAM', '8:32426'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/pritismankar/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'pritismankar'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/opt/ros/noetic/bin:/home/pritismankar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu-ros:@/tmp/.ICE-unix/1740,unix/ubuntu-ros:/tmp/.ICE-unix/1740'), ('INVOCATION_ID', '290a8c4ed1bd4a4a9fdde5b20973d42a'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9c278e65_4e49_4055_b68b_6e4042799706'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.86'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/pritismankar/ros2_ws/build/my_fusion'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/foxy/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pritismankar/ros2_ws/build/my_slam:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_simulation:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_robot_description:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic')]), 'shell': False}
+[33.369538] (-) TimerEvent: {}
+[33.376388] (my_fusion) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[33.378755] (my_fusion) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[33.380239] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/lib/my_fusion/ekf_fusion_node\n'}
+[33.399322] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion//launch/fusion.launch.py\n'}
+[33.418836] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion//resource/my_fusion\n'}
+[33.437020] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/package_run_dependencies/my_fusion\n'}
+[33.464018] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/parent_prefix_path/my_fusion\n'}
+[33.479224] (-) TimerEvent: {}
+[33.487189] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/ament_prefix_path.sh\n'}
+[33.504874] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/ament_prefix_path.dsv\n'}
+[33.519323] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/path.sh\n'}
+[33.536305] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/path.dsv\n'}
+[33.556658] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.bash\n'}
+[33.581620] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.sh\n'}
+[33.582853] (-) TimerEvent: {}
+[33.597174] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.zsh\n'}
+[33.608213] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.dsv\n'}
+[33.626330] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/package.dsv\n'}
+[33.650949] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/packages/my_fusion\n'}
+[33.696084] (-) TimerEvent: {}
+[33.696573] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/cmake/my_fusionConfig.cmake\n'}
+[33.721328] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/cmake/my_fusionConfig-version.cmake\n'}
+[33.760153] (my_fusion) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/package.xml\n'}
+[33.816008] (my_fusion) CommandEnded: {'returncode': 0}
+[33.816838] (-) TimerEvent: {}
+[33.817630] (my_fusion) JobEnded: {'identifier': 'my_fusion', 'rc': 0}
+[33.967617] (-) TimerEvent: {}
+[34.062562] (my_odometry) StdoutLine: {'line': b'[100%] Built target odom_node\n'}
+[34.072974] (-) TimerEvent: {}
+[34.082394] (my_odometry) CommandEnded: {'returncode': 0}
+[34.086078] (my_odometry) JobProgress: {'identifier': 'my_odometry', 'progress': 'install'}
+[34.088190] (my_odometry) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/pritismankar/ros2_ws/build/my_odometry'], 'cwd': '/home/pritismankar/ros2_ws/build/my_odometry', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pritismankar'), ('SSH_AGENT_PID', '1614'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/pritismankar/catkin_ws/devel/lib:/opt/ros/noetic/lib'), ('HOME', '/home/pritismankar'), ('OLDPWD', '/home/pritismankar'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1186'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/pritismankar/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'pritismankar'), ('JOURNAL_STREAM', '8:32426'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/pritismankar/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'pritismankar'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/opt/ros/noetic/bin:/home/pritismankar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu-ros:@/tmp/.ICE-unix/1740,unix/ubuntu-ros:/tmp/.ICE-unix/1740'), ('INVOCATION_ID', '290a8c4ed1bd4a4a9fdde5b20973d42a'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9c278e65_4e49_4055_b68b_6e4042799706'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.86'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/pritismankar/ros2_ws/build/my_odometry'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/foxy/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pritismankar/ros2_ws/build/my_slam:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_simulation:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:/home/pritismankar/ros2_ws/build/my_robot_description:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic')]), 'shell': False}
+[34.116419] (my_odometry) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[34.120028] (my_odometry) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[34.121115] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry/odom_node\n'}
+[34.131523] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry/live_plot\n'}
+[34.144626] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/launch/odom.launch.py\n'}
+[34.158736] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/package_run_dependencies/my_odometry\n'}
+[34.173259] (-) TimerEvent: {}
+[34.177986] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/parent_prefix_path/my_odometry\n'}
+[34.195100] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/ament_prefix_path.sh\n'}
+[34.215097] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/ament_prefix_path.dsv\n'}
+[34.239528] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/path.sh\n'}
+[34.252840] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/path.dsv\n'}
+[34.264898] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.bash\n'}
+[34.275359] (-) TimerEvent: {}
+[34.282238] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.sh\n'}
+[34.299217] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.zsh\n'}
+[34.319526] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.dsv\n'}
+[34.336130] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/package.dsv\n'}
+[34.353620] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/packages/my_odometry\n'}
+[34.368670] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/cmake/my_odometryConfig.cmake\n'}
+[34.377070] (-) TimerEvent: {}
+[34.382007] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/cmake/my_odometryConfig-version.cmake\n'}
+[34.399936] (my_odometry) StdoutLine: {'line': b'-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/package.xml\n'}
+[34.424266] (my_odometry) CommandEnded: {'returncode': 0}
+[34.454321] (my_odometry) JobEnded: {'identifier': 'my_odometry', 'rc': 0}
+[34.463723] (-) EventReactorShutdown: {}

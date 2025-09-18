@@ -21,6 +21,10 @@ struct Pose2D
   double x;
   double y;
   double yaw;
+  // velocities
+  double vx{0.0};
+  double vy{0.0};
+  double v_yaw{0.0};
 };
 
 struct Segment
@@ -107,6 +111,29 @@ private:
       new_pose.y   = current_pose_.y + d_center * std::sin(current_pose_.yaw + d_theta / 2.0);
       new_pose.yaw = current_pose_.yaw + d_theta;
 
+// --- compute velocities ---
+      bool use_joint_velocity = false;
+      double v_left = 0.0, v_right = 0.0;
+      if (!msg->velocity.empty() && idx_l < msg->velocity.size() && idx_r < msg->velocity.size()) {
+        v_left = msg->velocity[idx_l];
+        v_right = msg->velocity[idx_r];
+        if (std::fabs(v_left) > 1e-9 || std::fabs(v_right) > 1e-9) {
+          use_joint_velocity = true;
+        }  
+      }
+
+      if (use_joint_velocity) {
+        double v = (v_left + v_right) / 2.0 * wheel_radius_;
+        double omega = (v_right - v_left) / wheel_separation_;
+        new_pose.vx = v * std::cos(current_pose_.yaw);
+        new_pose.vy = v * std::sin(current_pose_.yaw);
+        new_pose.v_yaw = omega;
+      } else {
+        new_pose.vx = d_center / dt * std::cos(current_pose_.yaw + d_theta/2.0);
+        new_pose.vy = d_center / dt * std::sin(current_pose_.yaw + d_theta/2.0);
+        new_pose.v_yaw = d_theta / dt;
+      }      
+      
       updatePose(new_pose, now);
 
       last_left_pos_  = left_pos;
@@ -194,6 +221,23 @@ private:
     tf2::Quaternion q;
     q.setRPY(0, 0, imu_pose_.yaw);
     odom.pose.pose.orientation = tf2::toMsg(q);
+    
+     // --- twist (from integrated velocity) ---
+    odom.twist.twist.linear.x = imu_vx_;
+    odom.twist.twist.linear.y = imu_vy_;
+    odom.twist.twist.angular.z = imu_pose_.v_yaw;  // we need to track integrated yaw rate
+
+    // --- pose covariance ---
+    for (int i = 0; i < 36; i++) odom.pose.covariance[i] = 0.0;
+    odom.pose.covariance[0]  = 0.02*0.02; // x
+    odom.pose.covariance[7]  = 0.02*0.02; // y
+    odom.pose.covariance[35] = 0.05*0.05; // yaw (z rotation)
+
+    // --- twist covariance ---
+    for (int i = 0; i < 36; i++) odom.twist.covariance[i] = 0.0;
+    odom.twist.covariance[0]  = 0.02*0.02; // vx
+    odom.twist.covariance[7]  = 0.02*0.02; // vy
+    odom.twist.covariance[35] = 0.05*0.05; // v_yaw
 
     odom_imu_pub_->publish(odom);
   }
@@ -244,6 +288,22 @@ private:
     tf2::Quaternion q;
     q.setRPY(0, 0, current_pose_.yaw);
     odom.pose.pose.orientation = tf2::toMsg(q);
+    
+    // twist
+    odom.twist.twist.linear.x = current_pose_.vx;
+    odom.twist.twist.linear.y = current_pose_.vy;
+    odom.twist.twist.angular.z = current_pose_.v_yaw;
+
+    // pose covariance (example small numbers)
+    for (int i=0;i<36;i++) odom.pose.covariance[i]=0.0;
+    odom.pose.covariance[0] = 0.01*0.01;
+    odom.pose.covariance[7] = 0.01*0.01;
+    odom.pose.covariance[35]= 0.01*0.01;
+
+    for (int i=0;i<36;i++) odom.twist.covariance[i]=0.0;
+    odom.twist.covariance[0] = 0.01*0.01;
+    odom.twist.covariance[7] = 0.01*0.01;
+    odom.twist.covariance[35]= 0.01*0.01;
 
     odom_pub_->publish(odom);
   }
