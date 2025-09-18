@@ -1,0 +1,3 @@
+/home/pritismankar/ros2_ws/install/matplotlib_cpp/include/matplotlibcpp.h
+/home/pritismankar/ros2_ws/install/matplotlib_cpp/lib/matplotlib_cpp/cmake/matplotlib_cppTargets.cmake
+/home/pritismankar/ros2_ws/install/matplotlib_cpp/lib/matplotlib_cpp/cmake/matplotlib_cppConfig.cmake

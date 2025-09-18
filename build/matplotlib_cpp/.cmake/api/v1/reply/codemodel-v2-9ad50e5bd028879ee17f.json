@@ -1,0 +1,195 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "matplotlib_cpp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "animation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-animation-8f2a43f6963f5a7b7a7c.json",
+					"name" : "animation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bar-1bebc3d95d1da75a71a5.json",
+					"name" : "bar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "basic::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-basic-b21ff65c7c1932011f87.json",
+					"name" : "basic",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "colorbar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-colorbar-54e117a322a4069d0784.json",
+					"name" : "colorbar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "contour::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-contour-1016fc44517239b568b1.json",
+					"name" : "contour",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "fill::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fill-257ed5828cb346a52e2f.json",
+					"name" : "fill",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "fill_inbetween::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fill_inbetween-21512877c46935c111ea.json",
+					"name" : "fill_inbetween",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lines3d::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lines3d-e60a57e91bcc4e202e1b.json",
+					"name" : "lines3d",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "minimal::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-minimal-1aae65e76d837890cc16.json",
+					"name" : "minimal",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "modern::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-modern-766960ef0293dc52d13d.json",
+					"name" : "modern",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "nonblock::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-nonblock-d46709f36a9c5689f6fa.json",
+					"name" : "nonblock",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "spy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-spy-135695e20175aa569bf7.json",
+					"name" : "spy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "subplot2grid::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-subplot2grid-cb53122dae438b67d16e.json",
+					"name" : "subplot2grid",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "surface::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-surface-4ff429ad9aa467f23d70.json",
+					"name" : "surface",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "update::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-update-d49185e44fd0d40644b0.json",
+					"name" : "update",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xkcd::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xkcd-14c3d7eec5327a5a650a.json",
+					"name" : "xkcd",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/pritismankar/ros2_ws/build/matplotlib_cpp",
+		"source" : "/home/pritismankar/ros2_ws/src/matplotlib-cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

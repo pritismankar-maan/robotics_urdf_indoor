@@ -1,4 +1,6 @@
 /home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry/odom_node
+/home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry/live_plot
+/home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/launch/odom.launch.py
 /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/package_run_dependencies/my_odometry
 /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/parent_prefix_path/my_odometry
 /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/ament_prefix_path.sh

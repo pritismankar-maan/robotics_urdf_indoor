@@ -1,1 +1,0 @@
-/home/pritismankar/ros2_ws/src/my_odometry/scripts/move_robot.py

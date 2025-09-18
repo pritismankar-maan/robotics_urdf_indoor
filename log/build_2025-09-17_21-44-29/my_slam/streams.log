@@ -1,0 +1,26 @@
+[2.344s] Invoking command in '/home/pritismankar/ros2_ws/build/my_slam': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_slam/build --no-deps symlink_data
+[3.067s] running develop
+[3.230s] running egg_info
+[3.230s] creating my_slam.egg-info
+[3.231s] writing my_slam.egg-info/PKG-INFO
+[3.232s] writing dependency_links to my_slam.egg-info/dependency_links.txt
+[3.232s] writing entry points to my_slam.egg-info/entry_points.txt
+[3.232s] writing requirements to my_slam.egg-info/requires.txt
+[3.233s] writing top-level names to my_slam.egg-info/top_level.txt
+[3.233s] writing manifest file 'my_slam.egg-info/SOURCES.txt'
+[3.263s] reading manifest file 'my_slam.egg-info/SOURCES.txt'
+[3.264s] writing manifest file 'my_slam.egg-info/SOURCES.txt'
+[3.299s] running build_ext
+[3.302s] Creating /home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages/site.py
+[3.305s] Creating /home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages/my-slam.egg-link (link to .)
+[3.306s] Installing map_builder script to /home/pritismankar/ros2_ws/install/my_slam/lib/my_slam
+[3.306s] Installing scan_matcher script to /home/pritismankar/ros2_ws/install/my_slam/lib/my_slam
+[3.307s] 
+[3.307s] Installed /home/pritismankar/ros2_ws/build/my_slam
+[3.308s] running symlink_data
+[3.308s] creating /home/pritismankar/ros2_ws/install/my_slam/share/ament_index
+[3.309s] creating /home/pritismankar/ros2_ws/install/my_slam/share/ament_index/resource_index
+[3.309s] creating /home/pritismankar/ros2_ws/install/my_slam/share/ament_index/resource_index/packages
+[3.309s] symbolically linking /home/pritismankar/ros2_ws/build/my_slam/resource/my_slam -> /home/pritismankar/ros2_ws/install/my_slam/share/ament_index/resource_index/packages
+[3.309s] symbolically linking /home/pritismankar/ros2_ws/build/my_slam/package.xml -> /home/pritismankar/ros2_ws/install/my_slam/share/my_slam
+[3.343s] Invoked command in '/home/pritismankar/ros2_ws/build/my_slam' returned '0': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_slam/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_slam/build --no-deps symlink_data

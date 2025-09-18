@@ -48,8 +48,10 @@ public:
       "/imu/data", 50, std::bind(&OdomNode::imuCallback, this, _1));
 
     odom_pub_ = this->create_publisher<nav_msgs::msg::Odometry>("odom_est", 10);
+    odom_imu_pub_ = this->create_publisher<nav_msgs::msg::Odometry>("odom_imu_est", 10);
     traj_pub_ = this->create_publisher<visualization_msgs::msg::Marker>("odom_segments", 10);
     point_pub_ = create_publisher<visualization_msgs::msg::Marker>("odom_points", 10);
+    imu_point_pub_ = create_publisher<visualization_msgs::msg::Marker>("imu_points", 10);
 
     tf_broadcaster_ = std::make_shared<tf2_ros::TransformBroadcaster>(this);
   }
@@ -113,11 +115,106 @@ private:
     }
 
 
-  void imuCallback(const sensor_msgs::msg::Imu::SharedPtr /*msg*/)
+  void imuCallback(const sensor_msgs::msg::Imu::SharedPtr msg)
   {
     // placeholder for future IMU fusion
+    // need a first stamp
+    rclcpp::Time stamp(msg->header.stamp);
+
+  // first measurement
+  if (last_imu_time_.nanoseconds() == 0) {
+    last_imu_time_ = stamp;
+    return;
   }
 
+  double dt = (stamp - last_imu_time_).seconds();
+  if (dt <= 0.0) return;
+  
+  // Skip if dt is too large (sensor pause, old bag message, etc.)
+  if (dt > 0.05) {   // 50 ms for a 20 Hz sensor, adjust to your rate
+      RCLCPP_WARN(get_logger(),
+                  "Skipping IMU integration: dt=%.3f s", dt);
+      last_imu_time_ = stamp;
+      return;
+  }
+
+  // integrate yaw
+  double wz = msg->angular_velocity.z;
+  imu_pose_.yaw += wz * dt;
+
+  // body accel -> world
+  double ax = msg->linear_acceleration.x;
+  double ay = msg->linear_acceleration.y;
+  double c = std::cos(imu_pose_.yaw);
+  double s = std::sin(imu_pose_.yaw);
+  double ax_w =  c*ax - s*ay;
+  double ay_w =  s*ax + c*ay;
+
+  imu_vx_ += ax_w * dt;
+  imu_vy_ += ay_w * dt;
+  imu_pose_.x += imu_vx_ * dt;
+  imu_pose_.y += imu_vy_ * dt;
+
+  last_imu_time_ = stamp;
+
+  // publish as POINTS
+  visualization_msgs::msg::Marker mp;
+  mp.header.stamp = stamp;
+  mp.header.frame_id = "odom";
+  mp.ns = "imu_points";
+  mp.id = next_imu_point_id_++;
+  mp.type = visualization_msgs::msg::Marker::POINTS;
+  mp.action = visualization_msgs::msg::Marker::ADD;
+  mp.scale.x = 0.05;
+  mp.scale.y = 0.05;
+  mp.color.b = 1.0;
+  mp.color.a = 1.0;
+
+  geometry_msgs::msg::Point p;
+  p.x = imu_pose_.x;
+  p.y = imu_pose_.y;
+  p.z = 0.0;
+  mp.points.push_back(p);
+
+  publishImuOdom(stamp); 	
+  imu_point_pub_->publish(mp);
+  publishimuTF(stamp);
+  
+  }
+
+  void publishImuOdom(const rclcpp::Time &stamp)
+  {
+    nav_msgs::msg::Odometry odom;
+    odom.header.stamp = stamp;
+    odom.header.frame_id = "odom";
+    odom.child_frame_id = "imu_link";
+    odom.pose.pose.position.x = imu_pose_.x;
+    odom.pose.pose.position.y = imu_pose_.y;
+
+    tf2::Quaternion q;
+    q.setRPY(0, 0, imu_pose_.yaw);
+    odom.pose.pose.orientation = tf2::toMsg(q);
+
+    odom_imu_pub_->publish(odom);
+  }
+  
+  void publishimuTF(const rclcpp::Time &stamp)
+  {
+    geometry_msgs::msg::TransformStamped t;
+    t.header.stamp = stamp;
+    t.header.frame_id = "odom";
+    t.child_frame_id = "imu_link";
+    t.transform.translation.x = imu_pose_.x;
+    t.transform.translation.y = imu_pose_.y;
+    t.transform.translation.z = 0.0;
+
+    tf2::Quaternion q;
+    q.setRPY(0, 0, imu_pose_.yaw);
+    t.transform.rotation = tf2::toMsg(q);
+
+    tf_broadcaster_->sendTransform(t);
+  }
+  
   void updatePose(const Pose2D &new_pose, const rclcpp::Time &stamp)
   {
     Segment seg{current_pose_, new_pose};
@@ -222,9 +319,12 @@ private:
   rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_sub_;
   rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr imu_sub_;
   rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odom_pub_;
+  rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odom_imu_pub_;
   rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr traj_pub_;
   rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr point_pub_;
+  rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr imu_point_pub_;
   std::shared_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
+  
 
   double wheel_radius_;
   double wheel_separation_;
@@ -235,6 +335,13 @@ private:
   rclcpp::Time last_time_;
   int next_marker_id_;
   int next_marker_points_id_;
+
+  Pose2D imu_pose_{0.0, 0.0, 0.0};
+  double imu_vx_{0.0};
+  double imu_vy_{0.0};
+  rclcpp::Time last_imu_time_{0,0,RCL_ROS_TIME};
+  int next_imu_point_id_{0};
+
 };
 
 int main(int argc, char *argv[])

@@ -1,2 +1,0 @@
-Invoking command in '/home/pritismankar/ros2_ws/build/my_odometry': /usr/bin/cmake /home/pritismankar/ros2_ws/src/my_odometry -DCMAKE_INSTALL_PREFIX=/home/pritismankar/ros2_ws/install/my_odometry
-Invoked command in '/home/pritismankar/ros2_ws/build/my_odometry' returned '1': /usr/bin/cmake /home/pritismankar/ros2_ws/src/my_odometry -DCMAKE_INSTALL_PREFIX=/home/pritismankar/ros2_ws/install/my_odometry

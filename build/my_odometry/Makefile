@@ -168,6 +168,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named live_plot
+
+# Build rule for target.
+live_plot: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 live_plot
+.PHONY : live_plot
+
+# fast build rule for target.
+live_plot/fast:
+	$(MAKE) -f CMakeFiles/live_plot.dir/build.make CMakeFiles/live_plot.dir/build
+.PHONY : live_plot/fast
+
+#=============================================================================
 # Target rules for targets named odom_node
 
 # Build rule for target.
@@ -205,6 +218,33 @@ uninstall: cmake_check_build_system
 uninstall/fast:
 	$(MAKE) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
 .PHONY : uninstall/fast
+
+scripts/live_plot.o: scripts/live_plot.cpp.o
+
+.PHONY : scripts/live_plot.o
+
+# target to build an object file
+scripts/live_plot.cpp.o:
+	$(MAKE) -f CMakeFiles/live_plot.dir/build.make CMakeFiles/live_plot.dir/scripts/live_plot.cpp.o
+.PHONY : scripts/live_plot.cpp.o
+
+scripts/live_plot.i: scripts/live_plot.cpp.i
+
+.PHONY : scripts/live_plot.i
+
+# target to preprocess a source file
+scripts/live_plot.cpp.i:
+	$(MAKE) -f CMakeFiles/live_plot.dir/build.make CMakeFiles/live_plot.dir/scripts/live_plot.cpp.i
+.PHONY : scripts/live_plot.cpp.i
+
+scripts/live_plot.s: scripts/live_plot.cpp.s
+
+.PHONY : scripts/live_plot.s
+
+# target to generate assembly for a file
+scripts/live_plot.cpp.s:
+	$(MAKE) -f CMakeFiles/live_plot.dir/build.make CMakeFiles/live_plot.dir/scripts/live_plot.cpp.s
+.PHONY : scripts/live_plot.cpp.s
 
 scripts/odom_node.o: scripts/odom_node.cpp.o
 
@@ -245,10 +285,14 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... live_plot"
 	@echo "... odom_node"
 	@echo "... install/strip"
 	@echo "... my_odometry_uninstall"
 	@echo "... uninstall"
+	@echo "... scripts/live_plot.o"
+	@echo "... scripts/live_plot.i"
+	@echo "... scripts/live_plot.s"
 	@echo "... scripts/odom_node.o"
 	@echo "... scripts/odom_node.i"
 	@echo "... scripts/odom_node.s"

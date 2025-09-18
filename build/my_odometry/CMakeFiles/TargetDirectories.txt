@@ -4,6 +4,7 @@
 /home/pritismankar/ros2_ws/build/my_odometry/CMakeFiles/rebuild_cache.dir
 /home/pritismankar/ros2_ws/build/my_odometry/CMakeFiles/edit_cache.dir
 /home/pritismankar/ros2_ws/build/my_odometry/CMakeFiles/test.dir
+/home/pritismankar/ros2_ws/build/my_odometry/CMakeFiles/live_plot.dir
 /home/pritismankar/ros2_ws/build/my_odometry/CMakeFiles/odom_node.dir
 /home/pritismankar/ros2_ws/build/my_odometry/CMakeFiles/install/strip.dir
 /home/pritismankar/ros2_ws/build/my_odometry/CMakeFiles/my_odometry_uninstall.dir

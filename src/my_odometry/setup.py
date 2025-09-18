@@ -29,6 +29,7 @@ setup(
             'encoder_odom = my_odometry.scripts.encoder_odom:main',
             'imu_odom = my_odometry.scripts.imu_odom:main',
             'move_robot = my_odometry.scripts.move_robot:main',
+            'live_plot = my_odometry.live_plot:main',
         ],
     },
 )

@@ -310,8 +310,11 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "odom_node" "DESTINATION" "lib/my_odometry")
+# install("TARGETS" "odom_node" "live_plot" "DESTINATION" "lib/my_odometry")
 include("/home/pritismankar/ros2_ws/build/my_odometry/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install(DIRECTORY "launch" "DESTINATION" "share/my_odometry")
+ament_cmake_symlink_install_directory("/home/pritismankar/ros2_ws/src/my_odometry" DIRECTORY "launch" "DESTINATION" "share/my_odometry")
 
 # install(FILES "/home/pritismankar/ros2_ws/build/my_odometry/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/my_odometry" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/pritismankar/ros2_ws/src/my_odometry" FILES "/home/pritismankar/ros2_ws/build/my_odometry/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/my_odometry" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

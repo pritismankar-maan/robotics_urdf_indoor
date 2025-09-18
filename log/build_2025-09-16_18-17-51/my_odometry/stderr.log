@@ -1,7 +1,0 @@
-[01m[K/home/pritismankar/ros2_ws/src/my_odometry/scripts/odom_node.cpp:[m[K In constructor ‘[01m[KOdomNode::OdomNode()[m[K’:
-[01m[K/home/pritismankar/ros2_ws/src/my_odometry/scripts/odom_node.cpp:42:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[Knext_marker_points_id_[m[K’
-   42 |     [01;31m[Knext_marker_points_id_[m[K(0)
-      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
-make[2]: *** [CMakeFiles/odom_node.dir/build.make:63: CMakeFiles/odom_node.dir/scripts/odom_node.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/odom_node.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

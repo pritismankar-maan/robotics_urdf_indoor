@@ -1,11 +1,6 @@
 package.xml
 setup.cfg
 setup.py
-../../build/my_robot_description/my_robot_description.egg-info/PKG-INFO
-../../build/my_robot_description/my_robot_description.egg-info/SOURCES.txt
-../../build/my_robot_description/my_robot_description.egg-info/dependency_links.txt
-../../build/my_robot_description/my_robot_description.egg-info/top_level.txt
-../../build/my_robot_description/my_robot_description.egg-info/zip-safe
 launch/display.launch.py
 my_robot_description/__init__.py
 my_robot_description.egg-info/PKG-INFO

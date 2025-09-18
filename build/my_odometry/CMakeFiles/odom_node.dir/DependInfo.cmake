@@ -18,6 +18,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/pritismankar/ros2_ws/src/my_odometry/include"
+  "/usr/include/python3.8"
+  "/home/pritismankar/ros2_ws/src/my_odometry/../matplotlib-cpp"
   "/opt/ros/foxy/include"
   "/usr/include/eigen3"
   )
