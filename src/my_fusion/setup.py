@@ -12,14 +12,15 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        (os.path.join('share', package_name, 'config'), glob('config/*.yaml')),
+        # Install launch files
         (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
+        # Install scripts (Python nodes)
         (os.path.join('share', package_name, 'scripts'), glob('scripts/*.py')),
     ],
     zip_safe=True,
     maintainer='pritismankar',
     maintainer_email='pritismankar@todo.todo',
-    description='Sensor fusion EKF node',
+    description='Sensor fusion nodes (EKF)',
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={

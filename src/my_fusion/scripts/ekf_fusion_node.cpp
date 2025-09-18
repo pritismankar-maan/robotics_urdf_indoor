@@ -1,0 +1,101 @@
+// File: my_fusion/scripts/ekf_fusion_node.cpp
+#include <rclcpp/rclcpp.hpp>
+#include <nav_msgs/msg/odometry.hpp>
+#include <sensor_msgs/msg/imu.hpp>
+#include <tf2/LinearMath/Quaternion.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
+#include <Eigen/Dense>
+
+class EKFFusionNode : public rclcpp::Node
+{
+public:
+    EKFFusionNode() : Node("ekf_fusion_node")
+    {
+        odom_sub_ = this->create_subscription<nav_msgs::msg::Odometry>(
+            "/odom_est", 10, std::bind(&EKFFusionNode::odomCallback, this, std::placeholders::_1));
+
+        imu_sub_ = this->create_subscription<sensor_msgs::msg::Imu>(
+            "/imu/data", 10, std::bind(&EKFFusionNode::imuCallback, this, std::placeholders::_1));
+
+        fused_pub_ = this->create_publisher<nav_msgs::msg::Odometry>("/odom_fused", 10);
+
+        x_ = Eigen::Vector3d::Zero(); // [x, y, theta]
+        P_ = Eigen::Matrix3d::Identity() * 0.01;
+        Q_ = Eigen::Matrix3d::Identity() * 0.001;
+        R_ = Eigen::Matrix3d::Identity() * 0.05;
+
+        last_time_ = this->now();
+    }
+
+private:
+    rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub_;
+    rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr imu_sub_;
+    rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr fused_pub_;
+
+    Eigen::Vector3d x_;
+    Eigen::Matrix3d P_;
+    Eigen::Matrix3d Q_;
+    Eigen::Matrix3d R_;
+
+    double imu_omega_ = 0.0;
+    rclcpp::Time last_time_;
+
+    void imuCallback(const sensor_msgs::msg::Imu::SharedPtr msg)
+    {
+        imu_omega_ = msg->angular_velocity.z;
+    }
+
+    void odomCallback(const nav_msgs::msg::Odometry::SharedPtr msg)
+    {
+        rclcpp::Time now = this->now();
+        double dt = (now - last_time_).seconds();
+        if (dt <= 0.0) return;
+        last_time_ = now;
+
+        // --- PREDICTION using odom + imu ---
+        double v = std::sqrt(msg->twist.twist.linear.x * msg->twist.twist.linear.x +
+                             msg->twist.twist.linear.y * msg->twist.twist.linear.y);
+        double omega = imu_omega_; // fused angular velocity from IMU
+
+        double theta = x_(2);
+        x_(0) += v * dt * std::cos(theta);
+        x_(1) += v * dt * std::sin(theta);
+        x_(2) += omega * dt;
+
+        // EKF prediction Jacobian
+        Eigen::Matrix3d F = Eigen::Matrix3d::Identity();
+        F(0,2) = -v * dt * std::sin(theta);
+        F(1,2) = v * dt * std::cos(theta);
+
+        P_ = F * P_ * F.transpose() + Q_;
+
+        // --- MEASUREMENT UPDATE using odom pose ---
+        Eigen::Vector3d z(msg->pose.pose.position.x,
+                          msg->pose.pose.position.y,
+                          tf2::getYaw(msg->pose.pose.orientation));
+
+        Eigen::Matrix3d K = P_ * (P_ + R_).inverse();
+        x_ = x_ + K * (z - x_);
+        P_ = (Eigen::Matrix3d::Identity() - K) * P_;
+
+        // --- PUBLISH ---
+        nav_msgs::msg::Odometry fused;
+        fused.header.stamp = now;
+        fused.header.frame_id = "odom";
+        fused.pose.pose.position.x = x_(0);
+        fused.pose.pose.position.y = x_(1);
+        tf2::Quaternion q;
+        q.setRPY(0, 0, x_(2));
+        fused.pose.pose.orientation = tf2::toMsg(q);
+        fused_pub_->publish(fused);
+    }
+};
+
+int main(int argc, char** argv)
+{
+    rclcpp::init(argc, argv);
+    auto node = std::make_shared<EKFFusionNode>();
+    rclcpp::spin(node);
+    rclcpp::shutdown();
+    return 0;
+}

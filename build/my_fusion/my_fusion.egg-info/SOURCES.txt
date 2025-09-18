@@ -1,7 +1,6 @@
 package.xml
 setup.cfg
 setup.py
-config/ekf.yaml
 launch/fusion.launch.py
 my_fusion/__init__.py
 my_fusion.egg-info/PKG-INFO

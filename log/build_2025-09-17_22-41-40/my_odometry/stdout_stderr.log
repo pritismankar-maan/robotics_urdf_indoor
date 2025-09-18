@@ -48,9 +48,9 @@
 [35m[1mScanning dependencies of target odom_node[0m
 [ 25%] [32mBuilding CXX object CMakeFiles/odom_node.dir/scripts/odom_node.cpp.o[0m
 [ 50%] [32mBuilding CXX object CMakeFiles/live_plot.dir/scripts/live_plot.cpp.o[0m
-[ 75%] [32m[1mLinking CXX executable odom_node[0m
-[100%] [32m[1mLinking CXX executable live_plot[0m
-[100%] Built target live_plot
+[ 75%] [32m[1mLinking CXX executable live_plot[0m
+[ 75%] Built target live_plot
+[100%] [32m[1mLinking CXX executable odom_node[0m
 [100%] Built target odom_node
 -- Install configuration: ""
 -- Execute custom install script

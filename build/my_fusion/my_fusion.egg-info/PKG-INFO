@@ -1,7 +1,7 @@
 Metadata-Version: 1.2
 Name: my-fusion
 Version: 0.0.0
-Summary: Sensor fusion EKF node
+Summary: Sensor fusion nodes (EKF)
 Home-page: UNKNOWN
 Maintainer: pritismankar
 Maintainer-email: pritismankar@todo.todo

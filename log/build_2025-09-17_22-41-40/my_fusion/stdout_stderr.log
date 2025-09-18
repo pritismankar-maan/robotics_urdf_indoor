@@ -20,8 +20,6 @@ creating /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource
 creating /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/packages
 symbolically linking /home/pritismankar/ros2_ws/build/my_fusion/resource/my_fusion -> /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/packages
 symbolically linking /home/pritismankar/ros2_ws/build/my_fusion/package.xml -> /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion
-creating /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/config
-symbolically linking /home/pritismankar/ros2_ws/build/my_fusion/config/ekf.yaml -> /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/config
 creating /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/launch
 symbolically linking /home/pritismankar/ros2_ws/build/my_fusion/launch/fusion.launch.py -> /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/launch
 creating /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/scripts

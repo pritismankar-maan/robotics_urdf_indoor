@@ -1,0 +1,86 @@
+[0.081s] Invoking command in '/home/pritismankar/ros2_ws/build/matplotlib_cpp': /usr/bin/cmake /home/pritismankar/ros2_ws/src/matplotlib-cpp -DCMAKE_INSTALL_PREFIX=/home/pritismankar/ros2_ws/install/matplotlib_cpp
+[0.441s] -- The CXX compiler identification is GNU 9.4.0
+[0.442s] -- Check for working CXX compiler: /usr/bin/c++
+[0.442s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.443s] -- Detecting CXX compiler ABI info
+[0.488s] -- Detecting CXX compiler ABI info - done
+[0.497s] -- Detecting CXX compile features
+[0.498s] -- Detecting CXX compile features - done
+[1.081s] -- Found Python3: /usr/bin/python3.8 (found version "3.8.10") found components: Interpreter Development 
+[1.939s] -- Found Python3: /home/pritismankar/.local/lib/python3.8/site-packages/numpy/core/include (found version "3.8.10") found components: NumPy Interpreter Development 
+[1.942s] -- Configuring done
+[1.972s] -- Generating done
+[1.980s] -- Build files have been written to: /home/pritismankar/ros2_ws/build/matplotlib_cpp
+[1.995s] Invoked command in '/home/pritismankar/ros2_ws/build/matplotlib_cpp' returned '0': /usr/bin/cmake /home/pritismankar/ros2_ws/src/matplotlib-cpp -DCMAKE_INSTALL_PREFIX=/home/pritismankar/ros2_ws/install/matplotlib_cpp
+[2.011s] Invoking command in '/home/pritismankar/ros2_ws/build/matplotlib_cpp': /usr/bin/cmake --build /home/pritismankar/ros2_ws/build/matplotlib_cpp -- -j4 -l4
+[2.138s] [35m[1mScanning dependencies of target colorbar[0m
+[2.160s] [35m[1mScanning dependencies of target surface[0m
+[2.193s] [35m[1mScanning dependencies of target xkcd[0m
+[2.197s] [35m[1mScanning dependencies of target spy[0m
+[2.235s] [  3%] [32mBuilding CXX object CMakeFiles/xkcd.dir/examples/xkcd.cpp.o[0m
+[2.245s] [  6%] [32mBuilding CXX object CMakeFiles/surface.dir/examples/surface.cpp.o[0m
+[2.251s] [  9%] [32mBuilding CXX object CMakeFiles/colorbar.dir/examples/colorbar.cpp.o[0m
+[2.289s] [ 12%] [32mBuilding CXX object CMakeFiles/spy.dir/examples/spy.cpp.o[0m
+[3.991s] [ 15%] [32m[1mLinking CXX executable bin/xkcd[0m
+[4.018s] [ 18%] [32m[1mLinking CXX executable bin/colorbar[0m
+[4.248s] [ 18%] Built target colorbar
+[4.338s] [35m[1mScanning dependencies of target basic[0m
+[4.340s] [ 21%] [32m[1mLinking CXX executable bin/spy[0m
+[4.404s] [ 25%] [32m[1mLinking CXX executable bin/surface[0m
+[4.449s] [ 25%] Built target xkcd
+[4.521s] [ 28%] [32mBuilding CXX object CMakeFiles/basic.dir/examples/basic.cpp.o[0m
+[4.563s] [ 28%] Built target spy
+[4.564s] [35m[1mScanning dependencies of target animation[0m
+[4.737s] [35m[1mScanning dependencies of target minimal[0m
+[4.771s] [ 31%] [32mBuilding CXX object CMakeFiles/animation.dir/examples/animation.cpp.o[0m
+[4.867s] [ 31%] Built target surface
+[4.903s] [ 34%] [32mBuilding CXX object CMakeFiles/minimal.dir/examples/minimal.cpp.o[0m
+[4.979s] [35m[1mScanning dependencies of target nonblock[0m
+[5.096s] [ 37%] [32mBuilding CXX object CMakeFiles/nonblock.dir/examples/nonblock.cpp.o[0m
+[6.108s] [ 40%] [32m[1mLinking CXX executable bin/basic[0m
+[6.186s] [ 43%] [32m[1mLinking CXX executable bin/animation[0m
+[6.200s] [ 46%] [32m[1mLinking CXX executable bin/nonblock[0m
+[6.393s] [ 50%] [32m[1mLinking CXX executable bin/minimal[0m
+[6.414s] [ 50%] Built target basic
+[6.481s] [ 50%] Built target nonblock
+[6.486s] [35m[1mScanning dependencies of target fill[0m
+[6.561s] [35m[1mScanning dependencies of target contour[0m
+[6.602s] [ 53%] [32mBuilding CXX object CMakeFiles/contour.dir/examples/contour.cpp.o[0m
+[6.621s] [ 53%] Built target animation
+[6.626s] [ 56%] [32mBuilding CXX object CMakeFiles/fill.dir/examples/fill.cpp.o[0m
+[6.644s] [ 56%] Built target minimal
+[6.677s] [35m[1mScanning dependencies of target fill_inbetween[0m
+[6.696s] [35m[1mScanning dependencies of target bar[0m
+[6.738s] [ 59%] [32mBuilding CXX object CMakeFiles/bar.dir/examples/bar.cpp.o[0m
+[6.833s] [ 62%] [32mBuilding CXX object CMakeFiles/fill_inbetween.dir/examples/fill_inbetween.cpp.o[0m
+[7.772s] [ 65%] [32m[1mLinking CXX executable bin/fill[0m
+[7.790s] [ 68%] [32m[1mLinking CXX executable bin/fill_inbetween[0m
+[7.807s] [ 71%] [32m[1mLinking CXX executable bin/contour[0m
+[7.930s] [ 71%] Built target fill
+[8.053s] [35m[1mScanning dependencies of target update[0m
+[8.057s] [ 71%] Built target fill_inbetween
+[8.075s] [35m[1mScanning dependencies of target lines3d[0m
+[8.093s] [ 71%] Built target contour
+[8.108s] [ 75%] [32mBuilding CXX object CMakeFiles/update.dir/examples/update.cpp.o[0m
+[8.135s] [ 78%] [32mBuilding CXX object CMakeFiles/lines3d.dir/examples/lines3d.cpp.o[0m
+[8.142s] [35m[1mScanning dependencies of target modern[0m
+[8.183s] [ 81%] [32mBuilding CXX object CMakeFiles/modern.dir/examples/modern.cpp.o[0m
+[8.359s] [ 84%] [32m[1mLinking CXX executable bin/bar[0m
+[9.077s] [ 87%] [32m[1mLinking CXX executable bin/modern[0m
+[9.182s] [ 87%] Built target bar
+[9.283s] [ 90%] [32m[1mLinking CXX executable bin/lines3d[0m
+[9.325s] [35m[1mScanning dependencies of target subplot2grid[0m
+[9.356s] [ 90%] Built target modern
+[9.376s] [ 93%] [32m[1mLinking CXX executable bin/update[0m
+[9.433s] [ 96%] [32mBuilding CXX object CMakeFiles/subplot2grid.dir/examples/subplot2grid.cpp.o[0m
+[9.547s] [ 96%] Built target lines3d
+[9.569s] [ 96%] Built target update
+[10.210s] [100%] [32m[1mLinking CXX executable bin/subplot2grid[0m
+[10.323s] [100%] Built target subplot2grid
+[10.358s] Invoked command in '/home/pritismankar/ros2_ws/build/matplotlib_cpp' returned '0': /usr/bin/cmake --build /home/pritismankar/ros2_ws/build/matplotlib_cpp -- -j4 -l4
+[10.380s] Invoking command in '/home/pritismankar/ros2_ws/build/matplotlib_cpp': /usr/bin/cmake --install /home/pritismankar/ros2_ws/build/matplotlib_cpp
+[10.407s] -- Install configuration: ""
+[10.407s] -- Installing: /home/pritismankar/ros2_ws/install/matplotlib_cpp/include/matplotlibcpp.h
+[10.407s] -- Installing: /home/pritismankar/ros2_ws/install/matplotlib_cpp/lib/matplotlib_cpp/cmake/matplotlib_cppTargets.cmake
+[10.408s] -- Installing: /home/pritismankar/ros2_ws/install/matplotlib_cpp/lib/matplotlib_cpp/cmake/matplotlib_cppConfig.cmake
+[10.415s] Invoked command in '/home/pritismankar/ros2_ws/build/matplotlib_cpp' returned '0': /usr/bin/cmake --install /home/pritismankar/ros2_ws/build/matplotlib_cpp
