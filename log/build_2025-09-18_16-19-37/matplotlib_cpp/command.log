@@ -1,0 +1,6 @@
+Invoking command in '/home/pritismankar/ros2_ws/build/matplotlib_cpp': /usr/bin/cmake /home/pritismankar/ros2_ws/src/matplotlib-cpp -DCMAKE_INSTALL_PREFIX=/home/pritismankar/ros2_ws/install/matplotlib_cpp
+Invoked command in '/home/pritismankar/ros2_ws/build/matplotlib_cpp' returned '0': /usr/bin/cmake /home/pritismankar/ros2_ws/src/matplotlib-cpp -DCMAKE_INSTALL_PREFIX=/home/pritismankar/ros2_ws/install/matplotlib_cpp
+Invoking command in '/home/pritismankar/ros2_ws/build/matplotlib_cpp': /usr/bin/cmake --build /home/pritismankar/ros2_ws/build/matplotlib_cpp -- -j4 -l4
+Invoked command in '/home/pritismankar/ros2_ws/build/matplotlib_cpp' returned '0': /usr/bin/cmake --build /home/pritismankar/ros2_ws/build/matplotlib_cpp -- -j4 -l4
+Invoking command in '/home/pritismankar/ros2_ws/build/matplotlib_cpp': /usr/bin/cmake --install /home/pritismankar/ros2_ws/build/matplotlib_cpp
+Invoked command in '/home/pritismankar/ros2_ws/build/matplotlib_cpp' returned '0': /usr/bin/cmake --install /home/pritismankar/ros2_ws/build/matplotlib_cpp

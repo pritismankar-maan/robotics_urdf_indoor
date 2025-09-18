@@ -7,6 +7,7 @@
 #include <tf2/utils.h>
 #include <Eigen/Dense>
 #include <vector>
+#include "visualization_msgs/msg/marker.hpp"
 
 class EKFFusionNode : public rclcpp::Node
 {
@@ -51,6 +52,9 @@ public:
 
         //last_time_ = this->now();
         first_odom_ = true;
+        
+        fused_point_pub_ = this->create_publisher<visualization_msgs::msg::Marker>("fused_points", 10);
+
     }
 
 private:
@@ -72,6 +76,10 @@ private:
 
     // --- Parameters ---
     std::string odom_topic_, imu_topic_, fused_topic_, frame_id_;
+    
+    rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr fused_point_pub_;
+    int next_fused_point_id_ = 0;  // persistent ID counter
+
 
     // --- Callbacks ---
     void imuCallback(const sensor_msgs::msg::Imu::SharedPtr msg)
@@ -140,6 +148,28 @@ private:
                 fused.pose.covariance[i*6 + j] = (i<3 && j<3) ? P_(i,j) : 0.0;
 
         fused_pub_->publish(fused);
+        
+        // --- Publish fused trajectory point ---
+	visualization_msgs::msg::Marker mp;
+	mp.header.stamp = now;
+	mp.header.frame_id = frame_id_;  // same as odom frame
+	mp.ns = "fused_points";
+	mp.id = next_fused_point_id_++;
+	mp.type = visualization_msgs::msg::Marker::POINTS;
+	mp.action = visualization_msgs::msg::Marker::ADD;
+	mp.scale.x = 0.05;  // diameter of point
+	mp.scale.y = 0.05;
+	mp.color.r = 1.0;   // red for fused trajectory
+	mp.color.a = 1.0;
+
+	geometry_msgs::msg::Point p;
+	p.x = x_(0);
+	p.y = x_(1);
+	p.z = 0.0;
+	mp.points.push_back(p);
+
+	fused_point_pub_->publish(mp);
+
     }
 };
 
