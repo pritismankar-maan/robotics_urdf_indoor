@@ -25,10 +25,10 @@ def generate_launch_description():
             arguments=['--ros-args', '--log-level', 'debug']
         ),
         
-        Node(
-            package='my_odometry',
-            executable='live_plot',  # matches entry point
-            name='live_plot_node',
-        ),
+        #Node(
+        #    package='my_odometry',
+        #    executable='live_plot',  # matches entry point
+        #    name='live_plot_node',
+        #),
     ])
 
