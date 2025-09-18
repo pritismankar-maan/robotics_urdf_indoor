@@ -23,7 +23,26 @@
                     "ignoreFailures": true
                 }
             ]
+        },
+        {
+            "name": "Attach to ekf_fusion_node",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceFolder}/install/my_fusion/lib/my_fusion/ekf_fusion_node",
+            "processId": "${command:pickProcess}",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
         }
-
     ]
 }

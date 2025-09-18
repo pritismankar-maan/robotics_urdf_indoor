@@ -1,0 +1,47 @@
+[0.022s] Invoking command in '/home/pritismankar/ros2_ws/build/my_fusion': CMAKE_PREFIX_PATH=/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic /usr/bin/cmake /home/pritismankar/ros2_ws/src/my_fusion -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/home/pritismankar/ros2_ws/install/my_fusion
+[0.063s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.093s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.281s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.285s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.322s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.324s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.468s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.512s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.515s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.675s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.818s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[0.906s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[0.996s] -- Found tf2: 0.13.14 (/opt/ros/foxy/share/tf2/cmake)
+[1.004s] -- Found tf2_geometry_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)
+[1.011s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[1.545s] -- Configuring done
+[1.578s] -- Generating done
+[1.589s] -- Build files have been written to: /home/pritismankar/ros2_ws/build/my_fusion
+[1.601s] Invoked command in '/home/pritismankar/ros2_ws/build/my_fusion' returned '0': CMAKE_PREFIX_PATH=/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic /usr/bin/cmake /home/pritismankar/ros2_ws/src/my_fusion -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/home/pritismankar/ros2_ws/install/my_fusion
+[1.602s] Invoking command in '/home/pritismankar/ros2_ws/build/my_fusion': CMAKE_PREFIX_PATH=/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic /usr/bin/cmake --build /home/pritismankar/ros2_ws/build/my_fusion -- -j4 -l4
+[1.685s] [ 50%] [32mBuilding CXX object CMakeFiles/ekf_fusion_node.dir/scripts/ekf_fusion_node.cpp.o[0m
+[11.193s] [100%] [32m[1mLinking CXX executable ekf_fusion_node[0m
+[11.731s] [100%] Built target ekf_fusion_node
+[11.759s] Invoked command in '/home/pritismankar/ros2_ws/build/my_fusion' returned '0': CMAKE_PREFIX_PATH=/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic /usr/bin/cmake --build /home/pritismankar/ros2_ws/build/my_fusion -- -j4 -l4
+[11.774s] Invoking command in '/home/pritismankar/ros2_ws/build/my_fusion': CMAKE_PREFIX_PATH=/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic /usr/bin/cmake --install /home/pritismankar/ros2_ws/build/my_fusion
+[11.793s] -- Install configuration: "Debug"
+[11.794s] -- Execute custom install script
+[11.795s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/lib/my_fusion/ekf_fusion_node
+[11.795s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion//launch/fusion.launch.py
+[11.796s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion//resource/my_fusion
+[11.796s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/package_run_dependencies/my_fusion
+[11.796s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/parent_prefix_path/my_fusion
+[11.797s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/ament_prefix_path.sh
+[11.797s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/ament_prefix_path.dsv
+[11.797s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/path.sh
+[11.798s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/path.dsv
+[11.798s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.bash
+[11.798s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.sh
+[11.798s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.zsh
+[11.798s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.dsv
+[11.798s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/package.dsv
+[11.811s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/packages/my_fusion
+[11.811s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/cmake/my_fusionConfig.cmake
+[11.811s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/cmake/my_fusionConfig-version.cmake
+[11.811s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/package.xml
+[11.825s] Invoked command in '/home/pritismankar/ros2_ws/build/my_fusion' returned '0': CMAKE_PREFIX_PATH=/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/matplotlib_cpp:/home/pritismankar/ros2_ws/install/my_slam:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic /usr/bin/cmake --install /home/pritismankar/ros2_ws/build/my_fusion

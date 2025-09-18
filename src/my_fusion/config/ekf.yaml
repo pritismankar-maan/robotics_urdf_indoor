@@ -1,0 +1,21 @@
+ekf_fusion_node:
+  ros__parameters:
+    # Topics
+    odom_topic: "/odom_est"
+    imu_topic: "/imu/data"
+    fused_topic: "/odom_fused"
+    frame_id: "odom"
+
+    # EKF Matrices (flattened row-major 3x3)
+    Q: [0.001, 0, 0,
+        0, 0.001, 0,
+        0, 0, 0.001]
+    R: [0.05, 0, 0,
+        0, 0.05, 0,
+        0, 0, 0.05]
+    P_init: [0.01, 0, 0,
+             0, 0.01, 0,
+             0, 0, 0.01]
+
+    # Optional tuning
+    max_dt: 0.2  # max timestep between odom messages
