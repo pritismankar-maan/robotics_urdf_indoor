@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import os
 
 # -----------------------------
-# CONFIG: set your bag file path here
+# CONFIG: set bag file path here
 # Example:
 # bag_path = "install/my_fusion/share/my_fusion/bags/session_20250919_064519/session_20250919_064519_0.db3"
 # -----------------------------
