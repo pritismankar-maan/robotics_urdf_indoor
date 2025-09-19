@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/pritismankar/ros2_ws/build/my_odometry/odom_node" "/home/pritismankar/ros2_ws/build/my_odometry/live_plot" "TARGETS" "odom_node" "live_plot" "DESTINATION" "lib/my_odometry")

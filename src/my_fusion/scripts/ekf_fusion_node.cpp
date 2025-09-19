@@ -112,7 +112,8 @@ private:
         double theta = x_(2);
         x_(0) += v * dt * std::cos(theta);
         x_(1) += v * dt * std::sin(theta);
-        x_(2) += omega * dt;
+        //x_(2) += omega * dt;
+	x_(2) = normalizeYaw(x_(2) + omega * dt);
 
         Eigen::Matrix3d F = Eigen::Matrix3d::Identity();
         F(0,2) = -v * dt * std::sin(theta);
@@ -125,8 +126,16 @@ private:
                           msg->pose.pose.position.y,
                           tf2::getYaw(msg->pose.pose.orientation));
 
+        // Innovation (z - x)
+	Eigen::Vector3d y;
+	y(0) = z(0) - x_(0);
+	y(1) = z(1) - x_(1);
+	y(2) = normalizeYaw(z(2) - x_(2));   // <---- handle ±π wrap
+        
+        
         Eigen::Matrix3d K = P_ * (P_ + R_).inverse();
-        x_ = x_ + K * (z - x_);
+        x_ = x_ + K * y;
+        x_(2) = normalizeYaw(x_(2));         // keep final heading bounded
         P_ = (Eigen::Matrix3d::Identity() - K) * P_;
 
         // --- Publish fused odom ---
@@ -171,6 +180,18 @@ private:
 	fused_point_pub_->publish(mp);
 
     }
+    inline double normalizeYaw(double yaw)
+  {
+    while (yaw > M_PI) 
+    {
+      yaw -= 2.0 * M_PI;
+    }
+    while (yaw < -M_PI) 
+    {
+      yaw += 2.0 * M_PI;
+    }
+    return yaw;
+  }
 };
 
 int main(int argc, char** argv)

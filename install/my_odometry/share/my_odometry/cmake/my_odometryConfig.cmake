@@ -1,1 +1,0 @@
-/home/pritismankar/ros2_ws/build/my_odometry/ament_cmake_core/my_odometryConfig.cmake

@@ -1,1 +1,0 @@
-/home/pritismankar/ros2_ws/build/my_fusion/ament_cmake_environment_hooks/local_setup.bash
