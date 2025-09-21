@@ -194,15 +194,34 @@ private:
 	    if (R.determinant()<0) R.col(1)*=-1;
 
 	    Eigen::Vector2d t = mu_dst - R*mu_src;
+	    // Flip scan motion if lidar X is reversed
+	    t = -t;
 	    double dtheta = std::atan2(R(1,0), R(0,0));
 
 	    // Update pose
-	    lidar_pose_.yaw = normalizeYaw(lidar_pose_.yaw + dtheta);
-	    Eigen::Vector2d trans_rotated;
-	    trans_rotated.x() = t.x()*std::cos(lidar_pose_.yaw) - t.y()*std::sin(lidar_pose_.yaw);
-	    trans_rotated.y() = t.x()*std::sin(lidar_pose_.yaw) + t.y()*std::cos(lidar_pose_.yaw);
-	    lidar_pose_.x += trans_rotated.x();
-	    lidar_pose_.y += trans_rotated.y();
+	    //lidar_pose_.yaw = normalizeYaw(lidar_pose_.yaw + dtheta);
+	    //Eigen::Vector2d trans_rotated;
+	    //trans_rotated.x() = t.x()*std::cos(lidar_pose_.yaw) - t.y()*std::sin(lidar_pose_.yaw);
+	    //trans_rotated.y() = t.x()*std::sin(lidar_pose_.yaw) + t.y()*std::cos(lidar_pose_.yaw);
+	    //lidar_pose_.x += trans_rotated.x();
+	    //lidar_pose_.y += trans_rotated.y();
+	
+	double new_yaw = normalizeYaw(lidar_pose_.yaw + dtheta);
+	double yaw_before = lidar_pose_.yaw;     // save current heading
+	lidar_pose_.yaw = new_yaw;
+
+	Eigen::Vector2d trans_rotated;
+	trans_rotated.x() = t.x()*cos(yaw_before) - t.y()*sin(yaw_before);
+	trans_rotated.y() = t.x()*sin(yaw_before) + t.y()*cos(yaw_before);
+
+	lidar_pose_.x += trans_rotated.x();
+	lidar_pose_.y += trans_rotated.y();
+	
+	RCLCPP_INFO(this->get_logger(),
+    		"ICP result: dtheta=%.3f  t=(%.3f, %.3f)",
+    					dtheta, t.x(), t.y());
+
+
 
 	    // Covariance scaling for slip
 	    double wheel_move = std::hypot(last_encoder_pose_.vx, last_encoder_pose_.vy);
