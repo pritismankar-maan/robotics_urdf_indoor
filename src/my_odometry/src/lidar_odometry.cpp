@@ -134,104 +134,110 @@ private:
     }
 
     void lidarCallback(const sensor_msgs::msg::LaserScan::SharedPtr msg) {
-	    rclcpp::Time stamp(msg->header.stamp);
-	    if (last_lidar_time_.nanoseconds() == 0) {
-		last_lidar_time_ = stamp;
-		prev_scan_.clear();
-		for (size_t i=0;i<msg->ranges.size();i+=2){  // denser sampling
-		    double r = msg->ranges[i];
-		    if (!std::isfinite(r)) continue;
-		    double ang = msg->angle_min + i*msg->angle_increment;
-		    prev_scan_.push_back(Eigen::Vector2d(r*std::cos(ang), r*std::sin(ang)));
-		}
-		return;
-	    }
+    rclcpp::Time stamp(msg->header.stamp);
 
-	    double dt = (stamp - last_lidar_time_).seconds();
-	    if (dt <= 0 || dt > 0.5) return;
+    // --- First scan ---
+    if (last_lidar_time_.nanoseconds() == 0) {
+        last_lidar_time_ = stamp;
+        prev_scan_.clear();
+        for (size_t i = 0; i < msg->ranges.size(); i += 2) {
+            double r = msg->ranges[i];
+            if (!std::isfinite(r)) continue;
+            double ang = msg->angle_min + i * msg->angle_increment;
+            prev_scan_.push_back(Eigen::Vector2d(r * std::cos(ang), r * std::sin(ang)));
+        }
+        return;
+    }
 
-	    // Convert current scan
-	    std::vector<Eigen::Vector2d> curr_scan;
-	    for (size_t i=0;i<msg->ranges.size();i+=2){
-		double r = msg->ranges[i];
-		if (!std::isfinite(r)) continue;
-		double ang = msg->angle_min + i*msg->angle_increment;
-		curr_scan.emplace_back(r*std::cos(ang), r*std::sin(ang));
-	    }
-	    if (curr_scan.empty() || prev_scan_.empty()) return;
+    double dt = (stamp - last_lidar_time_).seconds();
+    if (dt <= 0 || dt > 0.5) return;
 
-	    // Tighter ICP association
-	    std::vector<Eigen::Vector2d> src, dst;
-	    double max_assoc_dist = 0.2; // tighter threshold
-	    for (size_t i=0;i<curr_scan.size();i++){
-		double min_d = max_assoc_dist;
-		int best_idx = -1;
-		for (size_t j=0;j<prev_scan_.size();j++){
-		    double d = (curr_scan[i]-prev_scan_[j]).squaredNorm();
-		    if (d<min_d*min_d) {
-		        min_d = std::sqrt(d);
-		        best_idx = j;
-		    }
-		}
-		if (best_idx>=0) {
-		    src.push_back(prev_scan_[best_idx]);
-		    dst.push_back(curr_scan[i]);
-		}
-	    }
+    // --- Convert current scan ---
+    std::vector<Eigen::Vector2d> curr_scan;
+    for (size_t i = 0; i < msg->ranges.size(); i += 2) {
+        double r = msg->ranges[i];
+        if (!std::isfinite(r)) continue;
+        double ang = msg->angle_min + i * msg->angle_increment;
+        curr_scan.emplace_back(r * std::cos(ang), r * std::sin(ang));
+    }
+    if (curr_scan.empty() || prev_scan_.empty()) return;
 
-	    if (src.size()<5) return;  // need more points
+    // --- Iterative ICP refinement ---
+    Eigen::Vector2d pose_est(0, 0);
+    double yaw_est = 0.0;
 
-	    // Compute SVD transform
-	    Eigen::Vector2d mu_src = Eigen::Vector2d::Zero(), mu_dst = Eigen::Vector2d::Zero();
-	    for (size_t i=0;i<src.size();i++){ mu_src+=src[i]; mu_dst+=dst[i]; }
-	    mu_src/=src.size(); mu_dst/=dst.size();
+    const int max_iters = 2;
+    const double max_assoc_dist = 0.6;
 
-	    Eigen::Matrix2d W = Eigen::Matrix2d::Zero();
-	    for (size_t i=0;i<src.size();i++){ W += (src[i]-mu_src)*(dst[i]-mu_dst).transpose(); }
+    for (int iter = 0; iter < max_iters; ++iter) {
+        std::vector<Eigen::Vector2d> src, dst;
+        for (auto &p_curr : curr_scan) {
+            // transform curr point to prev frame using current estimate
+            Eigen::Vector2d p_rot;
+            p_rot.x() =  cos(-yaw_est) * (p_curr.x() - pose_est.x()) -
+                         sin(-yaw_est) * (p_curr.y() - pose_est.y());
+            p_rot.y() =  sin(-yaw_est) * (p_curr.x() - pose_est.x()) +
+                         cos(-yaw_est) * (p_curr.y() - pose_est.y());
 
-	    Eigen::JacobiSVD<Eigen::Matrix2d> svd(W, Eigen::ComputeFullU | Eigen::ComputeFullV);
-	    Eigen::Matrix2d R = svd.matrixV()*svd.matrixU().transpose();
-	    if (R.determinant()<0) R.col(1)*=-1;
+            // nearest neighbor in prev_scan_
+            double best_d = max_assoc_dist * max_assoc_dist;
+            int best_idx = -1;
+            for (size_t j = 0; j < prev_scan_.size(); ++j) {
+                double d = (p_rot - prev_scan_[j]).squaredNorm();
+                if (d < best_d) { best_d = d; best_idx = j; }
+            }
+            if (best_idx >= 0) {
+                src.push_back(prev_scan_[best_idx]);
+                dst.push_back(p_rot);
+            }
+        }
 
-	    Eigen::Vector2d t = mu_dst - R*mu_src;
-	    // Flip scan motion if lidar X is reversed
-	    t = -t;
-	    double dtheta = std::atan2(R(1,0), R(0,0));
+        if (src.size() < 60) break;
 
-	    // Update pose
-	    //lidar_pose_.yaw = normalizeYaw(lidar_pose_.yaw + dtheta);
-	    //Eigen::Vector2d trans_rotated;
-	    //trans_rotated.x() = t.x()*std::cos(lidar_pose_.yaw) - t.y()*std::sin(lidar_pose_.yaw);
-	    //trans_rotated.y() = t.x()*std::sin(lidar_pose_.yaw) + t.y()*std::cos(lidar_pose_.yaw);
-	    //lidar_pose_.x += trans_rotated.x();
-	    //lidar_pose_.y += trans_rotated.y();
-	
-	double new_yaw = normalizeYaw(lidar_pose_.yaw + dtheta);
-	double yaw_before = lidar_pose_.yaw;     // save current heading
-	lidar_pose_.yaw = new_yaw;
+        // Compute SVD transform
+        Eigen::Vector2d mu_src = Eigen::Vector2d::Zero(), mu_dst = Eigen::Vector2d::Zero();
+        for (size_t i = 0; i < src.size(); ++i) { mu_src += src[i]; mu_dst += dst[i]; }
+        mu_src /= src.size(); mu_dst /= dst.size();
 
-	Eigen::Vector2d trans_rotated;
-	trans_rotated.x() = t.x()*cos(yaw_before) - t.y()*sin(yaw_before);
-	trans_rotated.y() = t.x()*sin(yaw_before) + t.y()*cos(yaw_before);
+        Eigen::Matrix2d W = Eigen::Matrix2d::Zero();
+        for (size_t i = 0; i < src.size(); ++i) W += (src[i] - mu_src) * (dst[i] - mu_dst).transpose();
 
-	lidar_pose_.x += trans_rotated.x();
-	lidar_pose_.y += trans_rotated.y();
-	
-	RCLCPP_INFO(this->get_logger(),
-    		"ICP result: dtheta=%.3f  t=(%.3f, %.3f)",
-    					dtheta, t.x(), t.y());
+        Eigen::JacobiSVD<Eigen::Matrix2d> svd(W, Eigen::ComputeFullU | Eigen::ComputeFullV);
+        Eigen::Matrix2d R = svd.matrixV() * svd.matrixU().transpose();
+        if (R.determinant() < 0) R.col(1) *= -1;
 
+        Eigen::Vector2d t = mu_dst - R * mu_src;
+        t = -t; // Flip if lidar X is reversed
+        double dtheta = std::atan2(R(1,0), R(0,0));
 
+        // Accumulate incremental pose
+        yaw_est = normalizeYaw(yaw_est + dtheta);
+        pose_est += t;
+    }
 
-	    // Covariance scaling for slip
-	    double wheel_move = std::hypot(last_encoder_pose_.vx, last_encoder_pose_.vy);
-	    double cov_factor = (wheel_move < 1e-3) ? 5.0 : 1.0;
+    // --- Update global lidar_pose_ ---
+    double yaw_before = lidar_pose_.yaw;
+    lidar_pose_.yaw = normalizeYaw(lidar_pose_.yaw + yaw_est);
 
-	    publishOdom(stamp, lidar_pose_, cov_factor);
+    Eigen::Vector2d trans_rotated;
+    trans_rotated.x() = pose_est.x() * cos(yaw_before) - pose_est.y() * sin(yaw_before);
+    trans_rotated.y() = pose_est.x() * sin(yaw_before) + pose_est.y() * cos(yaw_before);
 
-	    prev_scan_ = curr_scan;
-	    last_lidar_time_ = stamp;
-    } 
+    lidar_pose_.x += trans_rotated.x();
+    lidar_pose_.y += trans_rotated.y();
+
+    RCLCPP_INFO(this->get_logger(), "ICP result: dtheta=%.3f  t=(%.3f, %.3f)", yaw_est, pose_est.x(), pose_est.y());
+
+    // --- Covariance scaling for slip ---
+    double wheel_move = std::hypot(last_encoder_pose_.vx, last_encoder_pose_.vy);
+    double cov_factor = (wheel_move < 1e-3) ? 5.0 : 1.0;
+
+    publishOdom(stamp, lidar_pose_, cov_factor);
+
+    // --- Prepare for next iteration ---
+    prev_scan_ = curr_scan;
+    last_lidar_time_ = stamp;
+  }
 
 };
 

@@ -1,0 +1,27 @@
+[35m[1mScanning dependencies of target lidar_odometry_node[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/lidar_odometry_node.dir/src/lidar_odometry.cpp.o[0m
+[ 75%] Built target odom_node
+[100%] [32m[1mLinking CXX executable lidar_odometry_node[0m
+[100%] Built target lidar_odometry_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry/odom_node
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry/lidar_odometry_node
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/launch/odom.launch.py
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/launch/odom_with_lidar.launch.py
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/rviz/config.rviz
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/package_run_dependencies/my_odometry
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/parent_prefix_path/my_odometry
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/path.sh
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/path.dsv
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.bash
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.sh
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.zsh
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.dsv
+-- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/package.dsv
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/packages/my_odometry
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/cmake/my_odometryConfig.cmake
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/cmake/my_odometryConfig-version.cmake
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/package.xml

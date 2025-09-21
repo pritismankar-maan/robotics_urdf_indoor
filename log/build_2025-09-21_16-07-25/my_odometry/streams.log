@@ -1,0 +1,31 @@
+[0.183s] Invoking command in '/home/pritismankar/ros2_ws/build/my_odometry': CMAKE_PREFIX_PATH=/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic /usr/bin/cmake --build /home/pritismankar/ros2_ws/build/my_odometry -- -j4 -l4
+[0.625s] [35m[1mScanning dependencies of target lidar_odometry_node[0m
+[0.626s] [ 25%] [32mBuilding CXX object CMakeFiles/lidar_odometry_node.dir/src/lidar_odometry.cpp.o[0m
+[0.626s] [ 75%] Built target odom_node
+[15.877s] [100%] [32m[1mLinking CXX executable lidar_odometry_node[0m
+[16.615s] [100%] Built target lidar_odometry_node
+[16.652s] Invoked command in '/home/pritismankar/ros2_ws/build/my_odometry' returned '0': CMAKE_PREFIX_PATH=/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic /usr/bin/cmake --build /home/pritismankar/ros2_ws/build/my_odometry -- -j4 -l4
+[16.654s] Invoking command in '/home/pritismankar/ros2_ws/build/my_odometry': CMAKE_PREFIX_PATH=/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic /usr/bin/cmake --install /home/pritismankar/ros2_ws/build/my_odometry
+[16.671s] -- Install configuration: ""
+[16.673s] -- Execute custom install script
+[16.673s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry/odom_node
+[16.673s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry/lidar_odometry_node
+[16.675s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/launch/odom.launch.py
+[16.676s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/launch/odom_with_lidar.launch.py
+[16.676s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/rviz/config.rviz
+[16.676s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/package_run_dependencies/my_odometry
+[16.677s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/parent_prefix_path/my_odometry
+[16.679s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/ament_prefix_path.sh
+[16.680s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/ament_prefix_path.dsv
+[16.680s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/path.sh
+[16.680s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/path.dsv
+[16.680s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.bash
+[16.680s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.sh
+[16.681s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.zsh
+[16.682s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.dsv
+[16.682s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/package.dsv
+[16.707s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/packages/my_odometry
+[16.707s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/cmake/my_odometryConfig.cmake
+[16.707s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/cmake/my_odometryConfig-version.cmake
+[16.708s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/package.xml
+[16.715s] Invoked command in '/home/pritismankar/ros2_ws/build/my_odometry' returned '0': CMAKE_PREFIX_PATH=/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic /usr/bin/cmake --install /home/pritismankar/ros2_ws/build/my_odometry

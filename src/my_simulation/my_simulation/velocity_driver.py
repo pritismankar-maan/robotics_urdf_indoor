@@ -18,11 +18,11 @@ class VelocityDriver(Node):
         self.commands = [
             (0.5, 0.0, 5.2),    # forward - down
             (0.0, 0.8, 2.0),    # turn left
-            (0.5, 0.0, 5.8),    # forward - to the left
+            (0.5, 0.0, 5.3),    # forward - to the left
+            (0.0, 0.75, 2.0),    # turn left
+            (0.5, 0.0, 10.6),    # forward - up
             (0.0, 0.75, 1.8),    # turn left
-            (0.5, 0.0, 11.0),    # forward - up
-            (0.0, 0.75, 1.8),    # turn left
-            (0.5, 0.0, 9.0),    # forward back to start - to the right
+            (0.5, 0.0, 6.0),    # forward back to start - to the right
             (0.0, 0.8, 2.0),    # turn left
             (0.5, 0.0, 10.5),    # forward - down
             (0.0, 0.8, 2.0),    # turn left

@@ -1,0 +1,27 @@
+[0.199s] Invoking command in '/home/pritismankar/ros2_ws/build/my_fusion': CMAKE_PREFIX_PATH=/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic /usr/bin/cmake --build /home/pritismankar/ros2_ws/build/my_fusion -- -j4 -l4
+[0.720s] [100%] Built target ekf_fusion_node
+[0.729s] Invoked command in '/home/pritismankar/ros2_ws/build/my_fusion' returned '0': CMAKE_PREFIX_PATH=/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic /usr/bin/cmake --build /home/pritismankar/ros2_ws/build/my_fusion -- -j4 -l4
+[0.770s] Invoking command in '/home/pritismankar/ros2_ws/build/my_fusion': CMAKE_PREFIX_PATH=/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic /usr/bin/cmake --install /home/pritismankar/ros2_ws/build/my_fusion
+[1.258s] -- Install configuration: ""
+[1.262s] -- Execute custom install script
+[1.262s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/lib/my_fusion/ekf_fusion_node
+[1.263s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/launch/fusion.launch.py
+[1.266s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/config/ekf.yaml
+[1.266s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/package_run_dependencies/my_fusion
+[1.267s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/parent_prefix_path/my_fusion
+[1.267s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/ament_prefix_path.sh
+[1.267s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/ament_prefix_path.dsv
+[1.267s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/path.sh
+[1.267s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/path.dsv
+[1.268s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.bash
+[1.268s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.sh
+[1.268s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.zsh
+[1.268s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.dsv
+[1.269s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/package.dsv
+[1.269s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/packages/my_fusion
+[1.281s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/cmake/my_fusionConfig.cmake
+[1.282s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/cmake/my_fusionConfig-version.cmake
+[1.282s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/package.xml
+[1.283s] -- Up-to-date: /home/pritismankar/ros2_ws/install/my_fusion/lib/my_fusion/scripts
+[1.283s] -- Up-to-date: /home/pritismankar/ros2_ws/install/my_fusion/lib/my_fusion/scripts/plot_odom.py
+[1.290s] Invoked command in '/home/pritismankar/ros2_ws/build/my_fusion' returned '0': CMAKE_PREFIX_PATH=/home/pritismankar/ros2_ws/install/my_odometry:/home/pritismankar/ros2_ws/install/my_fusion:/home/pritismankar/ros2_ws/install/my_simulation:/home/pritismankar/ros2_ws/install/my_robot_description:/opt/ros/foxy:/home/pritismankar/catkin_ws/devel:/opt/ros/noetic /usr/bin/cmake --install /home/pritismankar/ros2_ws/build/my_fusion
