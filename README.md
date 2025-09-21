@@ -13,6 +13,7 @@
   - Base length / width / height: _0.5/0.3/0.1 meters_
 - **Kinematics:** Unicycle model → wheel velocity commands.
 
+- **TF Tree with Sensors**
 ![Robot TF tree](results/my_robot_description_results/launch view.png)
 ![TF CloseUp](results/my_robot_description_results/TF_tree_closeup_view.png)
 
@@ -23,6 +24,7 @@
   _Its an indoor apartment with an cross-section of 7x7 meters with multiple static objects (Sofa, Table, Chair and Box) laying around. This room has a door of 1 meter length and all objects are cuboid shape for simplicity._
 - Physics: Gazebo Classic / Ignition
 - Controllers: [`diffbot_controllers.yaml`](src/my_simulation/config/diffbot_controllers.yaml)
+- **Indoor Apartment with Sensor visualization**
 ![Indoor Apartment](results/my_simulation_results/my_simulation_gazebo_bringup.png)
 ![Indoor Apartment with open loop Control](results/my_simulation_results/gazebo_openloopControl.png)
 ![Sensor Visualization](results/my_simulation_results/my_simulation_sensor_rviz_viz.png)
@@ -129,16 +131,19 @@ i.e. python3 src/my_fusion/scripts/plot_odom.py install/my_fusion/share/my_fusio
 
 - **Test Case 1:** Drive Robot Manually in ClockWise fashion to complete 1 loop and coming back to starting position.
 ![Rviz Visualization of Fused Pose](results/my_fusion_results/TC1_1CW_Manuever/rviz_odom_fused_with_ekf.png)
+- Corresponding Post Analysis Plot:
 ![Plot Pose](results/my_fusion_results/TC1_1CW_Manuever/Full_plot.png)
 ![Plot Pose - Zoomed In, Ignore ground Truth](results/my_fusion_results/TC1_1CW_Manuever/zoomedIn_Traj.png)
 
 - **Test Case 2:** Drive Robot Manually in Counter-ClockWise fashion to complete 1 loop and coming back to starting position.
 ![Rviz Visualization of Fused Pose](results/my_fusion_results/TC3-1CCW-BothMarker/ekf_rviz_viz_with_both_marker_1ccw.png)
+- Corresponding Post Analysis Plot:
 ![Plot Pose](results/my_fusion_results/TC3-1CCW-BothMarker/fullplot_1ccw_both_markers.png)
 ![Plot Pose - Zoomed In, Ignore ground Truth](results/my_fusion_results/TC3-1CCW-BothMarker/zoomedplot_1ccw_both_marker.png)
 
 - **Test Case 3:** Drive Robot Manually with 2 Counter-ClockWise loops + 1 ClockWise loop and coming back to starting position.
 ![Rviz Visualization of Fused Pose](results/my_fusion_results/TC5-2CCW-1CW-MultipleLoops/fusion_rviz_2ccw_1cw.png)
+- Corresponding Post Analysis Plot:
 ![Plot Pose](results/my_fusion_results/TC5-2CCW-1CW-MultipleLoops/fullplot_multiple_loops.png)
 ![Plot Pose - Zoomed In, Ignore ground Truth](results/my_fusion_results/TC5-2CCW-1CW-MultipleLoops/zoomedplot_multipleloops.png)
 
@@ -147,6 +152,7 @@ i.e. python3 src/my_fusion/scripts/plot_odom.py install/my_fusion/share/my_fusio
 
 - **Test Case 3:** Robot remain almost stationary for drift Analysis
 ![Plot Pose](results/my_fusion_results/TC6-Stationary/fullplot_stationary.png)
+- ZoomedIn:
 ![Plot Pose - Zoomed In, Ignore ground Truth](results/my_fusion_results/TC6-Stationary/zoomedInplot_stationary.png)
  
 - Encoder odometry remains close to ground truth under nominal traction but diverges under wheel slip (when robot get stuck). So for our sensor fusion implementation, we are trusting the Encoder more and using IMU for fusing yaw movements.
