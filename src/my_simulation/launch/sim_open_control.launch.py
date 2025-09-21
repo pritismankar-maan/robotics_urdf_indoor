@@ -94,17 +94,17 @@ def generate_launch_description():
         ),
         
         # Start the velocity driver after controllers are ready
-        #TimerAction(
-        #    period=10.0,  # wait until controllers and gazebo are up
-        #    actions=[
-        #        Node(
-        #            package='my_simulation',
-        #            executable='velocity_driver',
-        #            name='velocity_driver',
-        #            parameters=[{'use_sim_time': True}],
-        #            output='screen',
-        #        )
-        #    ]
-        #),
+        TimerAction(
+            period=10.0,  # wait until controllers and gazebo are up
+            actions=[
+                Node(
+                    package='my_simulation',
+                    executable='velocity_driver',
+                    name='velocity_driver',
+                    parameters=[{'use_sim_time': True}],
+                    output='screen',
+                )
+            ]
+        ),
     ])
 

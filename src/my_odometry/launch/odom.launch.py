@@ -8,6 +8,7 @@ from ament_index_python.packages import get_package_share_directory
 def generate_launch_description():
     pkg_sim = get_package_share_directory('my_simulation')
     sim_launch = os.path.join(pkg_sim, 'launch', 'sim.launch.py')
+    # sim_launch = os.path.join(pkg_sim, 'launch', 'sim_open_control.launch.py')
 
     return LaunchDescription([
         # Bring up Gazebo + robot + controllers

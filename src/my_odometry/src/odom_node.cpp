@@ -305,11 +305,13 @@ void OdomNode::lidarCallback(const sensor_msgs::msg::LaserScan::SharedPtr msg)
 {
     rclcpp::Time stamp(msg->header.stamp);
 
+    // get first timestamp
     if (last_lidar_time_.nanoseconds() == 0) {
         last_lidar_time_ = stamp;
         return;
     }
 
+    // calculate timegap between 2 callback and threshold it
     double dt = (stamp - last_lidar_time_).seconds();
     if (dt <= 0.0 || dt > 0.5) {
         last_lidar_time_ = stamp;
@@ -326,37 +328,66 @@ void OdomNode::lidarCallback(const sensor_msgs::msg::LaserScan::SharedPtr msg)
         pts.emplace_back(r*std::cos(ang), r*std::sin(ang));
     }
 
+    // get first scan
     if (prev_scan_.empty()) {
         prev_scan_ = pts;
         return;
     }
 
-    // Nearest neighbor association
+    // Basic Nearest neighbor association
     std::vector<Eigen::Vector2d> src, dst;
-    for (auto &p: pts) {
+    for (auto &p: pts) 
+    {
+        // If distance is less than threshold, assume association 
         double best_d = 0.4;
         int best_idx = -1;
         for (size_t j = 0; j < prev_scan_.size(); ++j) {
             double d = (p - prev_scan_[j]).squaredNorm();
-            if (d < best_d*best_d) { best_d = std::sqrt(d); best_idx = j; }
+            if (d < best_d*best_d) 
+            { 
+              best_d = std::sqrt(d); best_idx = j; 
+            }
         }
-        if (best_idx >= 0) { src.push_back(prev_scan_[best_idx]); dst.push_back(p); }
+        if (best_idx >= 0) 
+        { 
+          src.push_back(prev_scan_[best_idx]); 
+          dst.push_back(p); 
+        }
     }
 
-    if (src.size() < 3) { prev_scan_ = pts; return; }
+    // if more than 3 asssociation pairs, go to publish lidarOdom
+    if (src.size() < 3) 
+    { 
+      prev_scan_ = pts; 
+      return; 
+    }
 
     // SVD
     Eigen::Vector2d mu_src = Eigen::Vector2d::Zero();
     Eigen::Vector2d mu_dst = Eigen::Vector2d::Zero();
-    for (size_t i=0;i<src.size();++i){ mu_src += src[i]; mu_dst += dst[i]; }
+    
+    for (size_t i=0;i<src.size();++i)
+    { 
+      mu_src += src[i]; 
+      mu_dst += dst[i]; 
+    }
     mu_src /= src.size(); mu_dst /= dst.size();
 
     Eigen::Matrix2d W = Eigen::Matrix2d::Zero();
-    for (size_t i=0;i<src.size();++i){ W += (src[i]-mu_src)*(dst[i]-mu_dst).transpose(); }
+    
+    for (size_t i=0;i<src.size();++i)
+    { 
+      W += (src[i]-mu_src)*(dst[i]-mu_dst).transpose(); 
+    }
 
     Eigen::JacobiSVD<Eigen::Matrix2d> svd(W, Eigen::ComputeFullU | Eigen::ComputeFullV);
     Eigen::Matrix2d R = svd.matrixV()*svd.matrixU().transpose();
-    if (R.determinant()<0) R.col(1) *= -1;
+    
+    if (R.determinant()<0) 
+    {
+      R.col(1) *= -1;
+    }
+    
     Eigen::Vector2d t = mu_dst - R*mu_src;
 
     double dtheta = std::atan2(R(1,0), R(0,0));
@@ -370,7 +401,7 @@ void OdomNode::lidarCallback(const sensor_msgs::msg::LaserScan::SharedPtr msg)
     lidar_vy_ = s*t.x()/dt + c*t.y()/dt;
     lidar_v_yaw_ = dtheta/dt;
 
-    // Publish marker
+    // Fill marker
     visualization_msgs::msg::Marker mp;
     mp.header.stamp = stamp;
     mp.header.frame_id = "odom";
@@ -389,6 +420,7 @@ void OdomNode::lidarCallback(const sensor_msgs::msg::LaserScan::SharedPtr msg)
     p.z = 0.0;
     mp.points.push_back(p);
 
+    // Publish lidarOdom, marker and TF 
     publishLidarOdom(stamp);
     lidar_point_pub_->publish(mp);
     publishlidarTF(stamp);
@@ -397,7 +429,7 @@ void OdomNode::lidarCallback(const sensor_msgs::msg::LaserScan::SharedPtr msg)
 }
 
 // ---------------------------
-// Encoder Odometry Publishers
+// Odometry Publishers
 // ---------------------------
 void OdomNode::publishOdom(const rclcpp::Time &stamp)
 {

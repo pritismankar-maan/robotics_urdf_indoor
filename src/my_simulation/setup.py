@@ -1,6 +1,6 @@
 from setuptools import setup
 import os
-from glob import glob  # Required for data_files with directories
+from glob import glob 
 
 package_name = 'my_simulation'
 
@@ -8,6 +8,8 @@ setup(
     name=package_name,
     version='0.0.0',
     packages=[package_name],
+    
+    # store all file names
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
@@ -26,6 +28,8 @@ setup(
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': [],  # No scripts in this package yet
+        'console_scripts': [
+        'velocity_driver = my_simulation.velocity_driver:main',
+      ],
     },
 )
