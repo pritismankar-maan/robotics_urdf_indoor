@@ -1,0 +1,26 @@
+[35m[1mScanning dependencies of target ekf_fusion_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/ekf_fusion_node.dir/src/ekf_fusion_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable ekf_fusion_node[0m
+[100%] Built target ekf_fusion_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/lib/my_fusion/ekf_fusion_node
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/launch/fusion.launch.py
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/config/ekf.yaml
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/package_run_dependencies/my_fusion
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/parent_prefix_path/my_fusion
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/path.sh
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/path.dsv
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.bash
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.sh
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.zsh
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.dsv
+-- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/package.dsv
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/packages/my_fusion
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/cmake/my_fusionConfig.cmake
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/cmake/my_fusionConfig-version.cmake
+-- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/package.xml
+-- Up-to-date: /home/pritismankar/ros2_ws/install/my_fusion/lib/my_fusion/scripts
+-- Up-to-date: /home/pritismankar/ros2_ws/install/my_fusion/lib/my_fusion/scripts/plot_odom.py

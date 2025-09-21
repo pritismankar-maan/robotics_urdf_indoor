@@ -1,0 +1,29 @@
+[2.396s] Invoking command in '/home/pritismankar/ros2_ws/build/my_robot_description': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_robot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_robot_description/build --no-deps symlink_data
+[3.165s] running develop
+[3.423s] running egg_info
+[3.423s] creating my_robot_description.egg-info
+[3.423s] writing my_robot_description.egg-info/PKG-INFO
+[3.424s] writing dependency_links to my_robot_description.egg-info/dependency_links.txt
+[3.424s] writing top-level names to my_robot_description.egg-info/top_level.txt
+[3.426s] writing manifest file 'my_robot_description.egg-info/SOURCES.txt'
+[3.485s] reading manifest file 'my_robot_description.egg-info/SOURCES.txt'
+[3.487s] writing manifest file 'my_robot_description.egg-info/SOURCES.txt'
+[3.608s] running build_ext
+[3.609s] Creating /home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages/site.py
+[3.611s] Creating /home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages/my-robot-description.egg-link (link to .)
+[3.628s] 
+[3.628s] Installed /home/pritismankar/ros2_ws/build/my_robot_description
+[3.629s] running symlink_data
+[3.632s] creating /home/pritismankar/ros2_ws/install/my_robot_description/share/ament_index
+[3.633s] creating /home/pritismankar/ros2_ws/install/my_robot_description/share/ament_index/resource_index
+[3.637s] creating /home/pritismankar/ros2_ws/install/my_robot_description/share/ament_index/resource_index/packages
+[3.637s] symbolically linking /home/pritismankar/ros2_ws/build/my_robot_description/resource/my_robot_description -> /home/pritismankar/ros2_ws/install/my_robot_description/share/ament_index/resource_index/packages
+[3.637s] symbolically linking /home/pritismankar/ros2_ws/build/my_robot_description/package.xml -> /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description
+[3.638s] creating /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/urdf
+[3.638s] symbolically linking /home/pritismankar/ros2_ws/build/my_robot_description/urdf/robot.urdf.xacro -> /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/urdf
+[3.638s] symbolically linking /home/pritismankar/ros2_ws/build/my_robot_description/urdf/materials.xacro -> /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/urdf
+[3.638s] creating /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/launch
+[3.639s] symbolically linking /home/pritismankar/ros2_ws/build/my_robot_description/launch/display.launch.py -> /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/launch
+[3.639s] creating /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/rviz
+[3.639s] symbolically linking /home/pritismankar/ros2_ws/build/my_robot_description/rviz/config.rviz -> /home/pritismankar/ros2_ws/install/my_robot_description/share/my_robot_description/rviz
+[3.854s] Invoked command in '/home/pritismankar/ros2_ws/build/my_robot_description' returned '0': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_robot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_robot_description/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_robot_description/build --no-deps symlink_data

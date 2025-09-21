@@ -1,0 +1,1 @@
+/home/pritismankar/ros2_ws/build/my_odometry/ament_cmake_environment_hooks/local_setup.bash

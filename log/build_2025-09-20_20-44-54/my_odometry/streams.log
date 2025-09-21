@@ -1,0 +1,75 @@
+[0.065s] Invoking command in '/home/pritismankar/ros2_ws/build/my_odometry': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/pritismankar/ros2_ws/src/my_odometry -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pritismankar/ros2_ws/install/my_odometry
+[0.605s] -- The C compiler identification is GNU 9.4.0
+[0.969s] -- The CXX compiler identification is GNU 9.4.0
+[1.001s] -- Check for working C compiler: /usr/bin/cc
+[1.260s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.272s] -- Detecting C compiler ABI info
+[1.531s] -- Detecting C compiler ABI info - done
+[1.543s] -- Detecting C compile features
+[1.544s] -- Detecting C compile features - done
+[1.553s] -- Check for working CXX compiler: /usr/bin/c++
+[1.811s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.813s] -- Detecting CXX compiler ABI info
+[2.157s] -- Detecting CXX compiler ABI info - done
+[2.180s] -- Detecting CXX compile features
+[2.183s] -- Detecting CXX compile features - done
+[2.195s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[2.247s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.247s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.552s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.740s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[2.883s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.917s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[3.246s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[3.329s] -- Found FastRTPS: /opt/ros/foxy/include  
+[3.560s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.872s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[3.889s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.900s] -- Looking for pthread.h
+[4.202s] -- Looking for pthread.h - found
+[4.203s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.372s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[4.372s] -- Looking for pthread_create in pthreads
+[4.533s] -- Looking for pthread_create in pthreads - not found
+[4.533s] -- Looking for pthread_create in pthread
+[4.850s] -- Looking for pthread_create in pthread - found
+[4.851s] -- Found Threads: TRUE  
+[5.550s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[6.419s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[6.531s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[6.658s] -- Found tf2: 0.13.14 (/opt/ros/foxy/share/tf2/cmake)
+[6.688s] -- Found tf2_geometry_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)
+[6.701s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[6.706s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[7.589s] -- Configuring done
+[7.610s] -- Generating done
+[7.625s] -- Build files have been written to: /home/pritismankar/ros2_ws/build/my_odometry
+[7.649s] Invoked command in '/home/pritismankar/ros2_ws/build/my_odometry' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/pritismankar/ros2_ws/src/my_odometry -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pritismankar/ros2_ws/install/my_odometry
+[7.654s] Invoking command in '/home/pritismankar/ros2_ws/build/my_odometry': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/pritismankar/ros2_ws/build/my_odometry -- -j4 -l4
+[7.758s] [35m[1mScanning dependencies of target odom_node[0m
+[8.536s] [ 50%] [32mBuilding CXX object CMakeFiles/odom_node.dir/src/odom_node.cpp.o[0m
+[28.689s] [100%] [32m[1mLinking CXX executable odom_node[0m
+[29.539s] [100%] Built target odom_node
+[29.558s] Invoked command in '/home/pritismankar/ros2_ws/build/my_odometry' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/pritismankar/ros2_ws/build/my_odometry -- -j4 -l4
+[29.560s] Invoking command in '/home/pritismankar/ros2_ws/build/my_odometry': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/pritismankar/ros2_ws/build/my_odometry
+[29.573s] -- Install configuration: ""
+[29.573s] -- Execute custom install script
+[29.574s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry/odom_node
+[29.592s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/launch/odom.launch.py
+[29.615s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/rviz/config.rviz
+[29.633s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/package_run_dependencies/my_odometry
+[29.644s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/parent_prefix_path/my_odometry
+[29.661s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/ament_prefix_path.sh
+[29.671s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/ament_prefix_path.dsv
+[29.693s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/path.sh
+[29.715s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/environment/path.dsv
+[29.734s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.bash
+[29.749s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.sh
+[29.760s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.zsh
+[29.771s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/local_setup.dsv
+[29.786s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/package.dsv
+[29.796s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/packages/my_odometry
+[29.812s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/cmake/my_odometryConfig.cmake
+[29.822s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/cmake/my_odometryConfig-version.cmake
+[29.835s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/package.xml
+[29.849s] Invoked command in '/home/pritismankar/ros2_ws/build/my_odometry' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/pritismankar/ros2_ws/build/my_odometry

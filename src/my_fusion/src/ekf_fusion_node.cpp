@@ -42,6 +42,7 @@ EKFFusionNode::EKFFusionNode() : Node("ekf_fusion_node")
 
 void EKFFusionNode::imuCallback(const sensor_msgs::msg::Imu::SharedPtr msg)
 {
+  // trusting only the yaw from IMU
   imu_omega_ = msg->angular_velocity.z;
 }
 

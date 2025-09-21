@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+launch/display.launch.py
+my_robot_description/__init__.py
+my_robot_description.egg-info/PKG-INFO
+my_robot_description.egg-info/SOURCES.txt
+my_robot_description.egg-info/dependency_links.txt
+my_robot_description.egg-info/top_level.txt
+my_robot_description.egg-info/zip-safe
+resource/my_robot_description
+rviz/config.rviz
+urdf/materials.xacro
+urdf/robot.urdf.xacro

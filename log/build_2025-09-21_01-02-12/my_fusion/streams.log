@@ -1,0 +1,30 @@
+[0.186s] Invoking command in '/home/pritismankar/ros2_ws/build/my_fusion': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/pritismankar/ros2_ws/build/my_fusion -- -j4 -l4
+[0.807s] [35m[1mScanning dependencies of target ekf_fusion_node[0m
+[0.829s] [ 50%] [32mBuilding CXX object CMakeFiles/ekf_fusion_node.dir/src/ekf_fusion_node.cpp.o[0m
+[18.068s] [100%] [32m[1mLinking CXX executable ekf_fusion_node[0m
+[19.273s] [100%] Built target ekf_fusion_node
+[19.303s] Invoked command in '/home/pritismankar/ros2_ws/build/my_fusion' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/pritismankar/ros2_ws/build/my_fusion -- -j4 -l4
+[19.326s] Invoking command in '/home/pritismankar/ros2_ws/build/my_fusion': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/pritismankar/ros2_ws/build/my_fusion
+[19.346s] -- Install configuration: ""
+[19.350s] -- Execute custom install script
+[19.358s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/lib/my_fusion/ekf_fusion_node
+[19.364s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/launch/fusion.launch.py
+[19.368s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/config/ekf.yaml
+[19.374s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/package_run_dependencies/my_fusion
+[19.378s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/parent_prefix_path/my_fusion
+[19.382s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/ament_prefix_path.sh
+[19.384s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/ament_prefix_path.dsv
+[19.386s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/path.sh
+[19.388s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/environment/path.dsv
+[19.389s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.bash
+[19.392s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.sh
+[19.393s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.zsh
+[19.395s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/local_setup.dsv
+[19.395s] -- Symlinking: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/package.dsv
+[19.421s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/ament_index/resource_index/packages/my_fusion
+[19.425s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/cmake/my_fusionConfig.cmake
+[19.426s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/cmake/my_fusionConfig-version.cmake
+[19.426s] -- Up-to-date symlink: /home/pritismankar/ros2_ws/install/my_fusion/share/my_fusion/package.xml
+[19.426s] -- Up-to-date: /home/pritismankar/ros2_ws/install/my_fusion/lib/my_fusion/scripts
+[19.429s] -- Up-to-date: /home/pritismankar/ros2_ws/install/my_fusion/lib/my_fusion/scripts/plot_odom.py
+[19.438s] Invoked command in '/home/pritismankar/ros2_ws/build/my_fusion' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/pritismankar/ros2_ws/build/my_fusion

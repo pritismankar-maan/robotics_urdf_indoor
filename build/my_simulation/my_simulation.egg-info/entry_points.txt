@@ -1,0 +1,3 @@
+[console_scripts]
+velocity_driver = my_simulation.velocity_driver:main
+
