@@ -24,6 +24,7 @@
 - Physics: Gazebo Classic / Ignition
 - Controllers: [`diffbot_controllers.yaml`](src/my_simulation/config/diffbot_controllers.yaml)
 ![Indoor Apartment](results/my_simulation_results/my_simulation_gazebo_bringup.png)
+![Indoor Apartment with open loop Control](results/my_simulation_results/gazebo_openloopControl.png)
 ![Sensor Visualization](results/my_simulation_results/my_simulation_sensor_rviz_viz.png)
 ---
 
