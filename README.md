@@ -12,6 +12,7 @@
   - Wheel separation: _0.3 meters_
   - Base length / width / height: _0.5/0.3/0.1 meters_
 - **Kinematics:** Unicycle model → wheel velocity commands.
+
 ![Robot TF tree](results/my_robot_description_results/launch view.png)
 ![TF CloseUp](results/my_robot_description_results/TF_tree_closeup_view.png)
 
@@ -149,4 +150,54 @@ i.e. python3 src/my_fusion/scripts/plot_odom.py install/my_fusion/share/my_fusio
  
 - Encoder odometry remains close to ground truth under nominal traction but diverges under wheel slip (when robot get stuck). So for our sensor fusion implementation, we are trusting the Encoder more and using IMU for fusing yaw movements.
 - Lidar Odometry has been implemented but needs to be tweaked properly before fusing it in our EKF filter.
-- Future work will integrate a slip detector (using IMU acceleration vs encoder velocity) and optionally include LIDAR scan matching to correct drift.    
+- Future work will integrate a slip detector (using IMU acceleration vs encoder velocity) and optionally include LIDAR scan matching to correct drift.  
+
+## Install ROS 2 Foxy on Ubuntu 20.04
+```bash
+
+sudo apt update && sudo apt upgrade -y
+
+sudo apt install ros-foxy-desktop \
+                 ros-foxy-gazebo-ros-pkgs \
+                 ros-foxy-gazebo-ros2-control \
+                 ros-foxy-ros2-control \
+                 ros-foxy-ros2-controllers \
+                 ros-foxy-joint-state-publisher-gui \
+                 ros-foxy-teleop-twist-keyboard \
+                 ros-foxy-robot-localization \
+                 ros-foxy-xacro \
+                 ros-foxy-rviz2 \
+                 python3-colcon-common-extensions \
+                 python3-rosdep \
+                 python3-argcomplete \
+                 python3-vcstool -y
+
+
+sudo rosdep init
+rosdep update
+
+# Clone my repository or download and place it here:
+git clone git@github.com:pritismankar-maan/robotics_urdf_indoor.git
+cd ~/ros2_ws
+
+rosdep install --from-paths src --ignore-src -r -y
+
+# Build the project
+colcon build --symlink-install
+source /opt/ros/foxy/setup.bash
+source install/setup.bash
+
+# Install rosbag file 
+sudo apt install ros-foxy-rosbag2 ros-foxy-rosbag2-storage-default-plugins
+
+# Verify gazebo and Plugin
+ros2 doctor        # Check ROS environment
+rviz2 --help       # Test RViz
+gazebo --verbose   # Check Gazebo
+ls /usr/lib/x86_64-linux-gnu/gazebo-*/plugins | grep imu # verify plugins
+# look for - libgazebo_ros_imu_sensor.so
+# look for -libgazebo_ros_ray_sensor.so
+# look for -libgazebo_ros2_control.so
+
+
+```
