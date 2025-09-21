@@ -1,1 +1,1 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/pritismankar/ros2_ws/build/my_odometry/odom_node" "TARGETS" "odom_node" "DESTINATION" "lib/my_odometry")
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/pritismankar/ros2_ws/build/my_odometry/odom_node" "/home/pritismankar/ros2_ws/build/my_odometry/lidar_odometry_node" "TARGETS" "odom_node" "lidar_odometry_node" "DESTINATION" "lib/my_odometry")

@@ -1,5 +1,7 @@
 /home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry/odom_node
+/home/pritismankar/ros2_ws/install/my_odometry/lib/my_odometry/lidar_odometry_node
 /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/launch/odom.launch.py
+/home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/launch/odom_with_lidar.launch.py
 /home/pritismankar/ros2_ws/install/my_odometry/share/my_odometry/rviz/config.rviz
 /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/package_run_dependencies/my_odometry
 /home/pritismankar/ros2_ws/install/my_odometry/share/ament_index/resource_index/parent_prefix_path/my_odometry

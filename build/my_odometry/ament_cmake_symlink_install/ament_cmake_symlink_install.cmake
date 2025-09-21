@@ -310,7 +310,7 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "odom_node" "DESTINATION" "lib/my_odometry")
+# install("TARGETS" "odom_node" "lidar_odometry_node" "DESTINATION" "lib/my_odometry")
 include("/home/pritismankar/ros2_ws/build/my_odometry/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "rviz" "DESTINATION" "share/my_odometry")

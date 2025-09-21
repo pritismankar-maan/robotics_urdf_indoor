@@ -68,6 +68,28 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -100,28 +122,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -168,6 +168,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named lidar_odometry_node
+
+# Build rule for target.
+lidar_odometry_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lidar_odometry_node
+.PHONY : lidar_odometry_node
+
+# fast build rule for target.
+lidar_odometry_node/fast:
+	$(MAKE) -f CMakeFiles/lidar_odometry_node.dir/build.make CMakeFiles/lidar_odometry_node.dir/build
+.PHONY : lidar_odometry_node/fast
+
+#=============================================================================
 # Target rules for targets named odom_node
 
 # Build rule for target.
@@ -206,6 +219,33 @@ uninstall/fast:
 	$(MAKE) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
 .PHONY : uninstall/fast
 
+src/lidar_odometry.o: src/lidar_odometry.cpp.o
+
+.PHONY : src/lidar_odometry.o
+
+# target to build an object file
+src/lidar_odometry.cpp.o:
+	$(MAKE) -f CMakeFiles/lidar_odometry_node.dir/build.make CMakeFiles/lidar_odometry_node.dir/src/lidar_odometry.cpp.o
+.PHONY : src/lidar_odometry.cpp.o
+
+src/lidar_odometry.i: src/lidar_odometry.cpp.i
+
+.PHONY : src/lidar_odometry.i
+
+# target to preprocess a source file
+src/lidar_odometry.cpp.i:
+	$(MAKE) -f CMakeFiles/lidar_odometry_node.dir/build.make CMakeFiles/lidar_odometry_node.dir/src/lidar_odometry.cpp.i
+.PHONY : src/lidar_odometry.cpp.i
+
+src/lidar_odometry.s: src/lidar_odometry.cpp.s
+
+.PHONY : src/lidar_odometry.s
+
+# target to generate assembly for a file
+src/lidar_odometry.cpp.s:
+	$(MAKE) -f CMakeFiles/lidar_odometry_node.dir/build.make CMakeFiles/lidar_odometry_node.dir/src/lidar_odometry.cpp.s
+.PHONY : src/lidar_odometry.cpp.s
+
 src/odom_node.o: src/odom_node.cpp.o
 
 .PHONY : src/odom_node.o
@@ -240,15 +280,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/local"
+	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... test"
+	@echo "... lidar_odometry_node"
 	@echo "... odom_node"
 	@echo "... install/strip"
 	@echo "... my_odometry_uninstall"
 	@echo "... uninstall"
+	@echo "... src/lidar_odometry.o"
+	@echo "... src/lidar_odometry.i"
+	@echo "... src/lidar_odometry.s"
 	@echo "... src/odom_node.o"
 	@echo "... src/odom_node.i"
 	@echo "... src/odom_node.s"

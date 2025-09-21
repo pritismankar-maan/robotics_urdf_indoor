@@ -29,8 +29,9 @@ include_directories(
 )
 
 # ------------------------
-# Odometry node
+# Odometry nodes
 # ------------------------
+# Encoder + IMU Odometry node
 add_executable(odom_node src/odom_node.cpp)
 ament_target_dependencies(odom_node
   rclcpp
@@ -41,6 +42,21 @@ ament_target_dependencies(odom_node
   tf2
   tf2_geometry_msgs
   tf2_ros
+  Eigen3
+)
+
+# Lidar Odometry node
+add_executable(lidar_odometry_node src/lidar_odometry.cpp)
+ament_target_dependencies(lidar_odometry_node
+  rclcpp
+  sensor_msgs
+  nav_msgs
+  visualization_msgs
+  geometry_msgs
+  tf2
+  tf2_geometry_msgs
+  tf2_ros
+  Eigen3
 )
 
 # ------------------------
@@ -48,11 +64,12 @@ ament_target_dependencies(odom_node
 # ------------------------
 install(TARGETS
   odom_node
+  lidar_odometry_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
 # ------------------------
-# Install launch folder
+# Install launch and rviz folders
 # ------------------------
 install(DIRECTORY launch rviz
   DESTINATION share/${PROJECT_NAME}

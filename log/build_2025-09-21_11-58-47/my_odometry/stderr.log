@@ -1,0 +1,7 @@
+CMake Error at CMakeLists.txt:35 (add_executable):
+  add_executable cannot create target "odom_node" because another target with
+  the same name already exists.  The existing target is an executable created
+  in source directory "/home/pritismankar/ros2_ws/src/my_odometry".  See
+  documentation for policy CMP0002 for more details.
+
+
