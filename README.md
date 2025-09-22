@@ -208,3 +208,62 @@ ls /usr/lib/x86_64-linux-gnu/gazebo-*/plugins | grep imu # verify plugins
 
 
 ```
+## Future Work (Work in Progress in separate branch)
+- Tune lidarOdometry and fuse it with sensors.
+
+### Overview
+- Implemented ICP strategy to estimate lidarPose (with translation and Rotation maritx) and tune its parameter
+- Scripts to compare Estimated Pose from lidar
+- In our current estimation logic, we are considering and comparing point clouds from [2-10] meters to estimate translation and rotation. Max association distance = 0.6 meters and minimum of 30 association per lidar estimate.
+- We have been using [`velocity_driver.py`](src/my_simulation/my_simulation/velocity_driver.py) as our unit test file for experiment.
+- One can tune EKF from [`velocity_driver.py`](src/my_fusion/config/ekf.yaml)
+ 
+### Setup
+```bash
+cd ~/ros2_ws
+
+# git branch and git checkout
+git branch
+git fetch
+git checkout feature/lidar-odom-ekf
+
+# verify you are on branch - feature/lidar-odom-ekf
+git branch 
+
+# delete only if absolute necessary, orelse skip this step
+rm -rf build install log [Optional]
+
+# Build workspace
+colcon build --symlink-install
+source /opt/ros/foxy/setup.bash
+source install/setup.bash
+
+# 1. Run open loop Control, Gazebo along with ROS Bag for post analysis
+ros2 launch my_odometry odom_with_lidar.launch.py
+# wait for robot to be spawned with controllers getting loaded succesfully
+
+# 2. Post analysis script for comparing lidarPose and EncoderPose
+python3 src/my_odometry/scripts/pre_plot_odom.py install/my_odometry/share/my_odometry/bags/<path_to_latest_db3_file.db3>
+i.e. python3 src/my_odometry/scripts/pre_plot_odom.py install/my_odometry/share/my_odometry/bags/session_20250921_203442/session_20250921_203442_0.db3
+
+# 1. Run Sensor fusion, open loop Control, Gazebo along with ROS Bag for post analysis
+ros2 launch my_fusion fusion_with_lidar.launch.py
+# wait for robot to be spawned with controllers getting loaded succesfully
+
+# 5. Post analysis script for comparing lidarPose and EncoderPose
+python3 src/my_fusion/scripts/plot_odom.py install/my_fusion/share/my_fusion/bags/<path_to_latest_db3_file.db3>
+i.e. python3 src/my_fusion/scripts/plot_odom.py install/my_fusion/share/my_fusion/bags/session_20250921_201222/session_20250921_201222_0.db3 
+
+```
+
+### Experiments
+- **Test Case 4 (with Open loop con):Pose comparison of lidarOdom vs encoderOdom**
+![Plot Pose](results/my_odometry_results/encoderVSlidar.png) 
+
+- **Plot estimated posed from each sensor along with EKF Fused Pose**
+![Plot Pose](results/my_fusion_results/TC7-UpdatedCode-UnitTest/fullplot_EKF_Fused.png) 
+
+- **ZoomedIn on the same plot**
+![Plot Pose](results/my_fusion_results/TC7-UpdatedCode-UnitTest/zoomPlot_EKF_Fused.png) 
+
+
