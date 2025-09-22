@@ -1,7 +1,0 @@
-[01m[K/home/pritismankar/ros2_ws/src/my_odometry/src/lidar_odometry.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Ksensor_msgs/msg/LaserScan.hpp: No such file or directory
-    2 | #include [01;31m[K"sensor_msgs/msg/LaserScan.hpp"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-make[2]: *** [CMakeFiles/lidar_odometry_node.dir/build.make:63: CMakeFiles/lidar_odometry_node.dir/src/lidar_odometry.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/lidar_odometry_node.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

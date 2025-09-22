@@ -16,17 +16,17 @@ class VelocityDriver(Node):
 
         # define a harcoded sequence of (linear_x, angular_z, duration)
         self.commands = [
-            (0.5, 0.0, 5.2),    # forward - down
+            (0.3, 0.0, 6.5),    # forward - down
+            (0.0, 0.1, 15.0),    # turn left
+            (0.3, 0.0, 9.5),    # forward - to the left
+            (0.0, 0.1, 20.0),    # turn left
+            (0.3, 0.0, 15.6),    # forward - up
+            (0.0, 0.1, 16.8),    # turn left
+            (0.3, 0.0, 15.0),    # forward back to start - to the right
+            (0.0, 0.1, 5.0),    # turn left
+            (0.2, 0.0, 10.5),    # forward - down
             (0.0, 0.8, 2.0),    # turn left
-            (0.5, 0.0, 5.3),    # forward - to the left
-            (0.0, 0.75, 2.0),    # turn left
-            (0.5, 0.0, 10.6),    # forward - up
-            (0.0, 0.75, 1.8),    # turn left
-            (0.5, 0.0, 6.0),    # forward back to start - to the right
-            (0.0, 0.8, 2.0),    # turn left
-            (0.5, 0.0, 10.5),    # forward - down
-            (0.0, 0.8, 2.0),    # turn left
-            (0.5, 0.0, 4.0),    # forward - to the left
+            (0.2, 0.0, 6.0),    # forward - to the left
             (0.0, 0.75, 1.5),    # turn left
             (0.5, 0.0, 4.2),    # forward - up towards origin
             (0.0, 0.0, 0.0),    # stop

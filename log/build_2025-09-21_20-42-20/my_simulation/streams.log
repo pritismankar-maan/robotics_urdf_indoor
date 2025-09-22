@@ -1,0 +1,31 @@
+[1.232s] Invoking command in '/home/pritismankar/ros2_ws/build/my_simulation': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_simulation/build --no-deps symlink_data
+[1.622s] running develop
+[1.800s] running egg_info
+[1.800s] creating my_simulation.egg-info
+[1.800s] writing my_simulation.egg-info/PKG-INFO
+[1.800s] writing dependency_links to my_simulation.egg-info/dependency_links.txt
+[1.800s] writing entry points to my_simulation.egg-info/entry_points.txt
+[1.800s] writing top-level names to my_simulation.egg-info/top_level.txt
+[1.801s] writing manifest file 'my_simulation.egg-info/SOURCES.txt'
+[1.851s] reading manifest file 'my_simulation.egg-info/SOURCES.txt'
+[1.853s] writing manifest file 'my_simulation.egg-info/SOURCES.txt'
+[1.921s] running build_ext
+[1.921s] Creating /home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages/site.py
+[1.925s] Creating /home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages/my-simulation.egg-link (link to .)
+[1.926s] Installing velocity_driver script to /home/pritismankar/ros2_ws/install/my_simulation/lib/my_simulation
+[1.928s] 
+[1.928s] Installed /home/pritismankar/ros2_ws/build/my_simulation
+[1.928s] running symlink_data
+[1.929s] creating /home/pritismankar/ros2_ws/install/my_simulation/share/ament_index
+[1.929s] creating /home/pritismankar/ros2_ws/install/my_simulation/share/ament_index/resource_index
+[1.929s] creating /home/pritismankar/ros2_ws/install/my_simulation/share/ament_index/resource_index/packages
+[1.929s] symbolically linking /home/pritismankar/ros2_ws/build/my_simulation/resource/my_simulation -> /home/pritismankar/ros2_ws/install/my_simulation/share/ament_index/resource_index/packages
+[1.930s] symbolically linking /home/pritismankar/ros2_ws/build/my_simulation/package.xml -> /home/pritismankar/ros2_ws/install/my_simulation/share/my_simulation
+[1.930s] creating /home/pritismankar/ros2_ws/install/my_simulation/share/my_simulation/worlds
+[1.930s] symbolically linking /home/pritismankar/ros2_ws/build/my_simulation/worlds/apartment.world -> /home/pritismankar/ros2_ws/install/my_simulation/share/my_simulation/worlds
+[1.930s] creating /home/pritismankar/ros2_ws/install/my_simulation/share/my_simulation/launch
+[1.930s] symbolically linking /home/pritismankar/ros2_ws/build/my_simulation/launch/sim.launch.py -> /home/pritismankar/ros2_ws/install/my_simulation/share/my_simulation/launch
+[1.930s] symbolically linking /home/pritismankar/ros2_ws/build/my_simulation/launch/sim_open_control.launch.py -> /home/pritismankar/ros2_ws/install/my_simulation/share/my_simulation/launch
+[1.931s] creating /home/pritismankar/ros2_ws/install/my_simulation/share/my_simulation/config
+[1.931s] symbolically linking /home/pritismankar/ros2_ws/build/my_simulation/config/diffbot_controllers.yaml -> /home/pritismankar/ros2_ws/install/my_simulation/share/my_simulation/config
+[1.962s] Invoked command in '/home/pritismankar/ros2_ws/build/my_simulation' returned '0': PYTHONPATH=/home/pritismankar/ros2_ws/build/my_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pritismankar/ros2_ws/install/my_simulation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pritismankar/ros2_ws/build/my_simulation/build --no-deps symlink_data

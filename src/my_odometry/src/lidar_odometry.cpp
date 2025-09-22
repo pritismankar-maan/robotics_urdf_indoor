@@ -153,13 +153,20 @@ private:
     if (dt <= 0 || dt > 0.5) return;
 
     // --- Convert current scan ---
-    std::vector<Eigen::Vector2d> curr_scan;
-    for (size_t i = 0; i < msg->ranges.size(); i += 2) {
-        double r = msg->ranges[i];
-        if (!std::isfinite(r)) continue;
-        double ang = msg->angle_min + i * msg->angle_increment;
-        curr_scan.emplace_back(r * std::cos(ang), r * std::sin(ang));
-    }
+
+	std::vector<Eigen::Vector2d> curr_scan;
+	double min_range = 2.0;  // ignore very close points
+	double max_range = 10.0; // ignore very far points
+
+	for (size_t i = 0; i < msg->ranges.size(); i += 2) {
+	    double r = msg->ranges[i];
+	    if (!std::isfinite(r)) continue;   // discard NaNs/inf
+	    if (r < min_range || r > max_range) continue;  // discard too close/far points
+
+	    double ang = msg->angle_min + i * msg->angle_increment;
+	    curr_scan.emplace_back(r * std::cos(ang), r * std::sin(ang));
+	}
+    
     if (curr_scan.empty() || prev_scan_.empty()) return;
 
     // --- Iterative ICP refinement ---
@@ -167,7 +174,7 @@ private:
     double yaw_est = 0.0;
 
     const int max_iters = 2;
-    const double max_assoc_dist = 0.6;
+    const double max_assoc_dist = 0.3;
 
     for (int iter = 0; iter < max_iters; ++iter) {
         std::vector<Eigen::Vector2d> src, dst;
