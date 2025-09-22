@@ -267,4 +267,5 @@ i.e. python3 src/my_fusion/scripts/plot_odom.py install/my_fusion/share/my_fusio
 ![Plot Pose](results/my_fusion_results/TC7-UpdatedCode-UnitTest/zoomPlot_EKF_Fused.png) 
 
 - **Test Case 5 (with manualControl):Pose comparison of lidarOdom tuning**
-![Plot Pose](results/LidarOdom tuning/EncoderVsLidar_point2_60_halfcircle.png) 
+![Plot Pose](results/LidarOdom_tuning/EncoderVsLidar_point2_60_halfcircle.png) 
+
